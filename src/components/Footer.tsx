@@ -90,11 +90,22 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container-x flex flex-col items-center justify-between gap-2 py-6 text-xs text-on-dark-muted sm:flex-row">
+        <div className="container-x flex flex-col items-center justify-between gap-3 py-6 text-xs text-on-dark-muted sm:flex-row">
           <span>
             © {year} {t("brand.name")}. {t("footer.rights")}
           </span>
-          <span>{t("brand.tagline")}</span>
+          <div className="flex items-center gap-4">
+            <a
+              href={COMPANY.webmail}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 transition-colors hover:text-accent"
+            >
+              <Mail className="h-3.5 w-3.5" />
+              {t("footer.webmail")}
+            </a>
+            <span>{t("brand.tagline")}</span>
+          </div>
         </div>
       </div>
     </footer>
