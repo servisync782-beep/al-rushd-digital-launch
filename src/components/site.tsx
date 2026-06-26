@@ -121,3 +121,73 @@ export function CTASection() {
     </section>
   );
 }
+
+export function Testimonials() {
+  const { t, pick } = useI18n();
+  return (
+    <section className="bg-secondary py-20 lg:py-28">
+      <div className="container-x">
+        <SectionHeading center eyebrow={t("home.testi.eyebrow")} title={t("home.testi.title")} />
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {TESTIMONIALS.map((item, i) => (
+            <figure
+              key={i}
+              className="flex flex-col rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)]"
+            >
+              <Quote className="h-8 w-8 text-accent" />
+              <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-foreground/90">
+                {pick(item.quote)}
+              </blockquote>
+              <figcaption className="mt-6 border-t border-border pt-4">
+                <div className="font-display font-bold">{pick(item.author)}</div>
+                <div className="text-xs text-muted-foreground">
+                  {pick(item.role)} · {pick(item.company)}
+                </div>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function FaqAccordion({ items }: { items: FaqItem[] }) {
+  const { pick } = useI18n();
+  const [open, setOpen] = useState<number | null>(0);
+  return (
+    <div className="mx-auto max-w-3xl divide-y divide-border overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-card)]">
+      {items.map((item, i) => {
+        const isOpen = open === i;
+        return (
+          <div key={i}>
+            <button
+              type="button"
+              onClick={() => setOpen(isOpen ? null : i)}
+              aria-expanded={isOpen}
+              className="flex w-full items-center justify-between gap-4 px-5 py-4 text-start font-display font-bold transition-colors hover:bg-secondary"
+            >
+              <span>{pick(item.q)}</span>
+              <Plus
+                className={`h-5 w-5 shrink-0 text-accent transition-transform duration-300 ${
+                  isOpen ? "rotate-45" : ""
+                }`}
+              />
+            </button>
+            <div
+              className={`grid transition-all duration-300 ${
+                isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+              }`}
+            >
+              <div className="overflow-hidden">
+                <p className="px-5 pb-5 text-sm leading-relaxed text-muted-foreground">
+                  {pick(item.a)}
+                </p>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
