@@ -19,6 +19,7 @@ import { Route as CareersRouteImport } from './routes/careers'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as FleetIndexRouteImport } from './routes/fleet.index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as FleetIdRouteImport } from './routes/fleet.$id'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -71,6 +72,11 @@ const FleetIndexRoute = FleetIndexRouteImport.update({
   path: '/fleet/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FleetIdRoute = FleetIdRouteImport.update({
   id: '/fleet/$id',
   path: '/fleet/$id',
@@ -88,6 +94,7 @@ export interface FileRoutesByFullPath {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/fleet/$id': typeof FleetIdRoute
+  '/blog/': typeof BlogIndexRoute
   '/fleet/': typeof FleetIndexRoute
 }
 export interface FileRoutesByTo {
@@ -101,6 +108,7 @@ export interface FileRoutesByTo {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/fleet/$id': typeof FleetIdRoute
+  '/blog': typeof BlogIndexRoute
   '/fleet': typeof FleetIndexRoute
 }
 export interface FileRoutesById {
@@ -115,6 +123,7 @@ export interface FileRoutesById {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/fleet/$id': typeof FleetIdRoute
+  '/blog/': typeof BlogIndexRoute
   '/fleet/': typeof FleetIndexRoute
 }
 export interface FileRouteTypes {
@@ -130,6 +139,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/fleet/$id'
+    | '/blog/'
     | '/fleet/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -143,6 +153,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/fleet/$id'
+    | '/blog'
     | '/fleet'
   id:
     | '__root__'
@@ -156,6 +167,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/fleet/$id'
+    | '/blog/'
     | '/fleet/'
   fileRoutesById: FileRoutesById
 }
@@ -170,6 +182,7 @@ export interface RootRouteChildren {
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   FleetIdRoute: typeof FleetIdRoute
+  BlogIndexRoute: typeof BlogIndexRoute
   FleetIndexRoute: typeof FleetIndexRoute
 }
 
@@ -245,6 +258,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FleetIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/fleet/$id': {
       id: '/fleet/$id'
       path: '/fleet/$id'
@@ -266,6 +286,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   FleetIdRoute: FleetIdRoute,
+  BlogIndexRoute: BlogIndexRoute,
   FleetIndexRoute: FleetIndexRoute,
 }
 export const routeTree = rootRouteImport
