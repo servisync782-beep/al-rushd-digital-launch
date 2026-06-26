@@ -113,7 +113,13 @@ export function Footer() {
           <span>
             © {year} {t("brand.name")}. {t("footer.rights")}
           </span>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+            <Link to="/privacy" className="transition-colors hover:text-accent">
+              {t("footer.privacy")}
+            </Link>
+            <Link to="/terms" className="transition-colors hover:text-accent">
+              {t("footer.terms")}
+            </Link>
             <a
               href={COMPANY.webmail}
               target="_blank"
@@ -123,7 +129,6 @@ export function Footer() {
               <Mail className="h-3.5 w-3.5" />
               {t("footer.webmail")}
             </a>
-            <span>{t("brand.tagline")}</span>
           </div>
         </div>
       </div>
