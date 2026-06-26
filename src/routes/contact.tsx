@@ -17,7 +17,9 @@ export const Route = createFileRoute("/contact")({
       },
       { property: "og:title", content: "Contact Us — Al Rushd International" },
       { property: "og:description", content: "Request a heavy equipment rental quote across Saudi Arabia." },
+      { property: "og:url", content: "/contact" },
     ],
+    links: [{ rel: "canonical", href: "/contact" }],
   }),
   component: Contact,
 });

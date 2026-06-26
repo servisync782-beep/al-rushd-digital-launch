@@ -14,7 +14,9 @@ export const Route = createFileRoute("/services")({
       },
       { property: "og:title", content: "Our Services — Al Rushd International" },
       { property: "og:description", content: "End-to-end heavy equipment rental solutions." },
+      { property: "og:url", content: "/services" },
     ],
+    links: [{ rel: "canonical", href: "/services" }],
   }),
   component: Services,
 });
