@@ -17,7 +17,9 @@ export const Route = createFileRoute("/fleet/")({
       },
       { property: "og:title", content: "Equipment Fleet — Al Rushd International" },
       { property: "og:description", content: "Cranes, excavators, loaders, generators and more, ready to rent." },
+      { property: "og:url", content: "/fleet" },
     ],
+    links: [{ rel: "canonical", href: "/fleet" }],
   }),
   component: Fleet,
 });

@@ -10,17 +10,53 @@ export const Route = createFileRoute("/fleet/$id")({
     if (!item) throw notFound();
     return { item };
   },
-  head: ({ loaderData }) => {
+  head: ({ params, loaderData }) => {
     const item = loaderData?.item;
     const name = item?.name.en ?? "Equipment";
+    const path = `/fleet/${params.id}`;
     return {
       meta: [
         { title: `${name} — Al Rushd International` },
         { name: "description", content: item?.short.en ?? "Heavy equipment for rent." },
         { property: "og:title", content: `${name} — Al Rushd International` },
         { property: "og:description", content: item?.short.en ?? "" },
+        { property: "og:type", content: "product" },
+        { property: "og:url", content: path },
         ...(item ? [{ property: "og:image", content: item.image }] : []),
       ],
+      links: [{ rel: "canonical", href: path }],
+      scripts: item
+        ? [
+            {
+              type: "application/ld+json",
+              children: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Product",
+                name: item.name.en,
+                description: item.description.en,
+                image: item.image,
+                category: item.category,
+                brand: { "@type": "Brand", name: "Al Rushd International" },
+                additionalProperty: item.specs.map((s) => ({
+                  "@type": "PropertyValue",
+                  name: s.label.en,
+                  value: s.value.en,
+                })),
+              }),
+            },
+            {
+              type: "application/ld+json",
+              children: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  { "@type": "ListItem", position: 1, name: "Fleet", item: "/fleet" },
+                  { "@type": "ListItem", position: 2, name: item.name.en, item: path },
+                ],
+              }),
+            },
+          ]
+        : [],
     };
   },
   notFoundComponent: NotFound,
