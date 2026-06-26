@@ -134,7 +134,7 @@ function Post() {
         </div>
 
         <div className="mx-auto mt-10 max-w-3xl">
-          {post.body.map((para, i) => (
+          {post.body.map((para: { en: string; ar: string }, i: number) => (
             <p key={i} className="mb-5 text-base leading-relaxed text-foreground/90">
               {pick(para)}
             </p>
