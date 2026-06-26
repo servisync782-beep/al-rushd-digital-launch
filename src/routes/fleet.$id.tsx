@@ -1,7 +1,7 @@
 import { createFileRoute, Link, useRouter, notFound } from "@tanstack/react-router";
 import { ArrowLeft, Phone, MessageCircle, CheckCircle2 } from "lucide-react";
 import { useI18n, COMPANY } from "@/lib/i18n";
-import { EQUIPMENT, getEquipment, relatedEquipment, type Spec } from "@/data/equipment";
+import { getEquipment, relatedEquipment, type Spec } from "@/data/equipment";
 import { EquipmentCard, CTASection } from "@/components/site";
 
 export const Route = createFileRoute("/fleet/$id")({
@@ -139,4 +139,3 @@ function Detail() {
   );
 }
 
-export { EQUIPMENT };

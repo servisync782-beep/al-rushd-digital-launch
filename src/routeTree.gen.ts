@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as IndustriesRouteImport } from './routes/industries'
@@ -20,6 +21,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as FleetIndexRouteImport } from './routes/fleet.index'
 import { Route as FleetIdRouteImport } from './routes/fleet.$id'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
@@ -80,6 +86,7 @@ export interface FileRoutesByFullPath {
   '/industries': typeof IndustriesRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/fleet/$id': typeof FleetIdRoute
   '/fleet/': typeof FleetIndexRoute
 }
@@ -92,6 +99,7 @@ export interface FileRoutesByTo {
   '/industries': typeof IndustriesRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/fleet/$id': typeof FleetIdRoute
   '/fleet': typeof FleetIndexRoute
 }
@@ -105,6 +113,7 @@ export interface FileRoutesById {
   '/industries': typeof IndustriesRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/fleet/$id': typeof FleetIdRoute
   '/fleet/': typeof FleetIndexRoute
 }
@@ -119,6 +128,7 @@ export interface FileRouteTypes {
     | '/industries'
     | '/projects'
     | '/services'
+    | '/sitemap.xml'
     | '/fleet/$id'
     | '/fleet/'
   fileRoutesByTo: FileRoutesByTo
@@ -131,6 +141,7 @@ export interface FileRouteTypes {
     | '/industries'
     | '/projects'
     | '/services'
+    | '/sitemap.xml'
     | '/fleet/$id'
     | '/fleet'
   id:
@@ -143,6 +154,7 @@ export interface FileRouteTypes {
     | '/industries'
     | '/projects'
     | '/services'
+    | '/sitemap.xml'
     | '/fleet/$id'
     | '/fleet/'
   fileRoutesById: FileRoutesById
@@ -156,12 +168,20 @@ export interface RootRouteChildren {
   IndustriesRoute: typeof IndustriesRoute
   ProjectsRoute: typeof ProjectsRoute
   ServicesRoute: typeof ServicesRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   FleetIdRoute: typeof FleetIdRoute
   FleetIndexRoute: typeof FleetIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
@@ -244,6 +264,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndustriesRoute: IndustriesRoute,
   ProjectsRoute: ProjectsRoute,
   ServicesRoute: ServicesRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   FleetIdRoute: FleetIdRoute,
   FleetIndexRoute: FleetIndexRoute,
 }
