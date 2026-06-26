@@ -18,6 +18,7 @@ import "@fontsource/dm-sans/600.css";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { ANALYTICS } from "../lib/analytics";
 import { LanguageProvider } from "../lib/i18n";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
