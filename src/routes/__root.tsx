@@ -103,12 +103,33 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Reliable heavy industrial equipment rental for construction, oil & gas and infrastructure projects across the Kingdom.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Al Rushd International" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Al Rushd International",
+          description:
+            "Heavy industrial equipment rental for construction, oil & gas and infrastructure projects across Saudi Arabia.",
+          areaServed: "SA",
+          email: "info@alrushd-intl.com",
+          telephone: "+966500000000",
+          address: {
+            "@type": "PostalAddress",
+            addressRegion: "Riyadh",
+            addressCountry: "SA",
+          },
+        }),
       },
     ],
   }),
