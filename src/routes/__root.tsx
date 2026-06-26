@@ -97,7 +97,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Al Rushd International rents cranes, excavators, loaders, forklifts and generators across Saudi Arabia, with certified operators and 24/7 support.",
       },
       { name: "author", content: "Al Rushd International" },
-      { property: "og:title", content: "Al Rushd International — Heavy Equipment Rental" },
+      { property: "og:title", content: "Al Rushd International — Heavy Equipment Rental in Saudi Arabia" },
       {
         property: "og:description",
         content:
@@ -110,6 +110,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       ...(ANALYTICS.gscVerification
         ? [{ name: "google-site-verification", content: ANALYTICS.gscVerification }]
         : []),
+      { name: "twitter:title", content: "Al Rushd International — Heavy Equipment Rental in Saudi Arabia" },
+      { name: "description", content: "Al Rushd Digital Launch establishes a comprehensive online presence for industrial equipment rental companies." },
+      { property: "og:description", content: "Al Rushd Digital Launch establishes a comprehensive online presence for industrial equipment rental companies." },
+      { name: "twitter:description", content: "Al Rushd Digital Launch establishes a comprehensive online presence for industrial equipment rental companies." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/965c6a9f-3506-4ab3-a3f5-b9f12653e49c/id-preview-0c565339--658615a4-45dd-4f06-ab5f-fc1f91d58539.lovable.app-1782476997181.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/965c6a9f-3506-4ab3-a3f5-b9f12653e49c/id-preview-0c565339--658615a4-45dd-4f06-ab5f-fc1f91d58539.lovable.app-1782476997181.png" },
     ],
     links: [
       {
