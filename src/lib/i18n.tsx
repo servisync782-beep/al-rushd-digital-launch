@@ -362,4 +362,12 @@ export const COMPANY = {
   mapsQuery: "Riyadh+Industrial+Area+Saudi+Arabia",
   // Microsoft 365 / Outlook on the web staff webmail login.
   webmail: "https://outlook.office.com/mail/",
+  // Downloadable company profile brochure (PDF in /public/brochures).
+  brochure: "/brochures/company-profile.pdf",
+  social: {
+    linkedin: "https://www.linkedin.com/company/al-rushd-international",
+    instagram: "https://www.instagram.com/alrushdintl",
+    facebook: "https://www.facebook.com/alrushdintl",
+    x: "https://x.com/alrushdintl",
+  },
 };
