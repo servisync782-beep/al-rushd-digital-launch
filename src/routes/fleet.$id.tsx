@@ -183,6 +183,14 @@ function Detail() {
               <Phone className="h-4 w-4" />
               {t("common.callNow")}
             </a>
+            <a
+              href={COMPANY.brochure}
+              download
+              className="inline-flex items-center gap-2 rounded-md border border-border px-6 py-3 text-sm font-bold transition-colors hover:bg-secondary"
+            >
+              <Download className="h-4 w-4" />
+              {t("common.downloadBrochure")}
+            </a>
           </div>
         </div>
       </section>
