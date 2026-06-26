@@ -18,6 +18,7 @@ import "@fontsource/dm-sans/600.css";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { ANALYTICS } from "../lib/analytics";
 import { LanguageProvider } from "../lib/i18n";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
@@ -105,6 +106,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Al Rushd International" },
       { name: "twitter:card", content: "summary_large_image" },
+      // Google Search Console verification placeholder — set token in src/lib/analytics.ts.
+      ...(ANALYTICS.gscVerification
+        ? [{ name: "google-site-verification", content: ANALYTICS.gscVerification }]
+        : []),
     ],
     links: [
       {
@@ -113,6 +118,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
     ],
     scripts: [
+      // Google Analytics 4 placeholder — set Measurement ID in src/lib/analytics.ts.
+      ...(ANALYTICS.gaMeasurementId
+        ? [
+            {
+              src: `https://www.googletagmanager.com/gtag/js?id=${ANALYTICS.gaMeasurementId}`,
+              async: true,
+            },
+            {
+              children: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${ANALYTICS.gaMeasurementId}');`,
+            },
+          ]
+        : []),
       {
         type: "application/ld+json",
         children: JSON.stringify({

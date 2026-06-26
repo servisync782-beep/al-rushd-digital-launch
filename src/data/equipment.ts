@@ -10,6 +10,8 @@ export type Bilingual = { en: string; ar: string };
 
 export type CategoryId = "earthmoving" | "lifting" | "power" | "haulage";
 
+export type Availability = "available" | "limited";
+
 export interface Spec {
   label: Bilingual;
   value: Bilingual;
@@ -22,6 +24,8 @@ export interface Equipment {
   short: Bilingual;
   description: Bilingual;
   image: string;
+  availability: Availability;
+  features: Bilingual[];
   specs: Spec[];
   featured?: boolean;
 }
@@ -38,6 +42,8 @@ const spec = (le: string, la: string, ve: string, va: string): Spec => ({
   value: { en: ve, ar: va },
 });
 
+const feat = (en: string, ar: string): Bilingual => ({ en, ar });
+
 export const EQUIPMENT: Equipment[] = [
   {
     id: "crawler-excavator-30t",
@@ -50,6 +56,13 @@ export const EQUIPMENT: Equipment[] = [
     },
     image: excavator,
     featured: true,
+    availability: "available",
+    features: [
+      feat("Climate-controlled operator cab", "كابينة مشغل مكيفة"),
+      feat("Quick-coupler attachment system", "نظام تركيب سريع للملحقات"),
+      feat("Fuel-efficient Tier-compliant engine", "محرك موفر للوقود ومطابق للمعايير"),
+      feat("Reinforced undercarriage for tough terrain", "هيكل سفلي معزز للتضاريس الصعبة"),
+    ],
     specs: [
       spec("Operating Weight", "وزن التشغيل", "30,000 kg", "30,000 كجم"),
       spec("Engine Power", "قوة المحرك", "200 hp", "200 حصان"),
@@ -68,6 +81,13 @@ export const EQUIPMENT: Equipment[] = [
     },
     image: loader,
     featured: true,
+    availability: "available",
+    features: [
+      feat("High breakout force bucket", "قادوس بقوة اقتلاع عالية"),
+      feat("Tight turning radius", "نصف قطر دوران ضيق"),
+      feat("Ride-control for fast travel", "نظام تحكم بالقيادة للتنقل السريع"),
+      feat("Excellent operator visibility", "رؤية ممتازة للمشغل"),
+    ],
     specs: [
       spec("Operating Weight", "وزن التشغيل", "14,000 kg", "14,000 كجم"),
       spec("Engine Power", "قوة المحرك", "170 hp", "170 حصان"),
@@ -86,6 +106,13 @@ export const EQUIPMENT: Equipment[] = [
     },
     image: crane,
     featured: true,
+    availability: "limited",
+    features: [
+      feat("Telescopic boom with load chart", "ذراع تلسكوبي مع مخطط حمولة"),
+      feat("All-wheel steering for tight sites", "توجيه لجميع العجلات للمواقع الضيقة"),
+      feat("Computerised load moment indicator", "مؤشر عزم الحمل المحوسب"),
+      feat("Outrigger stability monitoring", "مراقبة استقرار الدعامات"),
+    ],
     specs: [
       spec("Max Capacity", "أقصى حمولة", "50 t", "50 طن"),
       spec("Max Boom Length", "أقصى طول ذراع", "40 m", "40 م"),
@@ -103,6 +130,13 @@ export const EQUIPMENT: Equipment[] = [
       ar: "رافعة تلسكوبية توفر ارتفاع رفع يصل إلى 17 متراً. مثالية لوضع المواد والتحميل على ارتفاع والعمل في الأماكن الضيقة مع ملحقات قابلة للتبديل.",
     },
     image: telehandler,
+    availability: "available",
+    features: [
+      feat("Interchangeable forks and bucket", "شوكات وقادوس قابلة للتبديل"),
+      feat("Four-wheel drive and steering", "دفع وتوجيه رباعي"),
+      feat("Load-sensing hydraulics", "هيدروليك يستشعر الحمل"),
+      feat("Stabiliser legs for high lifts", "أرجل تثبيت للرفع العالي"),
+    ],
     specs: [
       spec("Max Lift Height", "أقصى ارتفاع رفع", "17 m", "17 م"),
       spec("Max Capacity", "أقصى حمولة", "4,000 kg", "4,000 كجم"),
@@ -120,6 +154,13 @@ export const EQUIPMENT: Equipment[] = [
       ar: "رافعة شوكية ديزل بوزن 5 أطنان مصممة لمهام المستودعات والساحات الثقيلة. صاري متين وعزم قوي وراحة للمشغل لعمليات المناولة المستمرة.",
     },
     image: forklift,
+    availability: "available",
+    features: [
+      feat("Triplex mast for high stacking", "صاري ثلاثي للتكديس العالي"),
+      feat("Side-shift fork carriage", "حامل شوكات قابل للإزاحة الجانبية"),
+      feat("Solid pneumatic tyres", "إطارات هوائية صلبة"),
+      feat("Ergonomic operator station", "محطة مشغل مريحة"),
+    ],
     specs: [
       spec("Load Capacity", "سعة الحمل", "5,000 kg", "5,000 كجم"),
       spec("Lift Height", "ارتفاع الرفع", "4.5 m", "4.5 م"),
@@ -138,6 +179,13 @@ export const EQUIPMENT: Equipment[] = [
     },
     image: generator,
     featured: true,
+    availability: "available",
+    features: [
+      feat("Sound-attenuated weatherproof enclosure", "غلاف عازل للصوت ومقاوم للعوامل الجوية"),
+      feat("Extended-run fuel tank", "خزان وقود لتشغيل ممتد"),
+      feat("Digital control and remote monitoring", "تحكم رقمي ومراقبة عن بُعد"),
+      feat("Automatic transfer switch ready", "جاهز لمفتاح النقل التلقائي"),
+    ],
     specs: [
       spec("Prime Power", "القدرة الأساسية", "500 kVA", "500 ك.ف.أ"),
       spec("Voltage", "الجهد", "400/230 V", "400/230 فولت"),
@@ -155,6 +203,13 @@ export const EQUIPMENT: Equipment[] = [
       ar: "شاحنة قلابة مفصلية ثقيلة مصممة لنقل التراب والركام والمخلفات عبر التضاريس غير المستوية. حمولة عالية ودفع لجميع العجلات يبقي المواد متحركة في أي ظروف.",
     },
     image: dumptruck,
+    availability: "limited",
+    features: [
+      feat("All-wheel drive (6x6)", "دفع لجميع العجلات (6×6)"),
+      feat("Articulated chassis for tight turns", "هيكل مفصلي للمنعطفات الضيقة"),
+      feat("Heated, tipping body", "صندوق قلاب مُدفأ"),
+      feat("Automatic traction control", "تحكم تلقائي بالجر"),
+    ],
     specs: [
       spec("Payload", "الحمولة", "30,000 kg", "30,000 كجم"),
       spec("Body Volume", "حجم الصندوق", "18 m³", "18 م³"),

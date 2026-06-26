@@ -1,10 +1,24 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ShieldCheck, Users, Headset, CalendarClock, CheckCircle2 } from "lucide-react";
+import {
+  ArrowRight,
+  ShieldCheck,
+  Users,
+  Headset,
+  CalendarClock,
+  CheckCircle2,
+  Building2,
+  Fuel,
+  Construction,
+  Mountain,
+  Warehouse,
+  Tent,
+} from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
 import yardImg from "@/assets/yard.jpg";
 import { useI18n } from "@/lib/i18n";
 import { CATEGORIES, EQUIPMENT } from "@/data/equipment";
-import { EquipmentCard, SectionHeading, CTASection } from "@/components/site";
+import { FAQ } from "@/data/faq";
+import { EquipmentCard, SectionHeading, CTASection, Testimonials, FaqAccordion } from "@/components/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,6 +42,7 @@ export const Route = createFileRoute("/")({
 });
 
 const WHY_ICONS = [ShieldCheck, Users, Headset, CalendarClock];
+const INDUSTRY_ICONS = [Building2, Fuel, Construction, Mountain, Warehouse, Tent];
 
 function Home() {
   const { t, pick } = useI18n();
@@ -197,7 +212,80 @@ function Home() {
         </div>
       </section>
 
+      {/* Industries served */}
+      <section className="container-x py-20 lg:py-28">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <SectionHeading eyebrow={t("home.industries.eyebrow")} title={t("home.industries.title")} />
+          <Link to="/industries" className="inline-flex items-center gap-2 text-sm font-bold text-accent">
+            {t("common.viewAll")} <ArrowRight className="h-4 w-4 rtl:rotate-180" />
+          </Link>
+        </div>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {INDUSTRY_ICONS.map((Icon, i) => (
+            <Link
+              key={i}
+              to="/industries"
+              className="group flex gap-5 rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:border-accent"
+            >
+              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-navy text-on-dark transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
+                <Icon className="h-6 w-6" />
+              </span>
+              <div>
+                <h3 className="font-display text-lg font-bold">{t(`industry.${i + 1}.title`)}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {t(`industry.${i + 1}.body`)}
+                </p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Client trust band */}
+      <section className="surface-dark relative overflow-hidden">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.07]"
+          style={{
+            backgroundImage: "repeating-linear-gradient(135deg, #f5a623 0 2px, transparent 2px 22px)",
+          }}
+        />
+        <div className="container-x relative grid items-center gap-10 py-16 lg:grid-cols-[1fr_auto] lg:py-20">
+          <div className="max-w-2xl">
+            <span className="eyebrow">{t("home.clients.eyebrow")}</span>
+            <h2 className="mt-3 text-3xl font-bold text-on-dark md:text-4xl">{t("home.clients.title")}</h2>
+            <p className="mt-4 max-w-xl leading-relaxed text-on-dark-muted">{t("home.clients.body")}</p>
+          </div>
+          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 sm:grid-cols-4 lg:grid-cols-2">
+            {stats.map((s) => (
+              <div key={s.key} className="bg-navy-light/40 px-8 py-6 text-center">
+                <div className="font-display text-3xl font-bold text-accent">{s.value}</div>
+                <div className="mt-1 text-xs font-medium uppercase tracking-wider text-on-dark-muted">
+                  {t(s.key)}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <Testimonials />
+
+      {/* FAQ */}
+      <section className="container-x py-20 lg:py-28">
+        <SectionHeading center eyebrow={t("home.faq.eyebrow")} title={t("home.faq.title")} />
+        <div className="mt-12">
+          <FaqAccordion items={FAQ.slice(0, 4)} />
+        </div>
+        <div className="mt-8 text-center">
+          <Link to="/faq" className="inline-flex items-center gap-2 text-sm font-bold text-accent">
+            {t("common.viewAll")} <ArrowRight className="h-4 w-4 rtl:rotate-180" />
+          </Link>
+        </div>
+      </section>
+
       <CTASection />
+
     </>
   );
 }

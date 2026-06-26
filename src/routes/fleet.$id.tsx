@@ -1,7 +1,7 @@
 import { createFileRoute, Link, useRouter, notFound } from "@tanstack/react-router";
-import { ArrowLeft, Phone, MessageCircle, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, Phone, MessageCircle, CheckCircle2, Download, Circle } from "lucide-react";
 import { useI18n, COMPANY } from "@/lib/i18n";
-import { getEquipment, relatedEquipment, type Spec } from "@/data/equipment";
+import { getEquipment, relatedEquipment, type Spec, type Bilingual } from "@/data/equipment";
 import { EquipmentCard, CTASection } from "@/components/site";
 
 export const Route = createFileRoute("/fleet/$id")({
@@ -115,9 +115,39 @@ function Detail() {
         </div>
 
         <div>
-          <span className="eyebrow">{t(`cat.${item.category}`)}</span>
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="eyebrow">{t(`cat.${item.category}`)}</span>
+            <span
+              className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold ${
+                item.availability === "available"
+                  ? "bg-green-500/15 text-green-700 dark:text-green-400"
+                  : "bg-accent/15 text-accent"
+              }`}
+            >
+              <Circle
+                className={`h-2 w-2 fill-current ${
+                  item.availability === "available" ? "text-green-600" : "text-accent"
+                }`}
+              />
+              {t(`common.${item.availability}`)}
+            </span>
+          </div>
           <h1 className="mt-3 text-3xl font-bold md:text-4xl">{pick(item.name)}</h1>
           <p className="mt-4 leading-relaxed text-muted-foreground">{pick(item.description)}</p>
+
+          {item.features.length > 0 && (
+            <>
+              <h2 className="mt-8 font-display text-lg font-bold">{t("common.keyFeatures")}</h2>
+              <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+                {item.features.map((f: Bilingual, i: number) => (
+                  <li key={i} className="flex items-start gap-2 text-sm">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                    <span>{pick(f)}</span>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
 
           <h2 className="mt-8 font-display text-lg font-bold">{t("common.specifications")}</h2>
           <dl className="mt-4 divide-y divide-border overflow-hidden rounded-xl border border-border">
@@ -152,6 +182,14 @@ function Detail() {
             >
               <Phone className="h-4 w-4" />
               {t("common.callNow")}
+            </a>
+            <a
+              href={COMPANY.brochure}
+              download
+              className="inline-flex items-center gap-2 rounded-md border border-border px-6 py-3 text-sm font-bold transition-colors hover:bg-secondary"
+            >
+              <Download className="h-4 w-4" />
+              {t("common.downloadBrochure")}
             </a>
           </div>
         </div>

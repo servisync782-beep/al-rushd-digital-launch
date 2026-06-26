@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Linkedin, Instagram, Facebook } from "lucide-react";
 import { useI18n, COMPANY } from "@/lib/i18n";
 
 export function Footer() {
@@ -17,6 +17,24 @@ export function Footer() {
             <span className="font-display text-lg font-bold text-on-dark">{t("brand.name")}</span>
           </div>
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-on-dark-muted">{t("footer.about")}</p>
+          <div className="mt-6 flex items-center gap-3">
+            {[
+              { href: COMPANY.social.linkedin, Icon: Linkedin, label: "LinkedIn" },
+              { href: COMPANY.social.instagram, Icon: Instagram, label: "Instagram" },
+              { href: COMPANY.social.facebook, Icon: Facebook, label: "Facebook" },
+            ].map(({ href, Icon, label }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="grid h-9 w-9 place-items-center rounded-md border border-white/15 text-on-dark-muted transition-colors hover:border-accent hover:text-accent"
+              >
+                <Icon className="h-4 w-4" />
+              </a>
+            ))}
+          </div>
         </div>
 
         <div>
@@ -29,6 +47,7 @@ export function Footer() {
               { to: "/services", key: "nav.services" },
               { to: "/industries", key: "nav.industries" },
               { to: "/projects", key: "nav.projects" },
+              { to: "/blog", key: "nav.blog" },
               { to: "/careers", key: "nav.careers" },
             ].map((l) => (
               <li key={l.to}>
@@ -94,7 +113,13 @@ export function Footer() {
           <span>
             © {year} {t("brand.name")}. {t("footer.rights")}
           </span>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+            <Link to="/privacy" className="transition-colors hover:text-accent">
+              {t("footer.privacy")}
+            </Link>
+            <Link to="/terms" className="transition-colors hover:text-accent">
+              {t("footer.terms")}
+            </Link>
             <a
               href={COMPANY.webmail}
               target="_blank"
@@ -104,7 +129,6 @@ export function Footer() {
               <Mail className="h-3.5 w-3.5" />
               {t("footer.webmail")}
             </a>
-            <span>{t("brand.tagline")}</span>
           </div>
         </div>
       </div>
