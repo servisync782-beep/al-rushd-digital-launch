@@ -115,9 +115,39 @@ function Detail() {
         </div>
 
         <div>
-          <span className="eyebrow">{t(`cat.${item.category}`)}</span>
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="eyebrow">{t(`cat.${item.category}`)}</span>
+            <span
+              className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold ${
+                item.availability === "available"
+                  ? "bg-green-500/15 text-green-700 dark:text-green-400"
+                  : "bg-accent/15 text-accent"
+              }`}
+            >
+              <Circle
+                className={`h-2 w-2 fill-current ${
+                  item.availability === "available" ? "text-green-600" : "text-accent"
+                }`}
+              />
+              {t(`common.${item.availability}`)}
+            </span>
+          </div>
           <h1 className="mt-3 text-3xl font-bold md:text-4xl">{pick(item.name)}</h1>
           <p className="mt-4 leading-relaxed text-muted-foreground">{pick(item.description)}</p>
+
+          {item.features.length > 0 && (
+            <>
+              <h2 className="mt-8 font-display text-lg font-bold">{t("common.keyFeatures")}</h2>
+              <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+                {item.features.map((f: Bilingual, i: number) => (
+                  <li key={i} className="flex items-start gap-2 text-sm">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                    <span>{pick(f)}</span>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
 
           <h2 className="mt-8 font-display text-lg font-bold">{t("common.specifications")}</h2>
           <dl className="mt-4 divide-y divide-border overflow-hidden rounded-xl border border-border">
