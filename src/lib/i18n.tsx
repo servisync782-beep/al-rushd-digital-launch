@@ -221,6 +221,77 @@ const DICT: Dict = {
   "cat.lifting": { en: "Lifting & Access", ar: "الرفع والوصول" },
   "cat.power": { en: "Power & Generators", ar: "الطاقة والمولدات" },
   "cat.haulage": { en: "Haulage & Transport", ar: "النقل والشحن" },
+
+  // Blog / FAQ / legal nav
+  "nav.blog": { en: "Blog", ar: "المدونة" },
+  "nav.faq": { en: "FAQ", ar: "الأسئلة الشائعة" },
+
+  // Common (extended)
+  "common.downloadBrochure": { en: "Download Brochure", ar: "تحميل الكتيب" },
+  "common.availability": { en: "Availability", ar: "حالة التوفر" },
+  "common.available": { en: "Available Now", ar: "متوفر الآن" },
+  "common.limited": { en: "Limited Availability", ar: "توفر محدود" },
+  "common.keyFeatures": { en: "Key Features", ar: "الميزات الرئيسية" },
+  "common.inquire": { en: "Send Inquiry", ar: "إرسال استفسار" },
+  "common.readMore": { en: "Read Article", ar: "اقرأ المقال" },
+  "common.backToBlog": { en: "Back to Blog", ar: "العودة إلى المدونة" },
+  "common.viewAll": { en: "View All", ar: "عرض الكل" },
+  "common.emailUs": { en: "Email Us", ar: "راسلنا" },
+  "common.filters": { en: "Filters", ar: "التصفية" },
+
+  // Home — industries / trust / testimonials / faq
+  "home.industries.eyebrow": { en: "Sectors We Power", ar: "القطاعات التي ندعمها" },
+  "home.industries.title": { en: "Industries We Serve", ar: "القطاعات التي نخدمها" },
+  "home.clients.eyebrow": { en: "Trusted Across the Kingdom", ar: "موثوق في جميع أنحاء المملكة" },
+  "home.clients.title": { en: "A Partner Industry Leaders Rely On", ar: "شريك يعتمد عليه رواد الصناعة" },
+  "home.clients.body": {
+    en: "From national infrastructure programmes to private industrial sites, contractors choose Al Rushd International for fleet reliability, certified operators and service that never sleeps.",
+    ar: "من برامج البنية التحتية الوطنية إلى المواقع الصناعية الخاصة، يختار المقاولون الرشد الدولية لموثوقية الأسطول والمشغلين المعتمدين والخدمة التي لا تتوقف.",
+  },
+  "home.testi.eyebrow": { en: "Client Voices", ar: "آراء العملاء" },
+  "home.testi.title": { en: "What Our Clients Say", ar: "ماذا يقول عملاؤنا" },
+  "home.faq.eyebrow": { en: "Good to Know", ar: "معلومات مفيدة" },
+  "home.faq.title": { en: "Frequently Asked Questions", ar: "الأسئلة الشائعة" },
+
+  // Blog page
+  "blog.title": { en: "Blog & News", ar: "المدونة والأخبار" },
+  "blog.subtitle": {
+    en: "Industry insights, safety guidance and company updates from the Al Rushd International team.",
+    ar: "رؤى القطاع وإرشادات السلامة وأخبار الشركة من فريق الرشد الدولية.",
+  },
+  "blog.latest.eyebrow": { en: "From the Blog", ar: "من المدونة" },
+  "blog.latest.title": { en: "Latest News & Insights", ar: "أحدث الأخبار والرؤى" },
+  "blog.minRead": { en: "min read", ar: "دقيقة قراءة" },
+  "blog.share": { en: "Share this article", ar: "شارك هذا المقال" },
+
+  // FAQ page
+  "faq.title": { en: "Frequently Asked Questions", ar: "الأسئلة الشائعة" },
+  "faq.subtitle": {
+    en: "Answers to the questions we hear most about renting heavy equipment from Al Rushd International.",
+    ar: "إجابات على أكثر الأسئلة شيوعاً حول تأجير المعدات الثقيلة من الرشد الدولية.",
+  },
+  "faq.cta": { en: "Still have a question?", ar: "هل لا يزال لديك سؤال؟" },
+
+  // Footer (extended)
+  "footer.follow": { en: "Follow Us", ar: "تابعنا" },
+  "footer.legal": { en: "Legal", ar: "قانوني" },
+  "footer.privacy": { en: "Privacy Policy", ar: "سياسة الخصوصية" },
+  "footer.terms": { en: "Terms & Conditions", ar: "الشروط والأحكام" },
+  "footer.resources": { en: "Resources", ar: "موارد" },
+  "footer.companyProfile": { en: "Company Profile (PDF)", ar: "ملف الشركة (PDF)" },
+
+  // Legal pages
+  "privacy.title": { en: "Privacy Policy", ar: "سياسة الخصوصية" },
+  "privacy.subtitle": {
+    en: "How Al Rushd International collects, uses and protects your information.",
+    ar: "كيف تجمع الرشد الدولية معلوماتك وتستخدمها وتحميها.",
+  },
+  "terms.title": { en: "Terms & Conditions", ar: "الشروط والأحكام" },
+  "terms.subtitle": {
+    en: "The terms that govern your use of this website and our rental services.",
+    ar: "الشروط التي تحكم استخدامك لهذا الموقع وخدمات التأجير لدينا.",
+  },
+  "legal.updated": { en: "Last updated: June 2026", ar: "آخر تحديث: يونيو 2026" },
 };
 
 interface LangContextValue {
