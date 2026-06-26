@@ -42,6 +42,7 @@ export const Route = createFileRoute("/")({
 });
 
 const WHY_ICONS = [ShieldCheck, Users, Headset, CalendarClock];
+const INDUSTRY_ICONS = [Building2, Fuel, Construction, Mountain, Warehouse, Tent];
 
 function Home() {
   const { t, pick } = useI18n();
