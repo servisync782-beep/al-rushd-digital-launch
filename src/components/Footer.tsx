@@ -17,6 +17,24 @@ export function Footer() {
             <span className="font-display text-lg font-bold text-on-dark">{t("brand.name")}</span>
           </div>
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-on-dark-muted">{t("footer.about")}</p>
+          <div className="mt-6 flex items-center gap-3">
+            {[
+              { href: COMPANY.social.linkedin, Icon: Linkedin, label: "LinkedIn" },
+              { href: COMPANY.social.instagram, Icon: Instagram, label: "Instagram" },
+              { href: COMPANY.social.facebook, Icon: Facebook, label: "Facebook" },
+            ].map(({ href, Icon, label }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="grid h-9 w-9 place-items-center rounded-md border border-white/15 text-on-dark-muted transition-colors hover:border-accent hover:text-accent"
+              >
+                <Icon className="h-4 w-4" />
+              </a>
+            ))}
+          </div>
         </div>
 
         <div>
