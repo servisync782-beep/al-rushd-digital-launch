@@ -1,10 +1,24 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ShieldCheck, Users, Headset, CalendarClock, CheckCircle2 } from "lucide-react";
+import {
+  ArrowRight,
+  ShieldCheck,
+  Users,
+  Headset,
+  CalendarClock,
+  CheckCircle2,
+  Building2,
+  Fuel,
+  Construction,
+  Mountain,
+  Warehouse,
+  Tent,
+} from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
 import yardImg from "@/assets/yard.jpg";
 import { useI18n } from "@/lib/i18n";
 import { CATEGORIES, EQUIPMENT } from "@/data/equipment";
-import { EquipmentCard, SectionHeading, CTASection } from "@/components/site";
+import { FAQ } from "@/data/faq";
+import { EquipmentCard, SectionHeading, CTASection, Testimonials, FaqAccordion } from "@/components/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
