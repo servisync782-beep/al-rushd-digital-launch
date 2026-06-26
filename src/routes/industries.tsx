@@ -14,7 +14,9 @@ export const Route = createFileRoute("/industries")({
       },
       { property: "og:title", content: "Industries We Serve — Al Rushd International" },
       { property: "og:description", content: "Equipment for construction, oil & gas, infrastructure and more." },
+      { property: "og:url", content: "/industries" },
     ],
+    links: [{ rel: "canonical", href: "/industries" }],
   }),
   component: Industries,
 });

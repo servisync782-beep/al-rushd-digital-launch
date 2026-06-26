@@ -10,7 +10,9 @@ export const Route = createFileRoute("/careers")({
       { name: "description", content: "Join Al Rushd International. We hire skilled equipment operators, technicians and professionals across Saudi Arabia." },
       { property: "og:title", content: "Careers — Al Rushd International" },
       { property: "og:description", content: "Join a team that keeps the Kingdom building." },
+      { property: "og:url", content: "/careers" },
     ],
+    links: [{ rel: "canonical", href: "/careers" }],
   }),
   component: Careers,
 });

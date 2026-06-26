@@ -16,7 +16,9 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About Al Rushd International" },
       { property: "og:description", content: "A trusted partner in heavy industrial equipment rental." },
       { property: "og:image", content: yardImg },
+      { property: "og:url", content: "/about" },
     ],
+    links: [{ rel: "canonical", href: "/about" }],
   }),
   component: About,
 });

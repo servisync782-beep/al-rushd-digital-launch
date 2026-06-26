@@ -20,7 +20,9 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Maintained fleet, certified operators and 24/7 support across Saudi Arabia.",
       },
+      { property: "og:url", content: "/" },
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Home,
 });

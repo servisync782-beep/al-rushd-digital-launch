@@ -214,6 +214,7 @@ const DICT: Dict = {
   "footer.equipment": { en: "Equipment", ar: "المعدات" },
   "footer.contact": { en: "Contact", ar: "اتصل بنا" },
   "footer.rights": { en: "All rights reserved.", ar: "جميع الحقوق محفوظة." },
+  "footer.webmail": { en: "Staff Webmail", ar: "بريد الموظفين" },
 
   // Categories
   "cat.earthmoving": { en: "Earthmoving", ar: "أعمال الحفر" },
@@ -288,4 +289,6 @@ export const COMPANY = {
   whatsapp: "966500000000",
   email: "info@alrushd-intl.com",
   mapsQuery: "Riyadh+Industrial+Area+Saudi+Arabia",
+  // Microsoft 365 / Outlook on the web staff webmail login.
+  webmail: "https://outlook.office.com/mail/",
 };
