@@ -118,6 +118,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
     ],
     scripts: [
+      // Google Analytics 4 placeholder — set Measurement ID in src/lib/analytics.ts.
+      ...(ANALYTICS.gaMeasurementId
+        ? [
+            {
+              src: `https://www.googletagmanager.com/gtag/js?id=${ANALYTICS.gaMeasurementId}`,
+              async: true,
+            },
+            {
+              children: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${ANALYTICS.gaMeasurementId}');`,
+            },
+          ]
+        : []),
       {
         type: "application/ld+json",
         children: JSON.stringify({
