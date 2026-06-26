@@ -1,2 +1,7 @@
 User-agent: *
 Allow: /
+
+# Disallow internal/auth endpoints if added later
+Disallow: /api/
+
+Sitemap: https://www.alrushd-intl.com/sitemap.xml
