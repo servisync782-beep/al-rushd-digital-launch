@@ -106,6 +106,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Al Rushd International" },
       { name: "twitter:card", content: "summary_large_image" },
+      // Google Search Console verification placeholder — set token in src/lib/analytics.ts.
+      ...(ANALYTICS.gscVerification
+        ? [{ name: "google-site-verification", content: ANALYTICS.gscVerification }]
+        : []),
     ],
     links: [
       {
