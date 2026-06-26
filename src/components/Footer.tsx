@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Linkedin, Instagram, Facebook } from "lucide-react";
 import { useI18n, COMPANY } from "@/lib/i18n";
 
 export function Footer() {
