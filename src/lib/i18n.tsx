@@ -47,6 +47,9 @@ const DICT: Dict = {
   "common.backToFleet": { en: "Back to Fleet", ar: "العودة إلى الأسطول" },
   "common.specifications": { en: "Specifications", ar: "المواصفات" },
   "common.relatedEquipment": { en: "Related Equipment", ar: "معدات ذات صلة" },
+  "common.backToServices": { en: "Back to Services", ar: "العودة إلى الخدمات" },
+  "common.whatsIncluded": { en: "What's Included", ar: "ما الذي يشمله" },
+  "common.relatedServices": { en: "Other Services", ar: "خدمات أخرى" },
 
   // Hero
   "hero.eyebrow": { en: "Trusted Across the Kingdom", ar: "موثوق في جميع أنحاء المملكة" },
