@@ -1,5 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { Truck, UserCog, Zap, PackageCheck, Wrench, ClipboardList, HardHat, Users, Construction, Layers, Fence, Car, Container } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Truck, UserCog, Zap, PackageCheck, Wrench, ClipboardList, HardHat, Users, Construction, Layers, Fence, Car, Container, ArrowRight } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { PageHeader, CTASection } from "@/components/site";
 
