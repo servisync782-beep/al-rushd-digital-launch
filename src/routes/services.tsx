@@ -28,14 +28,14 @@ const SERVICES = [
   { icon: PackageCheck, n: 4 },
   { icon: Wrench, n: 5 },
   { icon: ClipboardList, n: 6 },
-  { icon: HardHat, n: 7 },
-  { icon: Users, n: 8 },
-  { icon: Construction, n: 9 },
-  { icon: Layers, n: 10 },
-  { icon: Fence, n: 11 },
-  { icon: Car, n: 12 },
-  { icon: Container, n: 13 },
-];
+  { icon: HardHat, n: 7, slug: "industrial-safety-material-supply" },
+  { icon: Users, n: 8, slug: "manpower-supply" },
+  { icon: Construction, n: 9, slug: "asphalt-road-marking" },
+  { icon: Layers, n: 10, slug: "scaffolding-services" },
+  { icon: Fence, n: 11, slug: "fencing-works" },
+  { icon: Car, n: 12, slug: "vehicle-rentals" },
+  { icon: Container, n: 13, slug: "portable-cabin-services" },
+] as const;
 
 function Services() {
   const { t } = useI18n();
