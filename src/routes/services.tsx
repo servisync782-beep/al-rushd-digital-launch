@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Truck, UserCog, Zap, PackageCheck, Wrench, ClipboardList } from "lucide-react";
+import { Truck, UserCog, Zap, PackageCheck, Wrench, ClipboardList, HardHat, Users, Construction, Layers, Fence, Car, Container } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { PageHeader, CTASection } from "@/components/site";
 
@@ -28,6 +28,13 @@ const SERVICES = [
   { icon: PackageCheck, n: 4 },
   { icon: Wrench, n: 5 },
   { icon: ClipboardList, n: 6 },
+  { icon: HardHat, n: 7 },
+  { icon: Users, n: 8 },
+  { icon: Construction, n: 9 },
+  { icon: Layers, n: 10 },
+  { icon: Fence, n: 11 },
+  { icon: Car, n: 12 },
+  { icon: Container, n: 13 },
 ];
 
 function Services() {
