@@ -268,9 +268,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <Testimonials />
-
       {/* FAQ */}
       <section className="container-x py-20 lg:py-28">
         <SectionHeading center eyebrow={t("home.faq.eyebrow")} title={t("home.faq.title")} />
