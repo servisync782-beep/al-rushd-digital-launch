@@ -37,6 +37,20 @@ function Contact() {
       toast.error(t("contact.form.error"));
       return;
     }
+    const subject = `RFQ — ${form.equipment || form.company || form.name}`;
+    const body = [
+      `${t("contact.form.name")}: ${form.name}`,
+      `${t("contact.form.company")}: ${form.company || "—"}`,
+      `${t("contact.form.email")}: ${form.email}`,
+      `${t("contact.form.phone")}: ${form.phone}`,
+      `${t("contact.form.equipment")}: ${form.equipment || "—"}`,
+      "",
+      `${t("contact.form.message")}:`,
+      form.message || "—",
+    ].join("\n");
+    window.location.href = `mailto:${COMPANY.email}?subject=${encodeURIComponent(
+      subject,
+    )}&body=${encodeURIComponent(body)}`;
     toast.success(t("contact.form.success"));
     setForm({ name: "", company: "", email: "", phone: "", equipment: "", message: "" });
   };
