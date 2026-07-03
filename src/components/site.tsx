@@ -1,9 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Quote, Plus } from "lucide-react";
+import { ArrowRight, Plus } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { useI18n } from "@/lib/i18n";
 import type { Equipment } from "@/data/equipment";
-import { TESTIMONIALS } from "@/data/testimonials";
 import type { FaqItem } from "@/data/faq";
 
 export function PageHeader({
@@ -122,35 +121,7 @@ export function CTASection() {
   );
 }
 
-export function Testimonials() {
-  const { t, pick } = useI18n();
-  return (
-    <section className="bg-secondary py-20 lg:py-28">
-      <div className="container-x">
-        <SectionHeading center eyebrow={t("home.testi.eyebrow")} title={t("home.testi.title")} />
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {TESTIMONIALS.map((item, i) => (
-            <figure
-              key={i}
-              className="flex flex-col rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)]"
-            >
-              <Quote className="h-8 w-8 text-accent" />
-              <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-foreground/90">
-                {pick(item.quote)}
-              </blockquote>
-              <figcaption className="mt-6 border-t border-border pt-4">
-                <div className="font-display font-bold">{pick(item.author)}</div>
-                <div className="text-xs text-muted-foreground">
-                  {pick(item.role)} · {pick(item.company)}
-                </div>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+
 
 export function FaqAccordion({ items }: { items: FaqItem[] }) {
   const { pick } = useI18n();

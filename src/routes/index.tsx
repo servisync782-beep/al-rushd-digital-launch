@@ -18,7 +18,7 @@ import yardImg from "@/assets/yard.jpg";
 import { useI18n } from "@/lib/i18n";
 import { CATEGORIES, EQUIPMENT } from "@/data/equipment";
 import { FAQ } from "@/data/faq";
-import { EquipmentCard, SectionHeading, CTASection, Testimonials, FaqAccordion } from "@/components/site";
+import { EquipmentCard, SectionHeading, CTASection, FaqAccordion } from "@/components/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -267,9 +267,6 @@ function Home() {
           </div>
         </div>
       </section>
-
-      {/* Testimonials */}
-      <Testimonials />
 
       {/* FAQ */}
       <section className="container-x py-20 lg:py-28">
