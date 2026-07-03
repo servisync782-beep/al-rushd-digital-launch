@@ -1,9 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Quote, Plus } from "lucide-react";
+import { ArrowRight, Plus } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { useI18n } from "@/lib/i18n";
 import type { Equipment } from "@/data/equipment";
-import { TESTIMONIALS } from "@/data/testimonials";
 import type { FaqItem } from "@/data/faq";
 
 export function PageHeader({
