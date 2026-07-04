@@ -28,7 +28,7 @@ export interface Equipment {
   /** Card / homepage thumbnail. */
   image: string;
   /** Optional real-photo gallery shown on the detail page (falls back to `image`). */
-  gallery?: string[];
+  gallery?: (string | object)[];
   /** Optional brand shown on the detail page, e.g. "HELI (China)". */
   brand?: Bilingual;
   availability: Availability;
