@@ -121,14 +121,18 @@ function Detail() {
               className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold ${
                 item.availability === "available"
                   ? "bg-green-500/15 text-green-700 dark:text-green-400"
-                  : "bg-accent/15 text-accent"
+                  : item.availability === "coming_soon"
+                    ? "bg-accent px-3 py-1 text-accent-foreground shadow"
+                    : "bg-accent/15 text-accent"
               }`}
             >
-              <Circle
-                className={`h-2 w-2 fill-current ${
-                  item.availability === "available" ? "text-green-600" : "text-accent"
-                }`}
-              />
+              {item.availability !== "coming_soon" && (
+                <Circle
+                  className={`h-2 w-2 fill-current ${
+                    item.availability === "available" ? "text-green-600" : "text-accent"
+                  }`}
+                />
+              )}
               {t(`common.${item.availability}`)}
             </span>
           </div>

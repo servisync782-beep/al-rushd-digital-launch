@@ -56,6 +56,7 @@ export function SectionHeading({
 
 export function EquipmentCard({ item }: { item: Equipment }) {
   const { t, pick } = useI18n();
+  const isComingSoon = item.availability === "coming_soon";
   return (
     <Link
       to="/fleet/$id"
@@ -74,6 +75,11 @@ export function EquipmentCard({ item }: { item: Equipment }) {
         <span className="absolute top-3 rounded-md bg-navy/85 px-3 py-1 text-xs font-semibold text-on-dark start-3">
           {t(`cat.${item.category}`)}
         </span>
+        {isComingSoon && (
+          <span className="absolute end-3 top-3 rounded-md bg-accent px-3 py-1 text-xs font-bold text-accent-foreground shadow">
+            {t("common.comingSoon")}
+          </span>
+        )}
       </div>
       <div className="flex flex-1 flex-col p-5">
         <h3 className="font-display text-lg font-bold">{pick(item.name)}</h3>
