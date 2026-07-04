@@ -143,6 +143,9 @@ function ServiceDetail() {
               <h1 className="mt-2 max-w-3xl text-3xl font-bold text-on-dark md:text-5xl">
                 {pick(item.title)}
               </h1>
+              <span className="mt-3 inline-flex items-center rounded-md bg-accent px-3 py-1 text-sm font-bold text-accent-foreground shadow">
+                {t("common.comingSoon")}
+              </span>
             </div>
           </div>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-on-dark-muted">
