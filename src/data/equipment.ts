@@ -5,6 +5,8 @@ import forklift from "@/assets/equip-forklift.jpg";
 import telehandler from "@/assets/equip-telehandler.jpg";
 import generator from "@/assets/equip-generator.jpg";
 import dumptruck from "@/assets/equip-dumptruck.jpg";
+import heliForkliftSide from "@/assets/heli-forklift-side.jpg.asset.json";
+import heliForkliftForks from "@/assets/heli-forklift-forks.jpg.asset.json";
 
 export type Bilingual = { en: string; ar: string };
 
@@ -23,7 +25,12 @@ export interface Equipment {
   name: Bilingual;
   short: Bilingual;
   description: Bilingual;
+  /** Card / homepage thumbnail. */
   image: string;
+  /** Optional real-photo gallery shown on the detail page (falls back to `image`). */
+  gallery?: string[];
+  /** Optional brand shown on the detail page, e.g. "HELI (China)". */
+  brand?: Bilingual;
   availability: Availability;
   features: Bilingual[];
   specs: Spec[];
@@ -145,27 +152,48 @@ export const EQUIPMENT: Equipment[] = [
     ],
   },
   {
-    id: "diesel-forklift-5t",
+    id: "heli-cpcd100-w5g",
     category: "lifting",
-    name: { en: "Diesel Forklift 5T", ar: "رافعة شوكية ديزل 5 طن" },
-    short: { en: "Rugged material handling for any yard.", ar: "مناولة مواد قوية لأي ساحة." },
+    name: { en: "HELI CPCD100-W5G (Model 2026)", ar: "هيلي CPCD100-W5G (موديل 2026)" },
+    brand: { en: "HELI (China)", ar: "هيلي (الصين)" },
+    short: {
+      en: "Heavy-duty 10-tonne diesel forklift for demanding industrial handling.",
+      ar: "رافعة شوكية ديزل ثقيلة بسعة 10 أطنان لأعمال المناولة الصناعية الشاقة.",
+    },
     description: {
-      en: "A 5-tonne diesel forklift designed for heavy warehouse and yard duties. Durable mast, strong torque and operator comfort for continuous handling operations.",
-      ar: "رافعة شوكية ديزل بوزن 5 أطنان مصممة لمهام المستودعات والساحات الثقيلة. صاري متين وعزم قوي وراحة للمشغل لعمليات المناولة المستمرة.",
+      en: "The HELI CPCD100-W5G (Model 2026) is a heavy-duty 10-tonne diesel forklift engineered for the most demanding warehouse, port and industrial handling operations. Powered by a Japanese-built ISUZU 6-cylinder diesel engine paired with an automatic transmission, it delivers dependable power, precise hydraulic control and all-day operator comfort. Standard side shift, fork positioner and a Grammar suspension seat make heavy, repetitive lifting faster, safer and easier.",
+      ar: "رافعة هيلي CPCD100-W5G (موديل 2026) هي رافعة شوكية ديزل ثقيلة بسعة 10 أطنان مصممة لأصعب عمليات المناولة في المستودعات والموانئ والمنشآت الصناعية. مزودة بمحرك ايسوزو ديزل ياباني الصنع بست أسطوانات مع ناقل حركة أوتوماتيكي، فتوفر قوة موثوقة وتحكماً هيدروليكياً دقيقاً وراحة للمشغل طوال اليوم. الإزاحة الجانبية القياسية وموضّع الشوكات ومقعد جرامر بنظام التعليق تجعل الرفع الثقيل المتكرر أسرع وأكثر أماناً وسهولة.",
     },
     image: forklift,
+    gallery: [heliForkliftSide.url, heliForkliftForks.url],
     availability: "available",
+    featured: true,
     features: [
-      feat("Triplex mast for high stacking", "صاري ثلاثي للتكديس العالي"),
-      feat("Side-shift fork carriage", "حامل شوكات قابل للإزاحة الجانبية"),
-      feat("Solid pneumatic tyres", "إطارات هوائية صلبة"),
-      feat("Ergonomic operator station", "محطة مشغل مريحة"),
+      feat("ISUZU 6-cylinder Japanese diesel engine", "محرك ايسوزو ياباني ديزل بست أسطوانات"),
+      feat("Automatic transmission", "ناقل حركة أوتوماتيكي"),
+      feat("Side shift & fork positioner", "إزاحة جانبية وموضّع شوكات"),
+      feat("4-spool hydraulic control valve (4 levers)", "صمام تحكم هيدروليكي 4 مخارج (4 أذرع)"),
+      feat("Grammar suspension seat", "مقعد جرامر بنظام تعليق"),
+      feat("Hydraulic power steering", "توجيه هيدروليكي معزز"),
+      feat("Tool kit & standard safety components", "طقم أدوات ومكوّنات سلامة قياسية"),
+      feat("Operation, service & parts manuals (2 sets)", "أدلة التشغيل والصيانة وقطع الغيار (نسختان)"),
     ],
     specs: [
-      spec("Load Capacity", "سعة الحمل", "5,000 kg", "5,000 كجم"),
-      spec("Lift Height", "ارتفاع الرفع", "4.5 m", "4.5 م"),
-      spec("Fuel", "الوقود", "Diesel", "ديزل"),
-      spec("Mast Type", "نوع الصاري", "Triplex", "ثلاثي"),
+      spec("Brand", "العلامة التجارية", "HELI (China)", "هيلي (الصين)"),
+      spec("Model", "الموديل", "CPCD100-W5G (2026)", "CPCD100-W5G (2026)"),
+      spec("Basic Lifting Capacity", "سعة الرفع الأساسية", "10,000 kg @ 600 mm load center", "10,000 كجم عند مركز حمل 600 مم"),
+      spec("Engine", "المحرك", "ISUZU Diesel, 6 Cylinders (Japan)", "ايسوزو ديزل، 6 أسطوانات (اليابان)"),
+      spec("Engine Model", "موديل المحرك", "A-6BG1 QC-02", "A-6BG1 QC-02"),
+      spec("Engine Power", "قوة المحرك", "82 kW @ 2000 rpm", "82 كيلوواط عند 2000 دورة/دقيقة"),
+      spec("Mast", "الصاري", "M400 Two-Stage Mast", "صاري M400 من مرحلتين"),
+      spec("Lift Height", "ارتفاع الرفع", "4.0 m", "4.0 م"),
+      spec("Fork Length", "طول الشوكة", "1970 mm", "1970 مم"),
+      spec("Tires", "الإطارات", "Pneumatic (4 front + 2 rear)", "هوائية (4 أمامية + 2 خلفية)"),
+      spec("Side Shift", "الإزاحة الجانبية", "Side shift + fork positioner", "إزاحة جانبية + موضّع شوكات"),
+      spec("Hydraulic Control", "التحكم الهيدروليكي", "4-spool control valve (4 levers)", "صمام تحكم 4 مخارج (4 أذرع)"),
+      spec("Transmission", "ناقل الحركة", "Automatic", "أوتوماتيكي"),
+      spec("Seat", "المقعد", "Grammar suspension seat", "مقعد جرامر بنظام تعليق"),
+      spec("Steering", "التوجيه", "Hydraulic power steering", "توجيه هيدروليكي معزز"),
     ],
   },
   {

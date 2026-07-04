@@ -256,6 +256,19 @@ const DICT: Dict = {
   "common.viewAll": { en: "View All", ar: "عرض الكل" },
   "common.emailUs": { en: "Email Us", ar: "راسلنا" },
   "common.filters": { en: "Filters", ar: "التصفية" },
+  "common.brand": { en: "Brand", ar: "العلامة التجارية" },
+  "common.overview": { en: "Overview", ar: "نظرة عامة" },
+  "common.rentalEnquiry": { en: "Rental Enquiry", ar: "طلب تأجير" },
+  "common.rentalEnquirySub": {
+    en: "Send us your requirements and our team will prepare a tailored rental quote within one business day.",
+    ar: "أرسل لنا متطلباتك وسيقوم فريقنا بإعداد عرض تأجير مخصص خلال يوم عمل واحد.",
+  },
+
+  // Gallery / lightbox
+  "gallery.zoom": { en: "View larger image", ar: "عرض صورة أكبر" },
+  "gallery.close": { en: "Close", ar: "إغلاق" },
+  "gallery.prev": { en: "Previous image", ar: "الصورة السابقة" },
+  "gallery.next": { en: "Next image", ar: "الصورة التالية" },
 
   // Home — industries / trust / testimonials / faq
   "home.industries.eyebrow": { en: "Sectors We Power", ar: "القطاعات التي ندعمها" },
