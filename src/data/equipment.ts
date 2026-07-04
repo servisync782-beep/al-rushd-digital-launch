@@ -10,7 +10,7 @@ export type Bilingual = { en: string; ar: string };
 
 export type CategoryId = "earthmoving" | "lifting" | "power" | "haulage";
 
-export type Availability = "available" | "limited";
+export type Availability = "available" | "limited" | "coming_soon";
 
 export interface Spec {
   label: Bilingual;

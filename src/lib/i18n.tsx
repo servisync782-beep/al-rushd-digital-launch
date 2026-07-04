@@ -248,6 +248,7 @@ const DICT: Dict = {
   "common.availability": { en: "Availability", ar: "حالة التوفر" },
   "common.available": { en: "Available Now", ar: "متوفر الآن" },
   "common.limited": { en: "Limited Availability", ar: "توفر محدود" },
+  "common.comingSoon": { en: "⭐ Coming Soon", ar: "⭐ قريباً" },
   "common.keyFeatures": { en: "Key Features", ar: "الميزات الرئيسية" },
   "common.inquire": { en: "Send Inquiry", ar: "إرسال استفسار" },
   "common.readMore": { en: "Read Article", ar: "اقرأ المقال" },
