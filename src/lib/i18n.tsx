@@ -58,8 +58,8 @@ const DICT: Dict = {
     ar: "معدات ثقيلة، جاهزة عندما تحتاجها",
   },
   "hero.subtitle": {
-    en: "Al Rushd International supplies cranes, excavators, loaders and power solutions for the Kingdom's most demanding projects — backed by 24/7 support and a fully maintained fleet.",
-    ar: "توفر الرشد الدولية الرافعات والحفارات واللوادر وحلول الطاقة لأكثر مشاريع المملكة تطلباً — مدعومة بدعم على مدار الساعة وأسطول مُصان بالكامل.",
+    en: "From warehouses to construction sites, Al Rushd International delivers dependable forklift rental solutions backed by quality equipment and professional service.",
+    ar: "من المستودعات إلى مواقع البناء، توفر الرشد الدولية حلول تأجير رافعات شوكية موثوقة مدعومة بمعدات عالية الجودة وخدمة احترافية.",
   },
   "hero.stat1": { en: "Units in Fleet", ar: "وحدة في الأسطول" },
   "hero.stat2": { en: "Years of Service", ar: "سنوات من الخبرة" },
@@ -70,8 +70,8 @@ const DICT: Dict = {
   "home.about.eyebrow": { en: "Who We Are", ar: "من نحن" },
   "home.about.title": { en: "Powering Industry With a Dependable Fleet", ar: "ندعم الصناعة بأسطول موثوق" },
   "home.about.body": {
-    en: "For over a decade, Al Rushd International has been a leading provider of heavy industrial equipment rental in Saudi Arabia. From earthmoving to lifting and on-site power, we deliver well-maintained machinery and certified operators that keep your project moving.",
-    ar: "لأكثر من عقد، كانت الرشد الدولية مزوداً رائداً لتأجير المعدات الصناعية الثقيلة في المملكة العربية السعودية. من أعمال الحفر إلى الرفع والطاقة في الموقع، نوفر معدات مُصانة جيداً ومشغلين معتمدين لإبقاء مشروعك يتقدم.",
+    en: "At Al Rushd International, we believe reliable equipment and exceptional service are the foundation of every successful project. We specialize in forklift rental solutions designed to support businesses across Saudi Arabia with dependable machinery, flexible rental options, and responsive customer support. As a growing company, we are committed to earning our clients' trust by delivering quality, professionalism, and value in every project we serve.",
+    ar: "في الرشد الدولية، نؤمن بأن المعدات الموثوقة والخدمة الاستثنائية هي أساس كل مشروع ناجح. نحن متخصصون في حلول تأجير الرافعات الشوكية المصممة لدعم الشركات في جميع أنحاء المملكة العربية السعودية بآلات موثوقة، وخيارات تأجير مرنة، ودعم عملاء سريع الاستجابة. كشركة متنامية، نحن ملتزمون بكسب ثقة عملائنا من خلال تقديم الجودة والاحترافية والقيمة في كل مشروع نخدمه.",
   },
   "home.cats.eyebrow": { en: "Equipment Categories", ar: "فئات المعدات" },
   "home.cats.title": { en: "Built for Every Job Site", ar: "مصمم لكل موقع عمل" },
@@ -219,7 +219,7 @@ const DICT: Dict = {
   "contact.form.success": { en: "Thank you! We'll be in touch within one business day.", ar: "شكراً لك! سنتواصل معك خلال يوم عمل واحد." },
   "contact.form.error": { en: "Please complete the required fields.", ar: "يرجى إكمال الحقول المطلوبة." },
   "contact.info.title": { en: "Get in Touch", ar: "تواصل معنا" },
-  "contact.info.address": { en: "Industrial Area, Riyadh, Saudi Arabia", ar: "المنطقة الصناعية، الرياض، المملكة العربية السعودية" },
+  "contact.info.address": { en: "Jubail, Saudi Arabia", ar: "الجبيل، المملكة العربية السعودية" },
   "contact.info.hours": { en: "Sun – Thu: 7:00 AM – 6:00 PM", ar: "الأحد – الخميس: 7:00 ص – 6:00 م" },
 
   // Footer
