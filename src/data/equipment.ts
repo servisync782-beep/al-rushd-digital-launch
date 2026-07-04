@@ -5,6 +5,8 @@ import forklift from "@/assets/equip-forklift.jpg";
 import telehandler from "@/assets/equip-telehandler.jpg";
 import generator from "@/assets/equip-generator.jpg";
 import dumptruck from "@/assets/equip-dumptruck.jpg";
+import heliForkliftSide from "@/assets/heli-forklift-side.jpg.asset.json";
+import heliForkliftForks from "@/assets/heli-forklift-forks.jpg.asset.json";
 
 export type Bilingual = { en: string; ar: string };
 
@@ -23,7 +25,12 @@ export interface Equipment {
   name: Bilingual;
   short: Bilingual;
   description: Bilingual;
+  /** Card / homepage thumbnail. */
   image: string;
+  /** Optional real-photo gallery shown on the detail page (falls back to `image`). */
+  gallery?: string[];
+  /** Optional brand shown on the detail page, e.g. "HELI (China)". */
+  brand?: Bilingual;
   availability: Availability;
   features: Bilingual[];
   specs: Spec[];
