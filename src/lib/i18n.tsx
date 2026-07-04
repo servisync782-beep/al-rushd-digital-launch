@@ -59,7 +59,7 @@ const DICT: Dict = {
   },
   "hero.subtitle": {
     en: "From warehouses to construction sites, Al Rushd International delivers dependable forklift rental solutions backed by quality equipment and professional service.",
-    ar: ar: "من المستودعات إلى مواقع البناء، توفر الرشد الدولية حلول تأجير رافعات شوكية موثوقة مدعومة بمعدات عالية الجودة وخدمة احترافية."
+    ar: "من المستودعات إلى مواقع البناء، توفر الرشد الدولية حلول تأجير رافعات شوكية موثوقة مدعومة بمعدات عالية الجودة وخدمة احترافية."
   },
   "hero.stat1": { en: "Units in Fleet", ar: "وحدة في الأسطول" },
   "hero.stat2": { en: "Years of Service", ar: "سنوات من الخبرة" },
