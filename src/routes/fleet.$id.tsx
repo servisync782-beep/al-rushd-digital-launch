@@ -2,7 +2,6 @@ import { createFileRoute, Link, useRouter, notFound } from "@tanstack/react-rout
 import {
   Phone,
   MessageCircle,
-  CheckCircle2,
   Download,
   Circle,
   ChevronRight,
