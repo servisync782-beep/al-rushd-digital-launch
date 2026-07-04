@@ -5,8 +5,8 @@ import forklift from "@/assets/equip-forklift.jpg";
 import telehandler from "@/assets/equip-telehandler.jpg";
 import generator from "@/assets/equip-generator.jpg";
 import dumptruck from "@/assets/equip-dumptruck.jpg";
-import heliForkliftSide from "@/assets/heli-forklift-side.jpg.asset.json";
-import heliForkliftForks from "@/assets/heli-forklift-forks.jpg.asset.json";
+import heliForkliftSide from "@/assets/heli-forklift-side.jpg";
+import heliForkliftForks from "@/assets/heli-forklift-forks.jpg";
 
 export type Bilingual = { en: string; ar: string };
 
@@ -109,7 +109,7 @@ export const EQUIPMENT: Equipment[] = [
     short: { en: "Powerful lifting for tough access sites.", ar: "رفع قوي للمواقع صعبة الوصول." },
     description: {
       en: "A 50-tonne all-terrain mobile crane combining on-road speed with off-road capability. Telescopic boom and precise load control deliver safe lifts on the most demanding sites.",
-      ar: "رافعة متنقلة لجميع التضاريس بوزن 50 طناً تجمع بين السرعة على الطرق والقدرة على التضاريس الوعرة. ذراع تلسكوبي وتحكم دقيق بالحمل لرفع آمن في أصعب المواقع.",
+      ar: "رافعة متنقلة لجميع التضاريس بوزن 50 طناً تجمع بين السرعة على الطرق والقدرة على التضاريس الوعرة. ذراع تلسكوبي وتحكم حمولة دقيق يوفران رفع آمن في أصعب المواقع.",
     },
     image: crane,
     featured: true,
@@ -161,11 +161,11 @@ export const EQUIPMENT: Equipment[] = [
       ar: "رافعة شوكية ديزل ثقيلة بسعة 10 أطنان لأعمال المناولة الصناعية الشاقة.",
     },
     description: {
-      en: "The HELI CPCD100-W5G (Model 2026) is a heavy-duty 10-tonne diesel forklift engineered for the most demanding warehouse, port and industrial handling operations. Powered by a Japanese-built ISUZU 6-cylinder diesel engine paired with an automatic transmission, it delivers dependable power, precise hydraulic control and all-day operator comfort. Standard side shift, fork positioner and a Grammar suspension seat make heavy, repetitive lifting faster, safer and easier.",
-      ar: "رافعة هيلي CPCD100-W5G (موديل 2026) هي رافعة شوكية ديزل ثقيلة بسعة 10 أطنان مصممة لأصعب عمليات المناولة في المستودعات والموانئ والمنشآت الصناعية. مزودة بمحرك ايسوزو ديزل ياباني الصنع بست أسطوانات مع ناقل حركة أوتوماتيكي، فتوفر قوة موثوقة وتحكماً هيدروليكياً دقيقاً وراحة للمشغل طوال اليوم. الإزاحة الجانبية القياسية وموضّع الشوكات ومقعد جرامر بنظام التعليق تجعل الرفع الثقيل المتكرر أسرع وأكثر أماناً وسهولة.",
+      en: "The HELI CPCD100-W5G (Model 2026) is a heavy-duty 10-tonne diesel forklift engineered for the most demanding warehouse, port and industrial handling operations. Powered by a Japanese-built ISUZU engine with automatic transmission, it combines strength, reliability and operator comfort.",
+      ar: "رافعة هيلي CPCD100-W5G (موديل 2026) هي رافعة شوكية ديزل ثقيلة بسعة 10 أطنان مصممة لأصعب عمليات المناولة في المستودعات والموانئ والمنشآت الصناعية. مدعومة بمحرك ايسوزو ياباني مع ناقل حركة أوتوماتيكي، وهي تجمع بين القوة والموثوقية والراحة للمشغل.",
     },
     image: forklift,
-    gallery: [heliForkliftSide.url, heliForkliftForks.url],
+    gallery: [heliForkliftSide, heliForkliftForks],
     availability: "available",
     featured: true,
     features: [
