@@ -10,7 +10,7 @@ export type Bilingual = { en: string; ar: string };
 
 export type CategoryId = "earthmoving" | "lifting" | "power" | "haulage";
 
-export type Availability = "available" | "limited";
+export type Availability = "available" | "limited" | "coming_soon";
 
 export interface Spec {
   label: Bilingual;
@@ -56,7 +56,7 @@ export const EQUIPMENT: Equipment[] = [
     },
     image: excavator,
     featured: true,
-    availability: "available",
+    availability: "coming_soon",
     features: [
       feat("Climate-controlled operator cab", "كابينة مشغل مكيفة"),
       feat("Quick-coupler attachment system", "نظام تركيب سريع للملحقات"),
@@ -81,7 +81,7 @@ export const EQUIPMENT: Equipment[] = [
     },
     image: loader,
     featured: true,
-    availability: "available",
+    availability: "coming_soon",
     features: [
       feat("High breakout force bucket", "قادوس بقوة اقتلاع عالية"),
       feat("Tight turning radius", "نصف قطر دوران ضيق"),
@@ -106,7 +106,7 @@ export const EQUIPMENT: Equipment[] = [
     },
     image: crane,
     featured: true,
-    availability: "limited",
+    availability: "coming_soon",
     features: [
       feat("Telescopic boom with load chart", "ذراع تلسكوبي مع مخطط حمولة"),
       feat("All-wheel steering for tight sites", "توجيه لجميع العجلات للمواقع الضيقة"),
@@ -130,7 +130,7 @@ export const EQUIPMENT: Equipment[] = [
       ar: "رافعة تلسكوبية توفر ارتفاع رفع يصل إلى 17 متراً. مثالية لوضع المواد والتحميل على ارتفاع والعمل في الأماكن الضيقة مع ملحقات قابلة للتبديل.",
     },
     image: telehandler,
-    availability: "available",
+    availability: "coming_soon",
     features: [
       feat("Interchangeable forks and bucket", "شوكات وقادوس قابلة للتبديل"),
       feat("Four-wheel drive and steering", "دفع وتوجيه رباعي"),
@@ -179,7 +179,7 @@ export const EQUIPMENT: Equipment[] = [
     },
     image: generator,
     featured: true,
-    availability: "available",
+    availability: "coming_soon",
     features: [
       feat("Sound-attenuated weatherproof enclosure", "غلاف عازل للصوت ومقاوم للعوامل الجوية"),
       feat("Extended-run fuel tank", "خزان وقود لتشغيل ممتد"),
@@ -203,7 +203,7 @@ export const EQUIPMENT: Equipment[] = [
       ar: "شاحنة قلابة مفصلية ثقيلة مصممة لنقل التراب والركام والمخلفات عبر التضاريس غير المستوية. حمولة عالية ودفع لجميع العجلات يبقي المواد متحركة في أي ظروف.",
     },
     image: dumptruck,
-    availability: "limited",
+    availability: "coming_soon",
     features: [
       feat("All-wheel drive (6x6)", "دفع لجميع العجلات (6×6)"),
       feat("Articulated chassis for tight turns", "هيكل مفصلي للمنعطفات الضيقة"),

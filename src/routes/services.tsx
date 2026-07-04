@@ -51,9 +51,12 @@ function Services() {
                 <span className="grid h-14 w-14 place-items-center rounded-xl bg-accent/15 text-accent transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
                   <Icon className="h-7 w-7" />
                 </span>
-                <h3 className="mt-6 font-display text-xl font-bold">{t(`service.${n}.title`)}</h3>
-                <p className="mt-3 leading-relaxed text-muted-foreground">{t(`service.${n}.body`)}</p>
-                {slug && (
+            <h3 className="mt-6 font-display text-xl font-bold">{t(`service.${n}.title`)}</h3>
+            <span className="mt-2 inline-flex items-center rounded-md bg-accent px-2.5 py-1 text-xs font-bold text-accent-foreground shadow">
+              {t("common.comingSoon")}
+            </span>
+            <p className="mt-3 leading-relaxed text-muted-foreground">{t(`service.${n}.body`)}</p>
+            {slug && (
                   <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
                     {t("common.learnMore")}
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 rtl:rotate-180" />
