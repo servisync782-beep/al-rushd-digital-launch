@@ -59,7 +59,7 @@ const DICT: Dict = {
   },
   "hero.subtitle": {
     en: "From warehouses to construction sites, Al Rushd International delivers dependable forklift rental solutions backed by quality equipment and professional service.",
-    ar: "من المستودعات إلى مواقع البناء، توفر الرشد الدولية حلول تأجير رافعات شوكية موثوقة مدعومة بمعدات عالية الجودة وخدمة احترافية.",
+    ar: "من المستودعات إلى مواقع البناء، توفر الرشد الدولية حلول تأجير رافعات شوكية موثوقة مدعومة بمعدات عالية[...]
   },
   "hero.stat1": { en: "Units in Fleet", ar: "وحدة في الأسطول" },
   "hero.stat2": { en: "Years of Service", ar: "سنوات من الخبرة" },
@@ -70,8 +70,8 @@ const DICT: Dict = {
   "home.about.eyebrow": { en: "Who We Are", ar: "من نحن" },
   "home.about.title": { en: "Powering Industry With a Dependable Fleet", ar: "ندعم الصناعة بأسطول موثوق" },
   "home.about.body": {
-    en: "At Al Rushd International, we believe reliable equipment and exceptional service are the foundation of every successful project. We specialize in forklift rental solutions designed to support businesses across Saudi Arabia with dependable machinery, flexible rental options, and responsive customer support. As a growing company, we are committed to earning our clients' trust by delivering quality, professionalism, and value in every project we serve.",
-    ar: "في الرشد الدولية، نؤمن بأن المعدات الموثوقة والخدمة الاستثنائية هي أساس كل مشروع ناجح. نحن متخصصون في حلول تأجير الرافعات الشوكية المصممة لدعم الشركات في جميع أنحاء المملكة العربية السعودية بآلات موثوقة، وخيارات تأجير مرنة، ودعم عملاء سريع الاستجابة. كشركة متنامية، نحن ملتزمون بكسب ثقة عملائنا من خلال تقديم الجودة والاحترافية والقيمة في كل مشروع نخدمه.",
+    en: "At Al Rushd International, we believe reliable equipment and exceptional service are the foundation of every successful project. We specialize in forklift rental solutions designed to sup[...]
+    ar: "في الرشد الدولية، نؤمن بأن المعدات الموثوقة والخدمة الاستثنائية هي أساس كل مشروع ناجح. نحن متخصصون في �[...]
   },
   "home.cats.eyebrow": { en: "Equipment Categories", ar: "فئات المعدات" },
   "home.cats.title": { en: "Built for Every Job Site", ar: "مصمم لكل موقع عمل" },
@@ -87,13 +87,13 @@ const DICT: Dict = {
 
   // Why points
   "why.1.title": { en: "Maintained Fleet", ar: "أسطول مُصان" },
-  "why.1.body": { en: "Every unit is serviced and inspected before dispatch for maximum uptime.", ar: "تتم صيانة وفحص كل وحدة قبل الإرسال لضمان أقصى وقت تشغيل." },
+  "why.1.body": { en: "Every unit is serviced and inspected before dispatch for maximum uptime.", ar: "تتم صيانة وفحص كل وحدة قبل الإرسال لضمان أقصى وقت ت�[...]
   "why.2.title": { en: "Certified Operators", ar: "مشغلون معتمدون" },
   "why.2.body": { en: "Skilled, safety-certified operators available with every machine.", ar: "مشغلون مهرة ومعتمدون في السلامة متاحون مع كل آلة." },
   "why.3.title": { en: "24/7 Support", ar: "دعم على مدار الساعة" },
-  "why.3.body": { en: "Round-the-clock assistance and rapid on-site response across the Kingdom.", ar: "مساعدة على مدار الساعة واستجابة سريعة في الموقع بجميع أنحاء المملكة." },
+  "why.3.body": { en: "Round-the-clock assistance and rapid on-site response across the Kingdom.", ar: "مساعدة على مدار الساعة واستجابة سريعة في الموقع بج[...]
   "why.4.title": { en: "Flexible Terms", ar: "شروط مرنة" },
-  "why.4.body": { en: "Daily, weekly, monthly and long-term rental plans to fit your timeline.", ar: "خطط تأجير يومية وأسبوعية وشهرية وطويلة الأمد تناسب جدولك." },
+  "why.4.body": { en: "Daily, weekly, monthly and long-term rental plans to fit your timeline.", ar: "خطط تأجير يومية وأسبوعية وشهرية وطويلة الأمد تناسب [...]
 
   // Services page
   "services.title": { en: "Our Services", ar: "خدماتنا" },
@@ -102,31 +102,31 @@ const DICT: Dict = {
     ar: "حلول متكاملة لتأجير المعدات الثقيلة لمشاريع البناء والبنية التحتية والصناعية.",
   },
   "service.1.title": { en: "Equipment Rental", ar: "تأجير المعدات" },
-  "service.1.body": { en: "Short and long-term rental of cranes, excavators, loaders, forklifts and more.", ar: "تأجير قصير وطويل الأمد للرافعات والحفارات واللوادر والروافع الشوكية والمزيد." },
+  "service.1.body": { en: "Short and long-term rental of cranes, excavators, loaders, forklifts and more.", ar: "تأجير قصير وطويل الأمد للرافعات والحفارات وا[...]
   "service.2.title": { en: "Operated Rentals", ar: "تأجير مع مشغل" },
-  "service.2.body": { en: "Machinery supplied with experienced, certified operators ready to work.", ar: "معدات مزودة بمشغلين معتمدين وذوي خبرة جاهزين للعمل." },
+  "service.2.body": { en: "Machinery supplied with experienced, certified operators ready to work.", ar: "معدات مزودة بمشغلين معتمدين وذوي خبرة جاهزين للع[...]
   "service.3.title": { en: "On-Site Power", ar: "الطاقة في الموقع" },
-  "service.3.body": { en: "Diesel generators and power solutions to keep your site energised.", ar: "مولدات ديزل وحلول طاقة لإبقاء موقعك مزوداً بالطاقة." },
+  "service.3.body": { en: "Diesel generators and power solutions to keep your site energised.", ar: "مولدات ديزل وحلول طاقة لإبقاء موقعك مزوداً بالطاقة.[...]
   "service.4.title": { en: "Logistics & Transport", ar: "الخدمات اللوجستية والنقل" },
   "service.4.body": { en: "Safe delivery and recovery of equipment to and from your job site.", ar: "توصيل واستعادة آمنة للمعدات من وإلى موقع عملك." },
   "service.5.title": { en: "Maintenance & Service", ar: "الصيانة والخدمة" },
   "service.5.body": { en: "Preventive maintenance and on-call repair to minimise downtime.", ar: "صيانة وقائية وإصلاح عند الطلب لتقليل وقت التعطل." },
   "service.6.title": { en: "Project Consultation", ar: "استشارات المشاريع" },
-  "service.6.body": { en: "Expert guidance to match the right equipment to your project needs.", ar: "إرشاد متخصص لمطابقة المعدات المناسبة مع احتياجات مشروعك." },
+  "service.6.body": { en: "Expert guidance to match the right equipment to your project needs.", ar: "إرشاد متخصص لمطابقة المعدات المناسبة مع احتياجات م[...]
   "service.7.title": { en: "Industrial & Safety Material Supply", ar: "توريد المواد الصناعية ومواد السلامة" },
-  "service.7.body": { en: "Reliable supply of industrial consumables, PPE and safety equipment for compliant, well-stocked job sites.", ar: "توريد موثوق للمواد الصناعية ومعدات الوقاية الشخصية وأدوات السلامة لمواقع عمل متوافقة ومجهزة بالكامل." },
+  "service.7.body": { en: "Reliable supply of industrial consumables, PPE and safety equipment for compliant, well-stocked job sites.", ar: "توريد موثوق للمواد الصناعية و[...]
   "service.8.title": { en: "Skilled & Semi-Skilled Manpower Supply", ar: "توريد العمالة الماهرة وشبه الماهرة" },
-  "service.8.body": { en: "Vetted skilled and semi-skilled labour deployed quickly to keep your projects on schedule.", ar: "عمالة ماهرة وشبه ماهرة مؤهلة يتم توفيرها بسرعة للحفاظ على مشاريعك في موعدها." },
+  "service.8.body": { en: "Vetted skilled and semi-skilled labour deployed quickly to keep your projects on schedule.", ar: "عمالة ماهرة وشبه ماهرة مؤهلة يتم توفير[...]
   "service.9.title": { en: "Asphalt Works & Road Marking", ar: "أعمال الأسفلت وعلامات الطرق" },
-  "service.9.body": { en: "Asphalt laying, paving and precise road marking for durable, safe roadways and yards.", ar: "رصف الأسفلت والتبليط وعلامات الطرق الدقيقة لطرق وساحات آمنة وطويلة الأمد." },
+  "service.9.body": { en: "Asphalt laying, paving and precise road marking for durable, safe roadways and yards.", ar: "رصف الأسفلت والتبليط وعلامات الطرق الدقي[...]
   "service.10.title": { en: "Scaffolding Services", ar: "خدمات السقالات" },
-  "service.10.body": { en: "Supply, erection and dismantling of certified scaffolding for safe access at any height.", ar: "توريد وتركيب وفك السقالات المعتمدة لوصول آمن على أي ارتفاع." },
+  "service.10.body": { en: "Supply, erection and dismantling of certified scaffolding for safe access at any height.", ar: "توريد وتركيب وفك السقالات المعتمدة لوص[...]
   "service.11.title": { en: "Fencing Works", ar: "أعمال التسييج" },
-  "service.11.body": { en: "Site fencing and hoarding solutions to secure and define your project boundaries.", ar: "حلول التسييج والتسوير لتأمين وتحديد حدود مشروعك." },
+  "service.11.body": { en: "Site fencing and hoarding solutions to secure and define your project boundaries.", ar: "حلول التسييج والتسوير لتأمين وتحديد حدود م[...]
   "service.12.title": { en: "Vehicle Rentals", ar: "تأجير المركبات" },
-  "service.12.body": { en: "Light and heavy vehicle rentals to move your teams and materials wherever needed.", ar: "تأجير المركبات الخفيفة والثقيلة لنقل فرقك وموادك أينما لزم الأمر." },
+  "service.12.body": { en: "Light and heavy vehicle rentals to move your teams and materials wherever needed.", ar: "تأجير المركبات الخفيفة والثقيلة لنقل فرقك [...]
   "service.13.title": { en: "Portable Cabin Services", ar: "خدمات الكبائن المتنقلة" },
-  "service.13.body": { en: "Portable cabins, offices and accommodation units delivered and installed on-site.", ar: "كبائن ومكاتب ووحدات سكن متنقلة يتم توصيلها وتركيبها في الموقع." },
+  "service.13.body": { en: "Portable cabins, offices and accommodation units delivered and installed on-site.", ar: "كبائن ومكاتب ووحدات سكن متنقلة يتم توصيلها[...]
 
   // About page
   "about.title": { en: "About Al Rushd International", ar: "عن الرشد الدولية" },
@@ -136,8 +136,8 @@ const DICT: Dict = {
   },
   "about.story.title": { en: "Our Story", ar: "قصتنا" },
   "about.story.body": {
-    en: "Al Rushd International was founded to give contractors and industrial operators dependable access to heavy machinery without the burden of ownership. What began with a handful of machines has grown into one of the region's most reliable rental fleets, serving construction, oil & gas, infrastructure and logistics clients across the Kingdom.",
-    ar: "تأسست الرشد الدولية لتمنح المقاولين والمشغلين الصناعيين وصولاً موثوقاً إلى المعدات الثقيلة دون عبء الملكية. ما بدأ بعدد قليل من الآلات نما ليصبح أحد أكثر أساطيل التأجير موثوقية في المنطقة، يخدم عملاء البناء والنفط والغاز والبنية التحتية والخدمات اللوجستية في جميع أنحاء المملكة.",
+    en: "Al Rushd International was founded to give contractors and industrial operators dependable access to heavy machinery without the burden of ownership. What began with a handful of machine[...]
+    ar: "تأسست الرشد الدولية لتمنح المقاولين والمشغلين الصناعيين وصولاً موثوقاً إلى المعدات الثقيلة دون عبء ا[...]
   },
   "about.mission.title": { en: "Mission", ar: "رسالتنا" },
   "about.mission.body": {
@@ -166,9 +166,9 @@ const DICT: Dict = {
     ar: "يدعم أسطولنا مجموعة واسعة من القطاعات في جميع أنحاء المملكة.",
   },
   "industry.1.title": { en: "Construction", ar: "البناء والتشييد" },
-  "industry.1.body": { en: "Earthmoving, lifting and material handling for building projects.", ar: "أعمال الحفر والرفع ومناولة المواد لمشاريع البناء." },
+  "industry.1.body": { en: "Earthmoving, lifting and material handling for building projects.", ar: "أعمال الحفر والرفع ومناولة المواد لمشاريع البناء." }[...]
   "industry.2.title": { en: "Oil & Gas", ar: "النفط والغاز" },
-  "industry.2.body": { en: "Heavy-duty equipment for refineries, pipelines and facilities.", ar: "معدات شديدة التحمل للمصافي وخطوط الأنابيب والمنشآت." },
+  "industry.2.body": { en: "Heavy-duty equipment for refineries, pipelines and facilities.", ar: "معدات شديدة التحمل للمصافي وخطوط الأنابيب والمنشآت." [...]
   "industry.3.title": { en: "Infrastructure", ar: "البنية التحتية" },
   "industry.3.body": { en: "Roads, bridges and utility projects supported end to end.", ar: "دعم متكامل لمشاريع الطرق والجسور والمرافق." },
   "industry.4.title": { en: "Mining & Quarrying", ar: "التعدين والمحاجر" },
@@ -225,7 +225,7 @@ const DICT: Dict = {
   // Footer
   "footer.about": {
     en: "Reliable heavy industrial equipment rental serving construction, oil & gas, and infrastructure projects across Saudi Arabia.",
-    ar: "تأجير موثوق للمعدات الصناعية الثقيلة يخدم مشاريع البناء والنفط والغاز والبنية التحتية في جميع أنحاء المملكة العربية السعودية.",
+    ar: "تأجير موثوق للمعدات الصناعية الثقيلة يخدم مشاريع البناء والنفط والغاز والبنية التحتية في جميع أنحاء �[...]
   },
   "footer.quickLinks": { en: "Quick Links", ar: "روابط سريعة" },
   "footer.equipment": { en: "Equipment", ar: "المعدات" },
@@ -277,7 +277,7 @@ const DICT: Dict = {
   "home.clients.title": { en: "A Partner Industry Leaders Rely On", ar: "شريك يعتمد عليه رواد الصناعة" },
   "home.clients.body": {
     en: "From national infrastructure programmes to private industrial sites, contractors choose Al Rushd International for fleet reliability, certified operators and service that never sleeps.",
-    ar: "من برامج البنية التحتية الوطنية إلى المواقع الصناعية الخاصة، يختار المقاولون الرشد الدولية لموثوقية الأسطول والمشغلين المعتمدين والخدمة التي لا تتوقف.",
+    ar: "من برامج البنية التحتية الوطنية إلى المواقع الصناعية الخاصة، يختار المقاولون الرشد الدولية لموثوقية [...]
   },
   "home.testi.eyebrow": { en: "Client Voices", ar: "آراء العملاء" },
   "home.testi.title": { en: "What Our Clients Say", ar: "ماذا يقول عملاؤنا" },
@@ -386,9 +386,9 @@ export function useI18n() {
 
 // Company contact constants used across the site.
 export const COMPANY = {
-  phone: "+966500000000",
-  phoneDisplay: "+966 50 000 0000",
-  whatsapp: "966500000000",
+  phone: "+966538231025",
+  phoneDisplay: "+966 53 823 1025",
+  whatsapp: "966538231025",
   email: "info@alrushd-intl.com",
   mapsQuery: "Riyadh+Industrial+Area+Saudi+Arabia",
   // Microsoft 365 / Outlook on the web staff webmail login.
