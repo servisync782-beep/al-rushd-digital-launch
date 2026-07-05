@@ -94,7 +94,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Al Rushd International rents cranes, excavators, loaders, forklifts and generators across Saudi Arabia, with certified operators and 24/7 support.",
+          "Al Rushd International provides dependable forklift rental and heavy equipment solutions across Saudi Arabia, backed by quality machines and responsive service.",
       },
       { name: "author", content: "Al Rushd International" },
       { property: "og:title", content: "Al Rushd International — Heavy Equipment Rental in Saudi Arabia" },
