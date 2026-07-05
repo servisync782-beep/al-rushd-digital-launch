@@ -215,21 +215,22 @@ function Home() {
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {INDUSTRY_ICONS.map((Icon, i) => (
-            <Link
-              key={i}
-              to="/industries"
-              className="group flex gap-5 rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:border-accent"
-            >
-              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-navy text-on-dark transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
-                <Icon className="h-6 w-6" />
-              </span>
-              <div>
-                <h3 className="font-display text-lg font-bold">{t(`industry.${i + 1}.title`)}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {t(`industry.${i + 1}.body`)}
-                </p>
-              </div>
-            </Link>
+            <Reveal key={i} delay={i * 70}>
+              <Link
+                to="/industries"
+                className="group flex h-full gap-5 rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:border-accent"
+              >
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-navy text-on-dark transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
+                  <Icon className="h-6 w-6" />
+                </span>
+                <div>
+                  <h3 className="font-display text-lg font-bold">{t(`industry.${i + 1}.title`)}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {t(`industry.${i + 1}.body`)}
+                  </p>
+                </div>
+              </Link>
+            </Reveal>
           ))}
         </div>
       </section>
