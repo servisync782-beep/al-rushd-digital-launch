@@ -98,20 +98,8 @@ function Home() {
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Stat strip */}
-        <div className="relative border-t border-white/10 bg-navy/60 backdrop-blur">
-          <div className="container-x grid grid-cols-2 gap-px md:grid-cols-4">
-            {stats.map((s) => (
-              <div key={s.key} className="py-7 text-center">
-                <div className="font-display text-3xl font-bold text-accent md:text-4xl">{s.value}</div>
-                <div className="mt-1 text-xs font-medium uppercase tracking-wider text-on-dark-muted">
-                  {t(s.key)}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* About teaser */}
