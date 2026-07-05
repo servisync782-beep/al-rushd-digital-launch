@@ -249,9 +249,10 @@ function Home() {
             <p className="mt-4 max-w-xl leading-relaxed text-on-dark-muted">{t("home.clients.body")}</p>
           </div>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-            {trust.map(({ key, Icon }) => (
-              <div
+            {trust.map(({ key, Icon }, i) => (
+              <Reveal
                 key={key}
+                delay={i * 90}
                 className="rounded-2xl border border-white/10 bg-navy-light/40 p-5 transition-transform duration-300 hover:-translate-y-1"
               >
                 <span className="grid h-11 w-11 place-items-center rounded-lg bg-accent/15 text-accent">
@@ -263,7 +264,7 @@ function Home() {
                 <p className="mt-1 text-sm leading-relaxed text-on-dark-muted">
                   {t(`home.clients.${key}.body`)}
                 </p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
