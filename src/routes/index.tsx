@@ -243,13 +243,21 @@ function Home() {
             <h2 className="mt-3 text-3xl font-bold text-on-dark md:text-4xl">{t("home.clients.title")}</h2>
             <p className="mt-4 max-w-xl leading-relaxed text-on-dark-muted">{t("home.clients.body")}</p>
           </div>
-          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 sm:grid-cols-4 lg:grid-cols-2">
-            {stats.map((s) => (
-              <div key={s.key} className="bg-navy-light/40 px-8 py-6 text-center">
-                <div className="font-display text-3xl font-bold text-accent">{s.value}</div>
-                <div className="mt-1 text-xs font-medium uppercase tracking-wider text-on-dark-muted">
-                  {t(s.key)}
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {trust.map(({ key, Icon }) => (
+              <div
+                key={key}
+                className="rounded-2xl border border-white/10 bg-navy-light/40 p-5 transition-transform duration-300 hover:-translate-y-1"
+              >
+                <span className="grid h-11 w-11 place-items-center rounded-lg bg-accent/15 text-accent">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <div className="mt-4 font-display text-base font-bold text-on-dark">
+                  {t(`home.clients.${key}.title`)}
                 </div>
+                <p className="mt-1 text-sm leading-relaxed text-on-dark-muted">
+                  {t(`home.clients.${key}.body`)}
+                </p>
               </div>
             ))}
           </div>
