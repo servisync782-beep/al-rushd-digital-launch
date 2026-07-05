@@ -27,12 +27,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Rent cranes, excavators, loaders, forklifts and generators from Al Rushd International. Maintained fleet, certified operators and 24/7 support across the Kingdom.",
+          "Al Rushd International offers dependable forklift rental in Saudi Arabia — well-maintained equipment, flexible terms and responsive, personal service.",
       },
-      { property: "og:title", content: "Al Rushd International — Heavy Equipment Rental" },
+      { property: "og:title", content: "Al Rushd International — Forklift & Equipment Rental" },
       {
         property: "og:description",
-        content: "Maintained fleet, certified operators and 24/7 support across Saudi Arabia.",
+        content: "Well-maintained equipment, flexible rental terms and responsive service across Saudi Arabia.",
       },
       { property: "og:url", content: "/" },
     ],
