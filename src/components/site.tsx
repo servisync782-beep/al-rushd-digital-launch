@@ -1,9 +1,58 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Plus } from "lucide-react";
-import { useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { useI18n } from "@/lib/i18n";
 import type { Equipment } from "@/data/equipment";
 import type { FaqItem } from "@/data/faq";
+
+export function Reveal({
+  children,
+  className,
+  delay = 0,
+  as: Tag = "div",
+}: {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+  as?: "div" | "section";
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [shown, setShown] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (typeof IntersectionObserver === "undefined") {
+      setShown(true);
+      return;
+    }
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShown(true);
+            obs.disconnect();
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  return (
+    <Tag
+      ref={ref as never}
+      style={{ transitionDelay: shown ? `${delay}ms` : "0ms" }}
+      className={`transition-all duration-700 ease-out ${
+        shown ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+      } ${className ?? ""}`}
+    >
+      {children}
+    </Tag>
+  );
+}
 
 export function PageHeader({
   eyebrow,

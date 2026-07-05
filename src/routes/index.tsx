@@ -18,7 +18,7 @@ import yardImg from "@/assets/yard.jpg";
 import { useI18n } from "@/lib/i18n";
 import { CATEGORIES, EQUIPMENT } from "@/data/equipment";
 import { FAQ } from "@/data/faq";
-import { EquipmentCard, SectionHeading, CTASection, FaqAccordion } from "@/components/site";
+import { EquipmentCard, SectionHeading, CTASection, FaqAccordion, Reveal } from "@/components/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,12 +27,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Rent cranes, excavators, loaders, forklifts and generators from Al Rushd International. Maintained fleet, certified operators and 24/7 support across the Kingdom.",
+          "Al Rushd International offers dependable forklift rental in Saudi Arabia — well-maintained equipment, flexible terms and responsive, personal service.",
       },
-      { property: "og:title", content: "Al Rushd International — Heavy Equipment Rental" },
+      { property: "og:title", content: "Al Rushd International — Forklift & Equipment Rental" },
       {
         property: "og:description",
-        content: "Maintained fleet, certified operators and 24/7 support across Saudi Arabia.",
+        content: "Well-maintained equipment, flexible rental terms and responsive service across Saudi Arabia.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -44,15 +44,17 @@ export const Route = createFileRoute("/")({
 const WHY_ICONS = [ShieldCheck, Users, Headset, CalendarClock];
 const INDUSTRY_ICONS = [Building2, Fuel, Construction, Mountain, Warehouse, Tent];
 
+const TRUST_ICONS = [ShieldCheck, Headset, CalendarClock, Building2];
+
 function Home() {
   const { t, pick } = useI18n();
   const featured = EQUIPMENT.filter((e) => e.featured);
 
-  const stats = [
-    { value: "350+", key: "hero.stat1" },
-    { value: "12+", key: "hero.stat2" },
-    { value: "24/7", key: "hero.stat3" },
-    { value: "500+", key: "hero.stat4" },
+  const trust = [
+    { key: "point1", Icon: TRUST_ICONS[0] },
+    { key: "point2", Icon: TRUST_ICONS[1] },
+    { key: "point3", Icon: TRUST_ICONS[2] },
+    { key: "point4", Icon: TRUST_ICONS[3] },
   ];
 
   return (
@@ -96,20 +98,6 @@ function Home() {
             </div>
           </div>
         </div>
-
-        {/* Stat strip */}
-        <div className="relative border-t border-white/10 bg-navy/60 backdrop-blur">
-          <div className="container-x grid grid-cols-2 gap-px md:grid-cols-4">
-            {stats.map((s) => (
-              <div key={s.key} className="py-7 text-center">
-                <div className="font-display text-3xl font-bold text-accent md:text-4xl">{s.value}</div>
-                <div className="mt-1 text-xs font-medium uppercase tracking-wider text-on-dark-muted">
-                  {t(s.key)}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* About teaser */}
@@ -150,28 +138,29 @@ function Home() {
         <div className="container-x">
           <SectionHeading center eyebrow={t("home.cats.eyebrow")} title={t("home.cats.title")} />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {CATEGORIES.map((c) => (
-              <Link
-                key={c.id}
-                to="/fleet"
-                className="group relative aspect-[4/5] overflow-hidden rounded-xl"
-              >
-                <img
-                  src={c.image}
-                  alt={t(c.key)}
-                  loading="lazy"
-                  width={800}
-                  height={600}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-5">
-                  <h3 className="font-display text-xl font-bold text-on-dark">{t(c.key)}</h3>
-                  <span className="mt-1 inline-flex items-center gap-1.5 text-sm font-semibold text-accent opacity-0 transition-opacity group-hover:opacity-100">
-                    {t("common.exploreFleet")} <ArrowRight className="h-4 w-4 rtl:rotate-180" />
-                  </span>
-                </div>
-              </Link>
+            {CATEGORIES.map((c, i) => (
+              <Reveal key={c.id} delay={i * 90}>
+                <Link
+                  to="/fleet"
+                  className="group relative block aspect-[4/5] overflow-hidden rounded-xl"
+                >
+                  <img
+                    src={c.image}
+                    alt={t(c.key)}
+                    loading="lazy"
+                    width={800}
+                    height={600}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-5">
+                    <h3 className="font-display text-xl font-bold text-on-dark">{t(c.key)}</h3>
+                    <span className="mt-1 inline-flex items-center gap-1.5 text-sm font-semibold text-accent opacity-0 transition-opacity group-hover:opacity-100">
+                      {t("common.exploreFleet")} <ArrowRight className="h-4 w-4 rtl:rotate-180" />
+                    </span>
+                  </div>
+                </Link>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -186,8 +175,10 @@ function Home() {
           </Link>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {featured.map((item) => (
-            <EquipmentCard key={item.id} item={item} />
+          {featured.map((item, i) => (
+            <Reveal key={item.id} delay={i * 90}>
+              <EquipmentCard item={item} />
+            </Reveal>
           ))}
         </div>
       </section>
@@ -198,15 +189,17 @@ function Home() {
           <SectionHeading center eyebrow={t("home.why.eyebrow")} title={t("home.why.title")} />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {WHY_ICONS.map((Icon, i) => (
-              <div key={i} className="rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)]">
-                <span className="grid h-12 w-12 place-items-center rounded-lg bg-accent/15 text-accent">
-                  <Icon className="h-6 w-6" />
-                </span>
-                <h3 className="mt-5 font-display text-lg font-bold">{t(`why.${i + 1}.title`)}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {t(`why.${i + 1}.body`)}
-                </p>
-              </div>
+              <Reveal key={i} delay={i * 90}>
+                <div className="h-full rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:border-accent">
+                  <span className="grid h-12 w-12 place-items-center rounded-lg bg-accent/15 text-accent">
+                    <Icon className="h-6 w-6" />
+                  </span>
+                  <h3 className="mt-5 font-display text-lg font-bold">{t(`why.${i + 1}.title`)}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {t(`why.${i + 1}.body`)}
+                  </p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -222,21 +215,22 @@ function Home() {
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {INDUSTRY_ICONS.map((Icon, i) => (
-            <Link
-              key={i}
-              to="/industries"
-              className="group flex gap-5 rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:border-accent"
-            >
-              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-navy text-on-dark transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
-                <Icon className="h-6 w-6" />
-              </span>
-              <div>
-                <h3 className="font-display text-lg font-bold">{t(`industry.${i + 1}.title`)}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {t(`industry.${i + 1}.body`)}
-                </p>
-              </div>
-            </Link>
+            <Reveal key={i} delay={i * 70}>
+              <Link
+                to="/industries"
+                className="group flex h-full gap-5 rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:border-accent"
+              >
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-navy text-on-dark transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
+                  <Icon className="h-6 w-6" />
+                </span>
+                <div>
+                  <h3 className="font-display text-lg font-bold">{t(`industry.${i + 1}.title`)}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {t(`industry.${i + 1}.body`)}
+                  </p>
+                </div>
+              </Link>
+            </Reveal>
           ))}
         </div>
       </section>
@@ -255,14 +249,23 @@ function Home() {
             <h2 className="mt-3 text-3xl font-bold text-on-dark md:text-4xl">{t("home.clients.title")}</h2>
             <p className="mt-4 max-w-xl leading-relaxed text-on-dark-muted">{t("home.clients.body")}</p>
           </div>
-          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 sm:grid-cols-4 lg:grid-cols-2">
-            {stats.map((s) => (
-              <div key={s.key} className="bg-navy-light/40 px-8 py-6 text-center">
-                <div className="font-display text-3xl font-bold text-accent">{s.value}</div>
-                <div className="mt-1 text-xs font-medium uppercase tracking-wider text-on-dark-muted">
-                  {t(s.key)}
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {trust.map(({ key, Icon }, i) => (
+              <Reveal
+                key={key}
+                delay={i * 90}
+                className="rounded-2xl border border-white/10 bg-navy-light/40 p-5 transition-transform duration-300 hover:-translate-y-1"
+              >
+                <span className="grid h-11 w-11 place-items-center rounded-lg bg-accent/15 text-accent">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <div className="mt-4 font-display text-base font-bold text-on-dark">
+                  {t(`home.clients.${key}.title`)}
                 </div>
-              </div>
+                <p className="mt-1 text-sm leading-relaxed text-on-dark-muted">
+                  {t(`home.clients.${key}.body`)}
+                </p>
+              </Reveal>
             ))}
           </div>
         </div>
