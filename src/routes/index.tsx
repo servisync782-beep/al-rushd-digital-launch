@@ -175,8 +175,10 @@ function Home() {
           </Link>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {featured.map((item) => (
-            <EquipmentCard key={item.id} item={item} />
+          {featured.map((item, i) => (
+            <Reveal key={item.id} delay={i * 90}>
+              <EquipmentCard item={item} />
+            </Reveal>
           ))}
         </div>
       </section>
