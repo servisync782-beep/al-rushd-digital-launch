@@ -5,8 +5,8 @@ import forklift from "@/assets/equip-forklift.jpg";
 import telehandler from "@/assets/equip-telehandler.jpg";
 import generator from "@/assets/equip-generator.jpg";
 import dumptruck from "@/assets/equip-dumptruck.jpg";
-import heliForkliftSide from "@/assets/heli-forklift-side.jpg";
-import heliForkliftForks from "@/assets/heli-forklift-forks.jpg";
+import heliForkliftSide from "@/assets/heli-forklift-side.jpg.asset.json";
+import heliForkliftForks from "@/assets/heli-forklift-forks.jpg.asset.json";
 
 export type Bilingual = { en: string; ar: string };
 
@@ -28,7 +28,7 @@ export interface Equipment {
   /** Card / homepage thumbnail. */
   image: string;
   /** Optional real-photo gallery shown on the detail page (falls back to `image`). */
-  gallery?: (string | object)[];
+  gallery?: string[];
   /** Optional brand shown on the detail page, e.g. "HELI (China)". */
   brand?: Bilingual;
   availability: Availability;
@@ -165,7 +165,7 @@ export const EQUIPMENT: Equipment[] = [
       ar: "رافعة هيلي CPCD100-W5G (موديل 2026) هي رافعة شوكية ديزل ثقيلة بسعة 10 أطنان مصممة لأصعب عمليات المناولة في المستودعات والموانئ والمنشآت الصناعية. مدعومة بمحرك ايسوزو ياباني مع ناقل حركة أوتوماتيكي، وهي تجمع بين القوة والموثوقية والراحة للمشغل.",
     },
     image: forklift,
-    gallery: [heliForkliftSide, heliForkliftForks],
+    gallery: [heliForkliftSide.url, heliForkliftForks.url],
     availability: "available",
     featured: true,
     features: [
