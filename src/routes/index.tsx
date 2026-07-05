@@ -44,15 +44,17 @@ export const Route = createFileRoute("/")({
 const WHY_ICONS = [ShieldCheck, Users, Headset, CalendarClock];
 const INDUSTRY_ICONS = [Building2, Fuel, Construction, Mountain, Warehouse, Tent];
 
+const TRUST_ICONS = [ShieldCheck, Headset, CalendarClock, Building2];
+
 function Home() {
   const { t, pick } = useI18n();
   const featured = EQUIPMENT.filter((e) => e.featured);
 
-  const stats = [
-    { value: "350+", key: "hero.stat1" },
-    { value: "12+", key: "hero.stat2" },
-    { value: "24/7", key: "hero.stat3" },
-    { value: "500+", key: "hero.stat4" },
+  const trust = [
+    { key: "point1", Icon: TRUST_ICONS[0] },
+    { key: "point2", Icon: TRUST_ICONS[1] },
+    { key: "point3", Icon: TRUST_ICONS[2] },
+    { key: "point4", Icon: TRUST_ICONS[3] },
   ];
 
   return (
