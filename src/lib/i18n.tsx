@@ -90,8 +90,8 @@ const DICT: Dict = {
   "why.1.body": { en: "Every unit is serviced and inspected before dispatch for maximum uptime.", ar: "تتم صيانة وفحص كل وحدة قبل الإرسال لضمان أقصى وقت تشغيل." },
   "why.2.title": { en: "Certified Operators", ar: "مشغلون معتمدون" },
   "why.2.body": { en: "Skilled, safety-certified operators available with every machine.", ar: "مشغلون مهرة ومعتمدون في السلامة متاحون مع كل آلة." },
-  "why.3.title": { en: "24/7 Support", ar: "دعم على مدار الساعة" },
-  "why.3.body": { en: "Round-the-clock assistance and rapid on-site response across the Kingdom.", ar: "مساعدة على مدار الساعة واستجابة سريعة في الموقع بجميع أنحاء المملكة." },
+  "why.3.title": { en: "Responsive Support", ar: "دعم سريع الاستجابة" },
+  "why.3.body": { en: "Quick answers and prompt on-site assistance whenever you need it.", ar: "إجابات سريعة ومساعدة فورية في الموقع عند الحاجة." },
   "why.4.title": { en: "Flexible Terms", ar: "شروط مرنة" },
   "why.4.body": { en: "Daily, weekly, monthly and long-term rental plans to fit your timeline.", ar: "خطط تأجير يومية وأسبوعية وشهرية وطويلة الأمد تناسب جدولك الزمني." },
 
