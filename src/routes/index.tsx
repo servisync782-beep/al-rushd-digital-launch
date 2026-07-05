@@ -100,8 +100,6 @@ function Home() {
         </div>
       </section>
 
-      </section>
-
       {/* About teaser */}
       <section className="container-x grid items-center gap-12 py-20 lg:grid-cols-2 lg:py-28">
         <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-card)]">
