@@ -189,15 +189,17 @@ function Home() {
           <SectionHeading center eyebrow={t("home.why.eyebrow")} title={t("home.why.title")} />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {WHY_ICONS.map((Icon, i) => (
-              <div key={i} className="rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)]">
-                <span className="grid h-12 w-12 place-items-center rounded-lg bg-accent/15 text-accent">
-                  <Icon className="h-6 w-6" />
-                </span>
-                <h3 className="mt-5 font-display text-lg font-bold">{t(`why.${i + 1}.title`)}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {t(`why.${i + 1}.body`)}
-                </p>
-              </div>
+              <Reveal key={i} delay={i * 90}>
+                <div className="h-full rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:border-accent">
+                  <span className="grid h-12 w-12 place-items-center rounded-lg bg-accent/15 text-accent">
+                    <Icon className="h-6 w-6" />
+                  </span>
+                  <h3 className="mt-5 font-display text-lg font-bold">{t(`why.${i + 1}.title`)}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {t(`why.${i + 1}.body`)}
+                  </p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
