@@ -138,28 +138,29 @@ function Home() {
         <div className="container-x">
           <SectionHeading center eyebrow={t("home.cats.eyebrow")} title={t("home.cats.title")} />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {CATEGORIES.map((c) => (
-              <Link
-                key={c.id}
-                to="/fleet"
-                className="group relative aspect-[4/5] overflow-hidden rounded-xl"
-              >
-                <img
-                  src={c.image}
-                  alt={t(c.key)}
-                  loading="lazy"
-                  width={800}
-                  height={600}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-5">
-                  <h3 className="font-display text-xl font-bold text-on-dark">{t(c.key)}</h3>
-                  <span className="mt-1 inline-flex items-center gap-1.5 text-sm font-semibold text-accent opacity-0 transition-opacity group-hover:opacity-100">
-                    {t("common.exploreFleet")} <ArrowRight className="h-4 w-4 rtl:rotate-180" />
-                  </span>
-                </div>
-              </Link>
+            {CATEGORIES.map((c, i) => (
+              <Reveal key={c.id} delay={i * 90}>
+                <Link
+                  to="/fleet"
+                  className="group relative block aspect-[4/5] overflow-hidden rounded-xl"
+                >
+                  <img
+                    src={c.image}
+                    alt={t(c.key)}
+                    loading="lazy"
+                    width={800}
+                    height={600}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-5">
+                    <h3 className="font-display text-xl font-bold text-on-dark">{t(c.key)}</h3>
+                    <span className="mt-1 inline-flex items-center gap-1.5 text-sm font-semibold text-accent opacity-0 transition-opacity group-hover:opacity-100">
+                      {t("common.exploreFleet")} <ArrowRight className="h-4 w-4 rtl:rotate-180" />
+                    </span>
+                  </div>
+                </Link>
+              </Reveal>
             ))}
           </div>
         </div>
