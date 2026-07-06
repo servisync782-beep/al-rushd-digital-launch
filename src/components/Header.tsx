@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X, Phone, Globe } from "lucide-react";
 import { useI18n, COMPANY } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
+import logoImg from "@/assets/al-rushd-logo.jpg.asset.json";
 
 const NAV = [
   { to: "/", key: "nav.home" },
@@ -20,11 +21,15 @@ const NAV = [
 function Logo() {
   const { t } = useI18n();
   return (
-    <Link to="/" className="flex items-center gap-3 shrink-0">
-      <span className="grid h-11 w-11 place-items-center rounded-md bg-accent text-accent-foreground font-display text-xl font-bold">
-        AR
-      </span>
-      <span className="flex flex-col leading-none">
+    <Link to="/" className="flex items-center gap-3 shrink-0" aria-label={t("brand.name")}>
+      <img
+        src={logoImg.url}
+        alt={`${t("brand.name")} logo`}
+        width={517}
+        height={481}
+        className="h-12 w-auto object-contain md:h-14"
+      />
+      <span className="hidden flex-col leading-none sm:flex">
         <span className="font-display text-base font-bold tracking-tight text-foreground">
           {t("brand.name")}
         </span>
