@@ -396,7 +396,8 @@ export function useI18n() {
 export const COMPANY = {
   phone: "+966 53 823 1025",
   phoneDisplay: "+966 53 823 1025",
-  whatsapp: "+966 53 823 1025",
+  // Digits only, international format — required by wa.me links (no "+" or spaces).
+  whatsapp: "966538231025",
   email: "info@alrushd-intl.com",
   mapsQuery: "Riyadh+Industrial+Area+Saudi+Arabia",
   // Microsoft 365 / Outlook on the web staff webmail login.
