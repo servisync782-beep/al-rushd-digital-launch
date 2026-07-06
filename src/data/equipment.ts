@@ -165,7 +165,7 @@ export const EQUIPMENT: Equipment[] = [
       ar: "رافعة هيلي CPCD100-W5G (موديل 2026) هي رافعة شوكية ديزل ثقيلة بسعة 10 أطنان مصممة لأصعب عمليات المناولة في المستودعات والموانئ والمنشآت الصناعية. مدعومة بمحرك ايسوزو ياباني مع ناقل حركة أوتوماتيكي، وهي تجمع بين القوة والموثوقية والراحة للمشغل.",
     },
     image: forklift,
-    gallery: [heliForkliftSide.url, heliForkliftForks.url],
+    gallery: [heliForkliftSide, heliForkliftForks],
     availability: "available",
     featured: true,
     features: [
