@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X, Phone, Globe } from "lucide-react";
 import { useI18n, COMPANY } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
+import logoImg from "@/assets/al-rushd-logo.jpg.asset.json";
 
 const NAV = [
   { to: "/", key: "nav.home" },
