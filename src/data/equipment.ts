@@ -5,8 +5,8 @@ import forklift from "@/assets/equip-forklift.jpg";
 import telehandler from "@/assets/equip-telehandler.jpg";
 import generator from "@/assets/equip-generator.jpg";
 import dumptruck from "@/assets/equip-dumptruck.jpg";
-import heliForkliftSide from "@/assets/heli-forklift-side.jpg.asset.json";
-import heliForkliftForks from "@/assets/heli-forklift-forks.jpg.asset.json";
+import heliForkliftSide from "@/assets/heli-forklift-side.jpg";
+import heliForkliftForks from "@/assets/heli-forklift-forks.jpg";
 
 export type Bilingual = { en: string; ar: string };
 
