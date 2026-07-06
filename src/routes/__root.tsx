@@ -8,6 +8,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import "@fontsource/space-grotesk/400.css";
 import "@fontsource/space-grotesk/500.css";
@@ -192,6 +193,7 @@ function RootComponent() {
           <FloatingActions />
         </div>
         <Toaster position="top-center" richColors />
+        <SpeedInsights />
       </LanguageProvider>
     </QueryClientProvider>
   );
