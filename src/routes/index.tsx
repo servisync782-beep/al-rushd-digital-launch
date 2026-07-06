@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
 import yardImg from "@/assets/yard.jpg";
+import logoImg from "@/assets/al-rushd-logo.jpg.asset.json";
 import { useI18n } from "@/lib/i18n";
 import { CATEGORIES, EQUIPMENT } from "@/data/equipment";
 import { FAQ } from "@/data/faq";
