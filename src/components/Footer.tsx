@@ -12,8 +12,14 @@ export function Footer() {
       <div className="container-x grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
-            <span className="grid h-11 w-11 place-items-center rounded-md bg-accent text-accent-foreground font-display text-xl font-bold">
-              AR
+            <span className="grid place-items-center rounded-lg bg-on-dark p-1.5 shadow-sm">
+              <img
+                src={logoImg.url}
+                alt={`${t("brand.name")} logo`}
+                width={517}
+                height={481}
+                className="h-11 w-auto object-contain"
+              />
             </span>
             <span className="font-display text-lg font-bold text-on-dark">{t("brand.name")}</span>
           </div>
