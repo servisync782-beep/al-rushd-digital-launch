@@ -73,7 +73,7 @@ function Home() {
           className="absolute inset-0"
           style={{ background: "linear-gradient(90deg, rgba(15,27,45,0.96) 25%, rgba(15,27,45,0.55) 100%)" }}
         />
-        <div className="container-x relative py-24 md:py-36">
+        <div className="container-x relative grid items-center gap-12 py-20 md:py-28 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 lg:py-36">
           <div className="max-w-2xl animate-fade-up">
             <span className="eyebrow">{t("hero.eyebrow")}</span>
             <h1 className="mt-5 text-4xl font-bold leading-[1.05] text-on-dark sm:text-5xl md:text-6xl">
@@ -96,6 +96,22 @@ function Home() {
               >
                 {t("nav.getQuote")}
               </Link>
+            </div>
+          </div>
+
+          {/* Brand emblem */}
+          <div className="animate-fade-up flex justify-center lg:justify-end" style={{ animationDelay: "120ms" }}>
+            <div className="relative">
+              <div className="pointer-events-none absolute -inset-6 rounded-[2rem] bg-accent/10 blur-2xl" />
+              <div className="relative rounded-[2rem] border border-white/15 bg-on-dark/95 p-8 shadow-[0_30px_70px_-30px_rgba(0,0,0,0.7)] backdrop-blur-sm sm:p-10">
+                <img
+                  src={logoImg.url}
+                  alt={`${t("brand.name")} logo`}
+                  width={517}
+                  height={481}
+                  className="h-auto w-52 object-contain sm:w-64 lg:w-72"
+                />
+              </div>
             </div>
           </div>
         </div>
