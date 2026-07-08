@@ -147,6 +147,23 @@ export function HeroCarousel() {
         </div>
       </div>
 
+      {/* Brand emblem */}
+      <div className="pointer-events-none absolute inset-y-0 z-10 hidden items-center end-8 lg:flex xl:end-16">
+        <div className="relative animate-fade-up">
+          <div className="pointer-events-none absolute -inset-6 rounded-[2rem] bg-accent/10 blur-2xl" />
+          <div className="relative rounded-[2rem] border border-white/15 bg-on-dark/95 p-8 shadow-[0_30px_70px_-30px_rgba(0,0,0,0.7)] backdrop-blur-sm">
+            <img
+              src={logoImg.url}
+              alt={`${t("brand.name")} logo`}
+              width={517}
+              height={481}
+              className="h-auto w-56 object-contain xl:w-64"
+            />
+          </div>
+        </div>
+      </div>
+
+
       {/* Arrows */}
       <button
         type="button"
