@@ -14,6 +14,7 @@ import {
   Tent,
 } from "lucide-react";
 import yardImg from "@/assets/yard.jpg";
+import heroSlide1 from "@/assets/hero-slide-1.jpg";
 import { useI18n } from "@/lib/i18n";
 import { CATEGORIES, EQUIPMENT } from "@/data/equipment";
 import { FAQ } from "@/data/faq";
@@ -36,7 +37,10 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:url", content: "/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [
+      { rel: "canonical", href: "/" },
+      { rel: "preload", as: "image", href: heroSlide1, fetchPriority: "high" },
+    ],
   }),
   component: Home,
 });
