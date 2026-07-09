@@ -1,44 +1,44 @@
-# Fix images, remove fake stats & professionalize the site
+# Polish the homepage: logo lockup + carousel performance
 
-## 1. Fix the broken forklift images (the real bug)
-`src/data/equipment.ts` imports the two HELI photos as raw JPEGs:
-```ts
-import heliForkliftSide from "@/assets/heli-forklift-side.jpg";
-import heliForkliftForks from "@/assets/heli-forklift-forks.jpg";
-```
-But those files only exist as CDN pointers (`heli-forklift-side.jpg.asset.json`, `heli-forklift-forks.jpg.asset.json`). That mismatch is what throws `Cannot find module '@/assets/heli-forklift-side.jpg'` and 500s the page when the forklift is opened.
+Preserves the existing design, palette, sections, and branding. Only details, usability, and performance change.
 
-**Fix:** import the `.asset.json` pointers and use their `.url`, so the gallery stays a clean `string[]`:
-```ts
-import heliForkliftSide from "@/assets/heli-forklift-side.jpg.asset.json";
-import heliForkliftForks from "@/assets/heli-forklift-forks.jpg.asset.json";
-// ...
-gallery: [heliForkliftSide.url, heliForkliftForks.url],
-```
-This keeps the current forklift thumbnail (`equip-forklift.jpg`) unchanged as the card image, and makes the two real photos load in the product gallery + lightbox. The `gallery` type will be simplified back to `string[]`.
+## 1. Header logo lockup (emblem mark + name)
 
-## 2. Remove the fabricated stats
-Delete the invented numbers ("350+ Units in Fleet", "12+ Years of Service", "24/7 Support", "500+ Projects Delivered") from `src/routes/index.tsx`. They appear in **two** places:
-- the hero stat strip
-- the "client trust" band lower down
+The current logo image (`logo.png` / `al-rushd-logo.jpg.asset.json`) already has "AL RUSHD INTERNATIONAL" baked in, and the header *also* prints the name as text — so it shows twice. Per your choice, switch to a clean **emblem + text** lockup:
 
-Both stat grids will be removed. The client-trust band will be rebuilt into an honest, credibility-focused strip (e.g. genuine value props: quality equipment, professional service, responsive support, Jubail-based) — text-driven, no fabricated metrics.
+- Crop the **hexagon AR crane emblem** out of the existing logo artwork (same image, same colors — no redesign/recolor). Save it as a new committed asset (e.g. `ar-emblem.png`) and upload via the asset pipeline so the reference is a real committed pointer (no broken paths).
+- In `src/components/Header.tsx`, use the cropped emblem next to the text:
+  - **Emblem**: fixed height (`h-10 md:h-11`), `w-auto`, crisp (`object-contain`).
+  - **Name**: "Al Rushd International" in the existing display font, **bold**, `text-base md:text-lg`, tight tracking, vertically centered with the emblem via `flex items-center gap-2.5`. Tagline line kept beneath on `sm+` as today.
+  - Sized to sit naturally in the 20-height header — not oversized.
+- On mobile the name text already collapses sensibly; verify alignment at 402px.
 
-## 3. Avoid over-claiming the fleet size (professionally)
-Since only the HELI forklift is real right now (everything else is "Coming Soon"), soften copy so nothing implies a large ready fleet:
-- Adjust hero/about wording to emphasize *quality, hand-picked, well-maintained* equipment and *personal service* rather than fleet volume.
-- Keep the HELI forklift badged as available; other items stay "⭐ Coming Soon" as already set.
+## 2. Hero carousel performance
 
-No pricing or quantity claims that can't be backed up.
+`src/components/HeroCarousel.tsx` re-renders all slides on every autoplay tick (each slide's headline/subtitle animate off the shared `selected` state) and uses `backdrop-blur` — both cause jank, especially on mobile.
 
-## 4. Professional polish + motion
-Tasteful, performance-friendly enhancements (no heavy libraries):
-- Subtle entrance/reveal animations on section headings, cards and the featured grid using the existing `animate-fade-in` / `hover-scale` utilities (staggered where it reads well).
-- Smooth hover elevation on equipment cards and CTA buttons (consistent with existing accent shadow style).
-- Refined spacing/hierarchy on the homepage sections left after the stat removal so nothing looks empty.
+Optimizations (behavior/look preserved):
+- Drive slide-content transitions with **CSS only** keyed off Embla's active class rather than re-rendering every slide on each `select` — reduces React re-renders to just the dot indicators.
+- Add `will-change: transform` to the Embla track and keep transforms GPU-composited; drop the heavy `backdrop-blur` on overlays (replace with a solid/gradient tint at the same visual weight).
+- Tune Embla options for smoothness (`dragFree: false`, `duration` set for a snappy glide, `align: "start"`, `containScroll: "trimSnaps"`).
+- **Image loading**: keep slide 1 `loading="eager"` + add a `<link rel="preload" as="image" fetchpriority="high">` for slide 1 in the route `head()`; lazy-load the rest. Add `decoding="async"` and correct `sizes`. Compress the three slide JPEGs (currently 250–303 KB at 1920px) to lighter versions for faster first paint.
+- Ensure swipe works cleanly on touch and mouse; autoplay pauses on interaction and resumes.
+
+## 3. Carousel content
+
+- The three slides are already **unique** high-quality images (construction crane skyline, CAT equipment yard, forklift + telehandler). Keep them unique — no reuse.
+- **First slide = company intro / main hero**:
+  - Headline: welcoming intro to Al Rushd International.
+  - Subtext: short professional line — reliable heavy equipment rental for construction and industrial projects.
+  - CTAs: "Request a Quote" + "Explore Our Equipment" (existing buttons, relabeled to match).
+  - Slides 2 and 3 keep their service-focused captions.
+  - All copy stays bilingual (EN/AR) to match the existing i18n setup.
+
+## 4. Final quality check
+
+Before finishing, verify: emblem restored and crisp; "Al Rushd International" aligned beside it; carousel smooth on desktop + mobile with working swipe; each slide unique; slide 1 introduces the company; no broken asset references; no new console errors; responsive at desktop / tablet / mobile.
 
 ## Technical notes
-- Files touched: `src/data/equipment.ts` (asset imports + `gallery` type), `src/routes/index.tsx` (remove both stat grids, rework trust band, add motion), `src/routes/fleet.$id.tsx` (gallery already maps fine once it's `string[]`), possibly `src/lib/i18n.tsx` (retire unused `hero.stat*` keys / add any new trust-band copy).
-- Verify with a build/typecheck and by opening the forklift detail page to confirm both photos render in the gallery and lightbox.
-
-Want me to also apply the same subtle motion treatment to the Fleet and Services pages, or keep the polish focused on the homepage for now?
+- Files touched: `src/components/Header.tsx`, `src/components/HeroCarousel.tsx`, `src/routes/index.tsx` (preload link), `src/lib/i18n.tsx` (slide-1 copy/labels if needed), plus a new committed emblem asset. The old full-name logo asset stays available (still used by the hero emblem overlay if kept) — nothing deleted that other pages reference.
+- No palette, layout, or section changes; no logo redesign/recolor/replacement — only a crop of the existing artwork.
+- Verify with a build/typecheck and a Playwright screenshot at desktop + 402px mobile.
