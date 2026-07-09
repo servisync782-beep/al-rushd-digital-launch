@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X, Phone, Globe } from "lucide-react";
 import { useI18n, COMPANY } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
-import logoImg from "@/assets/al-rushd-logo.jpg.asset.json";
+import emblemImg from "@/assets/ar-emblem.png.asset.json";
 
 const NAV = [
   { to: "/", key: "nav.home" },
@@ -21,19 +21,19 @@ const NAV = [
 function Logo() {
   const { t } = useI18n();
   return (
-    <Link to="/" className="flex items-center gap-3 shrink-0" aria-label={t("brand.name")}>
+    <Link to="/" className="flex items-center gap-2.5 shrink-0" aria-label={t("brand.name")}>
       <img
-        src={logoImg.url}
+        src={emblemImg.url}
         alt={`${t("brand.name")} logo`}
-        width={517}
-        height={481}
-        className="h-12 w-auto object-contain md:h-14"
+        width={188}
+        height={188}
+        className="h-10 w-auto object-contain md:h-11"
       />
-      <span className="hidden flex-col leading-none sm:flex">
-        <span className="font-display text-base font-bold tracking-tight text-foreground">
+      <span className="flex flex-col leading-none">
+        <span className="font-display text-base font-bold tracking-tight text-foreground md:text-lg">
           {t("brand.name")}
         </span>
-        <span className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-muted-foreground">
+        <span className="hidden text-[0.65rem] font-medium uppercase tracking-[0.2em] text-muted-foreground sm:block">
           {t("brand.tagline")}
         </span>
       </span>
