@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X, Phone, Globe } from "lucide-react";
 import { useI18n, COMPANY } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
-import logoImg from "@/assets/al-rushd-logo.jpg.asset.json";
+import emblemImg from "@/assets/ar-emblem.png.asset.json";
 
 const NAV = [
   { to: "/", key: "nav.home" },
@@ -23,7 +23,7 @@ function Logo() {
   return (
     <Link to="/" className="flex items-center gap-2.5 shrink-0" aria-label={t("brand.name")}>
       <img
-        src={logoImg.url}
+        src={emblemImg.url}
         alt={`${t("brand.name")} logo`}
         width={188}
         height={188}
