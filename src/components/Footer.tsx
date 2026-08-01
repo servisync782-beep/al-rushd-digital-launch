@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { MapPin, Phone, Mail, Clock, Linkedin, Instagram, Facebook } from "lucide-react";
 import { useI18n, COMPANY } from "@/lib/i18n";
-import logoImg from "@/assets/al-rushd-logo.jpg.asset.json";
+
 
 export function Footer() {
   const { t } = useI18n();
