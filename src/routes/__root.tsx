@@ -122,6 +122,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
     ],
     scripts: [
       // Google Analytics 4 placeholder — set Measurement ID in src/lib/analytics.ts.
