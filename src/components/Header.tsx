@@ -3,8 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X, Phone, Globe } from "lucide-react";
 import { useI18n, COMPANY } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
-import emblemImg from "@/assets/ar-mark.png.asset.json";
-import fallbackImg from "@/assets/al-rushd-logo.jpg.asset.json";
+import emblemImg from "@/assets/ar-mark.png";
 
 const NAV = [
   { to: "/", key: "nav.home" },
