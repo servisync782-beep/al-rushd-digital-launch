@@ -24,7 +24,11 @@ function Logo() {
   // Prefer the small emblem (ar-mark). Keep the full logo as a fallback.
   const primary = emblemImg?.url;
   const fallback = fallbackImg?.url;
-  const [src, setSrc] = useState<string | undefined>(primary ?? fallback);
+  const inlineSvgFallback = `data:image/svg+xml;utf8,${encodeURIComponent(
+    `<svg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'><rect width='120' height='40' fill='%23f5a623'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='12' fill='white'>Al Rushd</text></svg>`
+  )}`;
+
+  const [src, setSrc] = useState<string | undefined>(primary ?? fallback ?? inlineSvgFallback);
 
   return (
     <Link to="/" className="flex items-center gap-2.5 shrink-0 md:gap-2.5" aria-label={t("brand.name")}>
@@ -34,8 +38,19 @@ function Logo() {
         width={588}
         height={344}
         className="h-10 w-auto object-contain md:h-11"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
         onError={() => {
-          if (fallback && src !== fallback) setSrc(fallback);
+          // fallback once to the full logo, then to the inline SVG fallback to avoid a broken img
+          if (fallback && src !== fallback) {
+            setSrc(fallback);
+            return;
+          }
+          if (src !== inlineSvgFallback) {
+            setSrc(inlineSvgFallback);
+            return;
+          }
         }}
       />
       <span className="flex flex-col justify-center gap-1 leading-none">
