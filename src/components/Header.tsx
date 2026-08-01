@@ -20,23 +20,17 @@ const NAV = [
 
 function Logo() {
   const { t } = useI18n();
-  // primary emblem asset; fall back to the full logo asset if the emblem fails to load
-  const primary = emblemImg?.url;
-  const fallback = fallbackImg?.url;
-  const [src, setSrc] = useState<string | undefined>(primary ?? fallback);
 
   return (
     <Link to="/" className="flex items-center gap-3.5 shrink-0 md:gap-4" aria-label={t("brand.name")}>
       <img
-        src={src}
+        src={emblemImg}
         alt={`${t("brand.name")} logo`}
         width={588}
         height={344}
         className="h-9 w-auto object-contain md:h-11"
-        onError={() => {
-          if (fallback && src !== fallback) setSrc(fallback);
-        }}
       />
+
       <span className="flex flex-col justify-center gap-1 leading-none">
         <span className="font-display text-base font-bold tracking-tight text-foreground md:text-lg">
           {t("brand.name")}
