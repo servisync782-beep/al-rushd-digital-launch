@@ -146,7 +146,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           description:
             "Heavy industrial equipment rental for construction, oil & gas and infrastructure projects across Saudi Arabia.",
           areaServed: "SA",
-          email: "info@alrushd-intl.com",
+          email: "info@alrushdksa.com",
           telephone: "+966500000000",
           address: {
             "@type": "PostalAddress",

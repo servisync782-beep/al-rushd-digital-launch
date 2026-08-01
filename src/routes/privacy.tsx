@@ -76,13 +76,13 @@ const SECTIONS: Section[] = [
     en: {
       h: "Your Rights",
       p: [
-        "You may request access to, correction of, or deletion of the personal information we hold about you. To exercise these rights, contact us at info@alrushd-intl.com.",
+        "You may request access to, correction of, or deletion of the personal information we hold about you. To exercise these rights, contact us at info@alrushdksa.com.",
       ],
     },
     ar: {
       h: "حقوقك",
       p: [
-        "يمكنك طلب الوصول إلى معلوماتك الشخصية التي نحتفظ بها أو تصحيحها أو حذفها. لممارسة هذه الحقوق، تواصل معنا على info@alrushd-intl.com.",
+        "يمكنك طلب الوصول إلى معلوماتك الشخصية التي نحتفظ بها أو تصحيحها أو حذفها. لممارسة هذه الحقوق، تواصل معنا على info@alrushdksa.com.",
       ],
     },
   },
