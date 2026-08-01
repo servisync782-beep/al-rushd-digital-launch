@@ -70,7 +70,7 @@ const SLIDES: Slide[] = [
 ];
 
 export function HeroCarousel() {
-  const { t, pick, dir } = useI18n();
+  const { pick, dir } = useI18n();
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, direction: dir, align: "start", containScroll: "trimSnaps", duration: 24 },
     [Autoplay({ delay: 5500, stopOnInteraction: false, stopOnMouseEnter: true })],
