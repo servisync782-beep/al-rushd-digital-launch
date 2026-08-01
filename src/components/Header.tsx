@@ -5,6 +5,7 @@ import { useI18n, COMPANY } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import emblemImg from "@/assets/ar-mark.png.asset.json";
 import fallbackImg from "@/assets/al-rushd-logo.jpg.asset.json";
+import ArEmblem from "@/components/ArEmblem";
 
 const NAV = [
   { to: "/", key: "nav.home" },
@@ -21,38 +22,12 @@ const NAV = [
 
 function Logo() {
   const { t } = useI18n();
-  // Prefer the small emblem (ar-mark). Keep the full logo as a fallback.
-  const primary = emblemImg?.url;
-  const fallback = fallbackImg?.url;
-  const inlineSvgFallback = `data:image/svg+xml;utf8,${encodeURIComponent(
-    `<svg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'><rect width='120' height='40' fill='%23f5a623'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='12' fill='white'>Al Rushd</text></svg>`
-  )}`;
 
-  const [src, setSrc] = useState<string | undefined>(primary ?? fallback ?? inlineSvgFallback);
-
+  // We render the committed SVG emblem component immediately (no network required).
+  // We keep the existing emblem/fallback assets around but prefer the inline emblem for reliability.
   return (
     <Link to="/" className="flex items-center gap-2.5 shrink-0 md:gap-2.5" aria-label={t("brand.name")}>
-      <img
-        src={src}
-        alt={`${t("brand.name")} logo`}
-        width={588}
-        height={344}
-        className="h-10 w-auto object-contain md:h-11"
-        loading="eager"
-        decoding="async"
-        fetchpriority="high"
-        onError={() => {
-          // fallback once to the full logo, then to the inline SVG fallback to avoid a broken img
-          if (fallback && src !== fallback) {
-            setSrc(fallback);
-            return;
-          }
-          if (src !== inlineSvgFallback) {
-            setSrc(inlineSvgFallback);
-            return;
-          }
-        }}
-      />
+      <ArEmblem className="h-10 w-auto md:h-11" />
       <span className="flex flex-col justify-center gap-1 leading-none">
         <span className="font-display text-base font-bold tracking-tight text-foreground md:text-lg">
           {t("brand.name")}
