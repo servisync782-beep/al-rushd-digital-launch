@@ -21,15 +21,15 @@ const NAV = [
 function Logo() {
   const { t } = useI18n();
   return (
-    <Link to="/" className="flex items-center gap-2.5 shrink-0" aria-label={t("brand.name")}>
+    <Link to="/" className="flex items-center gap-3.5 shrink-0 md:gap-4" aria-label={t("brand.name")}>
       <img
         src={emblemImg.url}
         alt={`${t("brand.name")} logo`}
-        width={188}
-        height={188}
-        className="h-10 w-auto object-contain md:h-11"
+        width={588}
+        height={344}
+        className="h-9 w-auto object-contain md:h-11"
       />
-      <span className="flex flex-col leading-none">
+      <span className="flex flex-col justify-center gap-1 leading-none">
         <span className="font-display text-base font-bold tracking-tight text-foreground md:text-lg">
           {t("brand.name")}
         </span>
