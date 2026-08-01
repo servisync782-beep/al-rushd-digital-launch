@@ -3,9 +3,8 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X, Phone, Globe } from "lucide-react";
 import { useI18n, COMPANY } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
+import logoImg from "@/assets/al-rushd-logo.jpg.asset.json";
 import emblemImg from "@/assets/ar-mark.png.asset.json";
-import fallbackImg from "@/assets/al-rushd-logo.jpg.asset.json";
-import ArEmblem from "@/components/ArEmblem";
 
 const NAV = [
   { to: "/", key: "nav.home" },
@@ -22,12 +21,25 @@ const NAV = [
 
 function Logo() {
   const { t } = useI18n();
+  // Prefer the original full logo asset so the header shows the full lockup.
+  const primary = logoImg?.url;
+  const fallback = emblemImg?.url;
+  const [src, setSrc] = useState<string | undefined>(primary ?? fallback);
 
-  // We render the committed SVG emblem component immediately (no network required).
-  // We keep the existing emblem/fallback assets around but prefer the inline emblem for reliability.
   return (
-    <Link to="/" className="flex items-center gap-2.5 shrink-0 md:gap-2.5" aria-label={t("brand.name")}>
-      <ArEmblem className="h-10 w-auto md:h-11" />
+    <Link to="/" className="flex items-center gap-3.5 shrink-0 md:gap-4" aria-label={t("brand.name")}>
+      <img
+        src={src}
+        alt={`${t("brand.name")} logo`}
+        width={588}
+        height={344}
+        className="h-9 w-auto object-contain md:h-11"
+        loading="eager"
+        decoding="async"
+        onError={() => {
+          if (fallback && src !== fallback) setSrc(fallback);
+        }}
+      />
       <span className="flex flex-col justify-center gap-1 leading-none">
         <span className="font-display text-base font-bold tracking-tight text-foreground md:text-lg">
           {t("brand.name")}
