@@ -398,7 +398,7 @@ export const COMPANY = {
   phoneDisplay: "+966 53 823 1025",
   // Digits only, international format — required by wa.me links (no "+" or spaces).
   whatsapp: "966538231025",
-  email: "info@alrushd-intl.com",
+  email: "info@alrushdksa.com",
   mapsQuery: "Riyadh+Industrial+Area+Saudi+Arabia",
   // Microsoft 365 / Outlook on the web staff webmail login.
   webmail: "https://outlook.office.com/mail/",
