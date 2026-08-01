@@ -21,7 +21,7 @@ const NAV = [
 
 function Logo() {
   const { t } = useI18n();
-  // Use the original full logo as primary and fall back to the emblem if it fails.
+  // Use the original full logo asset as primary and fall back to the emblem if it fails.
   const primary = logoImg?.url;
   const fallback = emblemImg?.url;
   const [src, setSrc] = useState<string | undefined>(primary ?? fallback);
@@ -30,24 +30,18 @@ function Logo() {
     <Link to="/" className="flex items-center gap-3.5 shrink-0 md:gap-4" aria-label={t("brand.name")}>
       <img
         src={src}
-        alt={`${t("brand.name")} logo`}
-        width={588}
-        height={344}
-        className="h-12 w-auto object-contain md:h-14"
+        alt={`${t("brand.name")} logo"`}
+        width={900}
+        height={320}
+        className="h-14 w-auto md:h-16"
         loading="eager"
         decoding="async"
+        style={{ maxHeight: "64px" }}
         onError={() => {
           if (fallback && src !== fallback) setSrc(fallback);
         }}
       />
-      <span className="flex flex-col justify-center gap-1 leading-none">
-        <span className="font-display text-base font-bold tracking-tight text-foreground md:text-lg">
-          {t("brand.name")}
-        </span>
-        <span className="hidden text-[0.65rem] font-medium uppercase tracking-[0.2em] text-muted-foreground sm:block">
-          {t("brand.tagline")}
-        </span>
-      </span>
+      <span className="sr-only">{t("brand.name")}</span>
     </Link>
   );
 }
