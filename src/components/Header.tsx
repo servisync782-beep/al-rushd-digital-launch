@@ -3,7 +3,8 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X, Phone, Globe } from "lucide-react";
 import { useI18n, COMPANY } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
-import FullLogo from "@/components/FullLogo";
+import logoImg from "@/assets/al-rushd-logo.jpg.asset.json";
+import emblemImg from "@/assets/ar-mark.png.asset.json";
 
 const NAV = [
   { to: "/", key: "nav.home" },
@@ -20,14 +21,33 @@ const NAV = [
 
 function Logo() {
   const { t } = useI18n();
+  // Use the original full logo as primary and fall back to the emblem if it fails.
+  const primary = logoImg?.url;
+  const fallback = emblemImg?.url;
+  const [src, setSrc] = useState<string | undefined>(primary ?? fallback);
 
   return (
-    <Link to="/" className="flex items-center gap-3.5 shrink-0 md:gap-4" aria-label={t("brand.name")}
-    >
-      {/* Inline SVG full logo - guarantees visibility without external assets */}
-      <FullLogo className="h-10 w-auto md:h-11" />
-      {/* Provide screen-reader text for accessibility */}
-      <span className="sr-only">{t("brand.name")}</span>
+    <Link to="/" className="flex items-center gap-3.5 shrink-0 md:gap-4" aria-label={t("brand.name")}>
+      <img
+        src={src}
+        alt={`${t("brand.name")} logo`}
+        width={588}
+        height={344}
+        className="h-12 w-auto object-contain md:h-14"
+        loading="eager"
+        decoding="async"
+        onError={() => {
+          if (fallback && src !== fallback) setSrc(fallback);
+        }}
+      />
+      <span className="flex flex-col justify-center gap-1 leading-none">
+        <span className="font-display text-base font-bold tracking-tight text-foreground md:text-lg">
+          {t("brand.name")}
+        </span>
+        <span className="hidden text-[0.65rem] font-medium uppercase tracking-[0.2em] text-muted-foreground sm:block">
+          {t("brand.tagline")}
+        </span>
+      </span>
     </Link>
   );
 }
