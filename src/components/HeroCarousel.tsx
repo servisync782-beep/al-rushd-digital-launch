@@ -7,7 +7,6 @@ import { useI18n } from "@/lib/i18n";
 import slide1 from "@/assets/hero-slide-1.jpg";
 import slide2 from "@/assets/hero-slide-2.jpg";
 import slide3 from "@/assets/hero-slide-3.jpg";
-import logoImg from "@/assets/al-rushd-logo.jpg.asset.json";
 
 type Cta = { label: { en: string; ar: string }; to: "/contact" | "/fleet"; primary?: boolean };
 
@@ -71,7 +70,7 @@ const SLIDES: Slide[] = [
 ];
 
 export function HeroCarousel() {
-  const { t, pick, dir } = useI18n();
+  const { pick, dir } = useI18n();
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, direction: dir, align: "start", containScroll: "trimSnaps", duration: 24 },
     [Autoplay({ delay: 5500, stopOnInteraction: false, stopOnMouseEnter: true })],
@@ -171,23 +170,6 @@ export function HeroCarousel() {
         </div>
       </div>
 
-      {/* Brand emblem */}
-      <div className="pointer-events-none absolute inset-y-0 z-10 hidden items-center end-8 lg:flex xl:end-16">
-        <div className="relative animate-fade-up">
-          <div className="pointer-events-none absolute -inset-6 rounded-[2rem] bg-accent/10 blur-2xl" />
-          <div className="relative rounded-[2rem] border border-white/15 bg-on-dark/95 p-8 shadow-[0_30px_70px_-30px_rgba(0,0,0,0.7)]">
-            <img
-              src={logoImg.url}
-              alt={`${t("brand.name")} logo`}
-              width={517}
-              height={481}
-              loading="lazy"
-              decoding="async"
-              className="h-auto w-56 object-contain xl:w-64"
-            />
-          </div>
-        </div>
-      </div>
 
       {/* Arrows */}
       <button
