@@ -7,7 +7,6 @@ import { useI18n } from "@/lib/i18n";
 import slide1 from "@/assets/hero-slide-1.jpg";
 import slide2 from "@/assets/hero-slide-2.jpg";
 import slide3 from "@/assets/hero-slide-3.jpg";
-import logoImg from "@/assets/al-rushd-logo.jpg.asset.json";
 
 type Cta = { label: { en: string; ar: string }; to: "/contact" | "/fleet"; primary?: boolean };
 
