@@ -3,7 +3,6 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X, Phone, Globe } from "lucide-react";
 import { useI18n, COMPANY } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
-import logoImg from "@/assets/al-rushd-logo.jpg.asset.json";
 import emblemImg from "@/assets/ar-mark.png.asset.json";
 
 const NAV = [
@@ -19,10 +18,13 @@ const NAV = [
   { to: "/contact", key: "nav.contact" },
 ] as const;
 
+// External logo URL provided by user
+const EXTERNAL_LOGO_URL = "https://kommodo.ai/i/9YR91nkoWPkl9c3w5d4z";
+
 function Logo() {
   const { t } = useI18n();
-  // Use the original full logo asset as primary and fall back to the emblem if it fails.
-  const primary = logoImg?.url;
+  // Use the provided external logo URL as primary; fall back to the committed emblem asset if it fails.
+  const primary = EXTERNAL_LOGO_URL;
   const fallback = emblemImg?.url;
   const [src, setSrc] = useState<string | undefined>(primary ?? fallback);
 
@@ -30,7 +32,7 @@ function Logo() {
     <Link to="/" className="flex items-center gap-3.5 shrink-0 md:gap-4" aria-label={t("brand.name")}>
       <img
         src={src}
-        alt={`${t("brand.name")} logo"`}
+        alt={`${t("brand.name")} logo`}
         width={900}
         height={320}
         className="h-14 w-auto md:h-16"
