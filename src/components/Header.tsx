@@ -18,32 +18,23 @@ const NAV = [
   { to: "/contact", key: "nav.contact" },
 ] as const;
 
-// External logo URL provided by user
-const EXTERNAL_LOGO_URL = "https://kommodo.ai/i/9YR91nkoWPkl9c3w5d4z";
-
 function Logo() {
   const { t } = useI18n();
-  // Use the provided external logo URL as primary; fall back to the committed emblem asset if it fails.
-  const primary = EXTERNAL_LOGO_URL;
-  const fallback = emblemImg?.url;
-  const [src, setSrc] = useState<string | undefined>(primary ?? fallback);
 
   return (
-    <Link to="/" className="flex items-center gap-3.5 shrink-0 md:gap-4" aria-label={t("brand.name")}>
+    <Link to="/" className="flex shrink-0 items-center gap-2.5" aria-label={t("brand.name")}>
       <img
-        src={src}
+        src={emblemImg.url}
         alt={`${t("brand.name")} logo`}
-        width={900}
-        height={320}
-        className="h-14 w-auto md:h-16"
+        width={176}
+        height={176}
+        className="h-11 w-11 shrink-0 object-contain md:h-12 md:w-12"
         loading="eager"
-        decoding="async"
-        style={{ maxHeight: "64px" }}
-        onError={() => {
-          if (fallback && src !== fallback) setSrc(fallback);
-        }}
+        decoding="sync"
       />
-      <span className="sr-only">{t("brand.name")}</span>
+      <span className="max-w-40 font-display text-sm font-bold leading-tight text-foreground sm:max-w-none sm:text-base md:text-lg">
+        {t("brand.name")}
+      </span>
     </Link>
   );
 }
