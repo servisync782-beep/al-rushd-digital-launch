@@ -11,17 +11,8 @@ export function Footer() {
     <footer className="surface-dark mt-24">
       <div className="container-x grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-3">
-            <span className="grid place-items-center rounded-lg bg-on-dark p-1.5 shadow-sm">
-              <img
-                src={logoImg.url}
-                alt={`${t("brand.name")} logo`}
-                width={517}
-                height={481}
-                className="h-11 w-auto object-contain"
-              />
-            </span>
-            <span className="font-display text-lg font-bold text-on-dark">{t("brand.name")}</span>
+          <div className="flex items-center">
+            <span className="font-display text-lg font-bold tracking-tight text-on-dark">{t("brand.name")}</span>
           </div>
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-on-dark-muted">{t("footer.about")}</p>
           <div className="mt-6 flex items-center gap-3">
