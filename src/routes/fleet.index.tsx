@@ -9,13 +9,13 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/fleet/")({
   head: () => ({
     meta: [
-      { title: "Equipment Fleet & Catalogue — Al Rushd International" },
+      { title: "Equipment Fleet & Catalogue — Al Rushd International Company" },
       {
         name: "description",
         content:
           "Browse our fleet of cranes, excavators, loaders, telehandlers, forklifts, generators and dump trucks available for rent across Saudi Arabia.",
       },
-      { property: "og:title", content: "Equipment Fleet — Al Rushd International" },
+      { property: "og:title", content: "Equipment Fleet — Al Rushd International Company" },
       { property: "og:description", content: "Cranes, excavators, loaders, generators and more, ready to rent." },
       { property: "og:url", content: "/fleet" },
     ],

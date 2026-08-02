@@ -8,9 +8,9 @@ import yardImg from "@/assets/yard.jpg";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Al Rushd International" },
-      { name: "description", content: "Photos of the Al Rushd International equipment fleet and teams at work across Saudi Arabia." },
-      { property: "og:title", content: "Gallery — Al Rushd International" },
+      { title: "Gallery — Al Rushd International Company" },
+      { name: "description", content: "Photos of the Al Rushd International Company equipment fleet and teams at work across Saudi Arabia." },
+      { property: "og:title", content: "Gallery — Al Rushd International Company" },
       { property: "og:description", content: "Our equipment and teams at work." },
       { property: "og:url", content: "/gallery" },
     ],

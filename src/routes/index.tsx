@@ -24,13 +24,13 @@ import { HeroCarousel } from "@/components/HeroCarousel";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Al Rushd International — Heavy Equipment Rental in Saudi Arabia" },
+      { title: "Al Rushd International Company — Heavy Equipment Rental in Saudi Arabia" },
       {
         name: "description",
         content:
-          "Al Rushd International offers dependable forklift rental in Saudi Arabia — well-maintained equipment, flexible terms and responsive, personal service.",
+          "Al Rushd International Company offers dependable forklift rental in Saudi Arabia — well-maintained equipment, flexible terms and responsive, personal service.",
       },
-      { property: "og:title", content: "Al Rushd International — Forklift & Equipment Rental" },
+      { property: "og:title", content: "Al Rushd International Company — Forklift & Equipment Rental" },
       {
         property: "og:description",
         content: "Well-maintained equipment, flexible rental terms and responsive service across Saudi Arabia.",
@@ -71,7 +71,7 @@ function Home() {
         <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-card)]">
           <img
             src={yardImg}
-            alt="Al Rushd International equipment yard"
+            alt="Al Rushd International Company equipment yard"
             loading="lazy"
             width={1400}
             height={900}

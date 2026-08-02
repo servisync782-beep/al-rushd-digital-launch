@@ -12,8 +12,8 @@ export const FAQ: FaqItem[] = [
       ar: "ما هي المناطق التي تخدمونها؟",
     },
     a: {
-      en: "Al Rushd International supplies and delivers heavy equipment across the Kingdom of Saudi Arabia, including Riyadh, Dammam, Jeddah and major project sites in between.",
-      ar: "توفر الرشد الدولية وتوصّل المعدات الثقيلة في جميع أنحاء المملكة العربية السعودية، بما في ذلك الرياض والدمام وجدة ومواقع المشاريع الكبرى بينها.",
+      en: "Al Rushd International Company supplies and delivers heavy equipment across the Kingdom of Saudi Arabia, including Riyadh, Dammam, Jeddah and major project sites in between.",
+      ar: "توفر شركة الرشد الدولية وتوصّل المعدات الثقيلة في جميع أنحاء المملكة العربية السعودية، بما في ذلك الرياض والدمام وجدة ومواقع المشاريع الكبرى بينها.",
     },
   },
   {
@@ -62,8 +62,8 @@ export const FAQ: FaqItem[] = [
       ar: "هل الصيانة مشمولة خلال فترة التأجير؟",
     },
     a: {
-      en: "Routine and preventive maintenance on rented equipment is covered by Al Rushd International. Our on-call service team responds rapidly to minimise any downtime.",
-      ar: "الصيانة الروتينية والوقائية للمعدات المستأجرة مشمولة من قبل الرشد الدولية. يستجيب فريق الخدمة عند الطلب بسرعة لتقليل أي توقف.",
+      en: "Routine and preventive maintenance on rented equipment is covered by Al Rushd International Company. Our on-call service team responds rapidly to minimise any downtime.",
+      ar: "الصيانة الروتينية والوقائية للمعدات المستأجرة مشمولة من قبل شركة الرشد الدولية. يستجيب فريق الخدمة عند الطلب بسرعة لتقليل أي توقف.",
     },
   },
 ];

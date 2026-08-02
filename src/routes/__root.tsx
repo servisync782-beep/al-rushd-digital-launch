@@ -90,27 +90,27 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Al Rushd International — Heavy Equipment Rental in Saudi Arabia" },
+      { title: "Al Rushd International Company — Heavy Equipment Rental in Saudi Arabia" },
       {
         name: "description",
         content:
-          "Al Rushd International provides dependable forklift rental and heavy equipment solutions across Saudi Arabia, backed by quality machines and responsive service.",
+          "Al Rushd International Company provides dependable forklift rental and heavy equipment solutions across Saudi Arabia, backed by quality machines and responsive service.",
       },
-      { name: "author", content: "Al Rushd International" },
-      { property: "og:title", content: "Al Rushd International — Heavy Equipment Rental in Saudi Arabia" },
+      { name: "author", content: "Al Rushd International Company" },
+      { property: "og:title", content: "Al Rushd International Company — Heavy Equipment Rental in Saudi Arabia" },
       {
         property: "og:description",
         content:
           "Reliable heavy industrial equipment rental for construction, oil & gas and infrastructure projects across the Kingdom.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Al Rushd International" },
+      { property: "og:site_name", content: "Al Rushd International Company" },
       { name: "twitter:card", content: "summary_large_image" },
       // Google Search Console verification placeholder — set token in src/lib/analytics.ts.
       ...(ANALYTICS.gscVerification
         ? [{ name: "google-site-verification", content: ANALYTICS.gscVerification }]
         : []),
-      { name: "twitter:title", content: "Al Rushd International — Heavy Equipment Rental in Saudi Arabia" },
+      { name: "twitter:title", content: "Al Rushd International Company — Heavy Equipment Rental in Saudi Arabia" },
       { name: "description", content: "Al Rushd Digital Launch establishes a comprehensive online presence for industrial equipment rental companies." },
       { property: "og:description", content: "Al Rushd Digital Launch establishes a comprehensive online presence for industrial equipment rental companies." },
       { name: "twitter:description", content: "Al Rushd Digital Launch establishes a comprehensive online presence for industrial equipment rental companies." },
@@ -142,7 +142,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "Al Rushd International",
+          name: "Al Rushd International Company",
           description:
             "Heavy industrial equipment rental for construction, oil & gas and infrastructure projects across Saudi Arabia.",
           areaServed: "SA",

@@ -34,9 +34,9 @@ export const Route = createFileRoute("/fleet/$id")({
     const shareImage = item?.gallery?.[0] ?? item?.image;
     return {
       meta: [
-        { title: `${name} — Al Rushd International` },
+        { title: `${name} — Al Rushd International Company` },
         { name: "description", content: item?.short.en ?? "Heavy equipment for rent." },
-        { property: "og:title", content: `${name} — Al Rushd International` },
+        { property: "og:title", content: `${name} — Al Rushd International Company` },
         { property: "og:description", content: item?.short.en ?? "" },
         { property: "og:type", content: "product" },
         { property: "og:url", content: path },
@@ -54,7 +54,7 @@ export const Route = createFileRoute("/fleet/$id")({
                 description: item.description.en,
                 image: item.gallery ?? [item.image],
                 category: item.category,
-                brand: { "@type": "Brand", name: item.brand?.en ?? "Al Rushd International" },
+                brand: { "@type": "Brand", name: item.brand?.en ?? "Al Rushd International Company" },
                 additionalProperty: item.specs.map((s) => ({
                   "@type": "PropertyValue",
                   name: s.label.en,

@@ -6,13 +6,13 @@ import { PageHeader, CTASection } from "@/components/site";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Our Services — Al Rushd International" },
+      { title: "Our Services — Al Rushd International Company" },
       {
         name: "description",
         content:
-          "Equipment rental, operated rentals, on-site power, logistics, maintenance and project consultation from Al Rushd International across Saudi Arabia.",
+          "Equipment rental, operated rentals, on-site power, logistics, maintenance and project consultation from Al Rushd International Company across Saudi Arabia.",
       },
-      { property: "og:title", content: "Our Services — Al Rushd International" },
+      { property: "og:title", content: "Our Services — Al Rushd International Company" },
       { property: "og:description", content: "End-to-end heavy equipment rental solutions." },
       { property: "og:url", content: "/services" },
     ],

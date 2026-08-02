@@ -16,7 +16,7 @@ export const Route = createFileRoute("/blog/$slug")({
     const path = `/blog/${params.slug}`;
     return {
       meta: [
-        { title: `${title} — Al Rushd International` },
+        { title: `${title} — Al Rushd International Company` },
         { name: "description", content: post?.excerpt.en ?? "" },
         { property: "og:title", content: title },
         { property: "og:description", content: post?.excerpt.en ?? "" },
@@ -36,8 +36,8 @@ export const Route = createFileRoute("/blog/$slug")({
                 description: post.excerpt.en,
                 image: post.image,
                 datePublished: post.date,
-                author: { "@type": "Organization", name: "Al Rushd International" },
-                publisher: { "@type": "Organization", name: "Al Rushd International" },
+                author: { "@type": "Organization", name: "Al Rushd International Company" },
+                publisher: { "@type": "Organization", name: "Al Rushd International Company" },
               }),
             },
             {

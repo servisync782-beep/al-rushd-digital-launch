@@ -9,13 +9,13 @@ import { EQUIPMENT } from "@/data/equipment";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Request a Quote — Al Rushd International" },
+      { title: "Contact & Request a Quote — Al Rushd International Company" },
       {
         name: "description",
         content:
-          "Contact Al Rushd International for heavy equipment rental quotes. Call, WhatsApp or submit an RFQ — we respond within one business day.",
+          "Contact Al Rushd International Company for heavy equipment rental quotes. Call, WhatsApp or submit an RFQ — we respond within one business day.",
       },
-      { property: "og:title", content: "Contact Us — Al Rushd International" },
+      { property: "og:title", content: "Contact Us — Al Rushd International Company" },
       { property: "og:description", content: "Request a heavy equipment rental quote across Saudi Arabia." },
       { property: "og:url", content: "/contact" },
     ],
@@ -140,7 +140,7 @@ function Contact() {
 
           <div className="overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-card)]">
             <iframe
-              title="Al Rushd International location"
+              title="Al Rushd International Company location"
               src={`https://www.google.com/maps?q=${COMPANY.mapsQuery}&output=embed`}
               className="h-64 w-full border-0"
               loading="lazy"

@@ -6,13 +6,13 @@ import { CATEGORIES } from "@/data/equipment";
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
-      { title: "Projects & Portfolio — Al Rushd International" },
+      { title: "Projects & Portfolio — Al Rushd International Company" },
       {
         name: "description",
         content:
-          "A selection of construction, infrastructure and industrial projects supported by the Al Rushd International equipment fleet.",
+          "A selection of construction, infrastructure and industrial projects supported by the Al Rushd International Company equipment fleet.",
       },
-      { property: "og:title", content: "Projects & Portfolio — Al Rushd International" },
+      { property: "og:title", content: "Projects & Portfolio — Al Rushd International Company" },
       { property: "og:description", content: "Work our fleet helps make possible across the Kingdom." },
       { property: "og:url", content: "/projects" },
     ],
