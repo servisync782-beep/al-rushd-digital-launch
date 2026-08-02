@@ -5,13 +5,13 @@ import { PageHeader } from "@/components/site";
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
-      { title: "Terms & Conditions — Al Rushd International" },
+      { title: "Terms & Conditions — Al Rushd International Company" },
       {
         name: "description",
         content:
-          "The terms and conditions governing the use of the Al Rushd International website and our heavy equipment rental services.",
+          "The terms and conditions governing the use of the Al Rushd International Company website and our heavy equipment rental services.",
       },
-      { property: "og:title", content: "Terms & Conditions — Al Rushd International" },
+      { property: "og:title", content: "Terms & Conditions — Al Rushd International Company" },
       { property: "og:description", content: "Terms governing our website and rental services." },
       { property: "og:url", content: "/terms" },
     ],
@@ -30,7 +30,7 @@ const SECTIONS: Section[] = [
     en: {
       h: "Use of This Website",
       p: [
-        "By accessing this website you agree to use it lawfully and not to misuse its content, forms or services. All content, branding and imagery on this site is the property of Al Rushd International unless otherwise stated.",
+        "By accessing this website you agree to use it lawfully and not to misuse its content, forms or services. All content, branding and imagery on this site is the property of Al Rushd International Company unless otherwise stated.",
       ],
     },
     ar: {
@@ -72,13 +72,13 @@ const SECTIONS: Section[] = [
     en: {
       h: "Liability",
       p: [
-        "Al Rushd International maintains its fleet to a high standard but is not liable for indirect or consequential losses arising from equipment use, save as required by applicable law. Nothing in these terms limits liability that cannot be excluded by law.",
+        "Al Rushd International Company maintains its fleet to a high standard but is not liable for indirect or consequential losses arising from equipment use, save as required by applicable law. Nothing in these terms limits liability that cannot be excluded by law.",
       ],
     },
     ar: {
       h: "المسؤولية",
       p: [
-        "تحافظ الرشد الدولية على أسطولها بمعايير عالية لكنها غير مسؤولة عن الخسائر غير المباشرة أو التبعية الناشئة عن استخدام المعدات، إلا بالقدر الذي يقتضيه القانون المعمول به. لا شيء في هذه الشروط يحد من المسؤولية التي لا يمكن استبعادها قانوناً.",
+        "تحافظ شركة الرشد الدولية على أسطولها بمعايير عالية لكنها غير مسؤولة عن الخسائر غير المباشرة أو التبعية الناشئة عن استخدام المعدات، إلا بالقدر الذي يقتضيه القانون المعمول به. لا شيء في هذه الشروط يحد من المسؤولية التي لا يمكن استبعادها قانوناً.",
       ],
     },
   },

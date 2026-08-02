@@ -64,8 +64,8 @@ export const BLOG_POSTS: BlogPost[] = [
     image: crane,
     body: [
       {
-        en: "Every safe lift begins long before the crane arrives on site. A documented lift plan protects your crew, your schedule and the surrounding public, and it is a non-negotiable part of how Al Rushd International operates.",
-        ar: "تبدأ كل عملية رفع آمنة قبل وصول الرافعة إلى الموقع بوقت طويل. تحمي خطة الرفع الموثقة طاقمك وجدولك والجمهور المحيط، وهي جزء غير قابل للتفاوض من طريقة عمل الرشد الدولية.",
+        en: "Every safe lift begins long before the crane arrives on site. A documented lift plan protects your crew, your schedule and the surrounding public, and it is a non-negotiable part of how Al Rushd International Company operates.",
+        ar: "تبدأ كل عملية رفع آمنة قبل وصول الرافعة إلى الموقع بوقت طويل. تحمي خطة الرفع الموثقة طاقمك وجدولك والجمهور المحيط، وهي جزء غير قابل للتفاوض من طريقة عمل شركة الرشد الدولية.",
       },
       {
         en: "Confirm ground bearing capacity and use outrigger mats where required. Verify the load weight, radius and the crane's rated capacity at that radius against the manufacturer load chart — never the boom length alone. Establish exclusion zones and assign a qualified signaller for every lift.",
@@ -114,7 +114,7 @@ export const BLOG_POSTS: BlogPost[] = [
       ar: "معدل الاستخدام والصيانة وتجميد رأس المال تحدد ما إذا كان التأجير يتفوق على الملكية. نحلل الأرقام.",
     },
     category: { en: "Industry Insight", ar: "رؤية القطاع" },
-    author: { en: "Al Rushd International", ar: "الرشد الدولية" },
+    author: { en: "Al Rushd International Company", ar: "شركة الرشد الدولية" },
     date: "2026-03-18",
     readMinutes: 5,
     image: yard,

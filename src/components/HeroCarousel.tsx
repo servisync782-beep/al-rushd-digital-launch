@@ -21,14 +21,14 @@ type Slide = {
 const SLIDES: Slide[] = [
   {
     image: slide1,
-    eyebrow: { en: "Welcome to Al Rushd International", ar: "مرحبًا بكم في الرشد الدولية" },
+    eyebrow: { en: "Welcome to Al Rushd International Company", ar: "مرحبًا بكم في شركة الرشد الدولية" },
     title: {
       en: "Reliable Heavy Equipment Rental for Every Project",
       ar: "تأجير معدات ثقيلة موثوق لكل مشروع",
     },
     subtitle: {
-      en: "Al Rushd International delivers dependable equipment rental solutions for construction and industrial projects across the Kingdom — backed by responsive, personal service.",
-      ar: "تقدّم الرشد الدولية حلول تأجير معدات موثوقة لمشاريع البناء والمشاريع الصناعية في جميع أنحاء المملكة، مدعومة بخدمة شخصية سريعة الاستجابة.",
+      en: "Al Rushd International Company delivers dependable equipment rental solutions for construction and industrial projects across the Kingdom — backed by responsive, personal service.",
+      ar: "تقدّم شركة الرشد الدولية حلول تأجير معدات موثوقة لمشاريع البناء والمشاريع الصناعية في جميع أنحاء المملكة، مدعومة بخدمة شخصية سريعة الاستجابة.",
     },
     ctas: [
       { label: { en: "Request a Quote", ar: "اطلب عرض سعر" }, to: "/contact", primary: true },

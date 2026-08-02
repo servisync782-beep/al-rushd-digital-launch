@@ -5,13 +5,13 @@ import { PageHeader } from "@/components/site";
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — Al Rushd International" },
+      { title: "Privacy Policy — Al Rushd International Company" },
       {
         name: "description",
         content:
-          "How Al Rushd International collects, uses, stores and protects the personal information of website visitors and clients.",
+          "How Al Rushd International Company collects, uses, stores and protects the personal information of website visitors and clients.",
       },
-      { property: "og:title", content: "Privacy Policy — Al Rushd International" },
+      { property: "og:title", content: "Privacy Policy — Al Rushd International Company" },
       { property: "og:description", content: "How we handle and protect your information." },
       { property: "og:url", content: "/privacy" },
     ],

@@ -6,9 +6,9 @@ import { PageHeader } from "@/components/site";
 export const Route = createFileRoute("/careers")({
   head: () => ({
     meta: [
-      { title: "Careers — Al Rushd International" },
-      { name: "description", content: "Join Al Rushd International. We hire skilled equipment operators, technicians and professionals across Saudi Arabia." },
-      { property: "og:title", content: "Careers — Al Rushd International" },
+      { title: "Careers — Al Rushd International Company" },
+      { name: "description", content: "Join Al Rushd International Company. We hire skilled equipment operators, technicians and professionals across Saudi Arabia." },
+      { property: "og:title", content: "Careers — Al Rushd International Company" },
       { property: "og:description", content: "Join a team that keeps the Kingdom building." },
       { property: "og:url", content: "/careers" },
     ],

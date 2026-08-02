@@ -7,13 +7,13 @@ import { BLOG_POSTS } from "@/data/blog";
 export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
-      { title: "Blog & News — Al Rushd International" },
+      { title: "Blog & News — Al Rushd International Company" },
       {
         name: "description",
         content:
-          "Heavy equipment guides, safety insights and company news from Al Rushd International, Saudi Arabia's trusted equipment rental partner.",
+          "Heavy equipment guides, safety insights and company news from Al Rushd International Company, Saudi Arabia's trusted equipment rental partner.",
       },
-      { property: "og:title", content: "Blog & News — Al Rushd International" },
+      { property: "og:title", content: "Blog & News — Al Rushd International Company" },
       { property: "og:description", content: "Industry insights and updates from the Al Rushd team." },
       { property: "og:url", content: "/blog" },
     ],

@@ -15,7 +15,7 @@ type Dict = Record<string, { en: string; ar: string }>;
 // Central bilingual dictionary. Keys are dot-namespaced for readability.
 const DICT: Dict = {
   // Brand / company
-  "brand.name": { en: "Al Rushd International", ar: "الرشد الدولية" },
+  "brand.name": { en: "Al Rushd International Company", ar: "شركة الرشد الدولية" },
   "brand.tagline": {
     en: "Heavy Equipment Rental",
     ar: "تأجير المعدات الثقيلة",
@@ -58,8 +58,8 @@ const DICT: Dict = {
     ar: "معدات ثقيلة، جاهزة عندما تحتاجها",
   },
   "hero.subtitle": {
-    en: "From warehouses to construction sites, Al Rushd International delivers dependable forklift rental solutions backed by quality equipment and professional service.",
-    ar: "من المستودعات إلى مواقع البناء، توفر الرشد الدولية حلول تأجير رافعات شوكية موثوقة مدعومة بمعدات عالية الجودة والخدمة الاحترافية.",
+    en: "From warehouses to construction sites, Al Rushd International Company delivers dependable forklift rental solutions backed by quality equipment and professional service.",
+    ar: "من المستودعات إلى مواقع البناء، توفر شركة الرشد الدولية حلول تأجير رافعات شوكية موثوقة مدعومة بمعدات عالية الجودة والخدمة الاحترافية.",
   },
   "hero.stat1": { en: "Units in Fleet", ar: "وحدة في الأسطول" },
   "hero.stat2": { en: "Years of Service", ar: "سنوات من الخبرة" },
@@ -70,8 +70,8 @@ const DICT: Dict = {
   "home.about.eyebrow": { en: "Who We Are", ar: "من نحن" },
   "home.about.title": { en: "Powering Industry With a Dependable Fleet", ar: "ندعم الصناعة بأسطول موثوق" },
   "home.about.body": {
-    en: "At Al Rushd International, we believe reliable equipment and exceptional service are the foundation of every successful project. We specialize in forklift rental solutions designed to support your operations with minimal downtime and maximum efficiency.",
-    ar: "في الرشد الدولية، نؤمن بأن المعدات الموثوقة والخدمة الاستثنائية هي أساس كل مشروع ناجح. نحن متخصصون في حلول تأجير الرافعات الشوكية المصممة لدعم عملياتك بأقل وقت تعطل وأقصى كفاءة.",
+    en: "At Al Rushd International Company, we believe reliable equipment and exceptional service are the foundation of every successful project. We specialize in forklift rental solutions designed to support your operations with minimal downtime and maximum efficiency.",
+    ar: "في شركة الرشد الدولية، نؤمن بأن المعدات الموثوقة والخدمة الاستثنائية هي أساس كل مشروع ناجح. نحن متخصصون في حلول تأجير الرافعات الشوكية المصممة لدعم عملياتك بأقل وقت تعطل وأقصى كفاءة.",
   },
   "home.cats.eyebrow": { en: "Equipment Categories", ar: "فئات المعدات" },
   "home.cats.title": { en: "Built for Every Job Site", ar: "مصمم لكل موقع عمل" },
@@ -129,15 +129,15 @@ const DICT: Dict = {
   "service.13.body": { en: "Portable cabins, offices and accommodation units delivered and installed on-site.", ar: "كبائن ومكاتب ووحدات سكن متنقلة يتم توصيلها وتثبيتها في الموقع." },
 
   // About page
-  "about.title": { en: "About Al Rushd International", ar: "عن الرشد الدولية" },
+  "about.title": { en: "About Al Rushd International Company", ar: "عن شركة الرشد الدولية" },
   "about.subtitle": {
     en: "A trusted partner in heavy industrial equipment rental across Saudi Arabia.",
     ar: "شريك موثوق في تأجير المعدات الصناعية الثقيلة في جميع أنحاء المملكة العربية السعودية.",
   },
   "about.story.title": { en: "Our Story", ar: "قصتنا" },
   "about.story.body": {
-    en: "Al Rushd International was founded to give contractors and industrial operators dependable access to heavy machinery without the burden of ownership. What began with a handful of machines has grown into a diverse fleet serving projects across Saudi Arabia with unmatched reliability.",
-    ar: "تأسست الرشد الدولية لتمنح المقاولين والمشغلين الصناعيين وصولاً موثوقاً إلى المعدات الثقيلة دون عبء الملكية. ما بدأ بعدد قليل من الآلات نما ليصبح أسطولاً متنوعاً يخدم المشاريع في جميع أنحاء المملكة العربية السعودية بموثوقية لا مثيل لها.",
+    en: "Al Rushd International Company was founded to give contractors and industrial operators dependable access to heavy machinery without the burden of ownership. What began with a handful of machines has grown into a diverse fleet serving projects across Saudi Arabia with unmatched reliability.",
+    ar: "تأسست شركة الرشد الدولية لتمنح المقاولين والمشغلين الصناعيين وصولاً موثوقاً إلى المعدات الثقيلة دون عبء الملكية. ما بدأ بعدد قليل من الآلات نما ليصبح أسطولاً متنوعاً يخدم المشاريع في جميع أنحاء المملكة العربية السعودية بموثوقية لا مثيل لها.",
   },
   "about.mission.title": { en: "Mission", ar: "رسالتنا" },
   "about.mission.body": {
@@ -295,8 +295,8 @@ const DICT: Dict = {
   // Blog page
   "blog.title": { en: "Blog & News", ar: "المدونة والأخبار" },
   "blog.subtitle": {
-    en: "Industry insights, safety guidance and company updates from the Al Rushd International team.",
-    ar: "رؤى القطاع وإرشادات السلامة وأخبار الشركة من فريق الرشد الدولية.",
+    en: "Industry insights, safety guidance and company updates from the Al Rushd International Company team.",
+    ar: "رؤى القطاع وإرشادات السلامة وأخبار الشركة من فريق شركة الرشد الدولية.",
   },
   "blog.latest.eyebrow": { en: "From the Blog", ar: "من المدونة" },
   "blog.latest.title": { en: "Latest News & Insights", ar: "أحدث الأخبار والرؤى" },
@@ -306,8 +306,8 @@ const DICT: Dict = {
   // FAQ page
   "faq.title": { en: "Frequently Asked Questions", ar: "الأسئلة الشائعة" },
   "faq.subtitle": {
-    en: "Answers to the questions we hear most about renting heavy equipment from Al Rushd International.",
-    ar: "إجابات على أكثر الأسئلة شيوعاً حول تأجير المعدات الثقيلة من الرشد الدولية.",
+    en: "Answers to the questions we hear most about renting heavy equipment from Al Rushd International Company.",
+    ar: "إجابات على أكثر الأسئلة شيوعاً حول تأجير المعدات الثقيلة من شركة الرشد الدولية.",
   },
   "faq.cta": { en: "Still have a question?", ar: "هل لا يزال لديك سؤال؟" },
 
@@ -322,8 +322,8 @@ const DICT: Dict = {
   // Legal pages
   "privacy.title": { en: "Privacy Policy", ar: "سياسة الخصوصية" },
   "privacy.subtitle": {
-    en: "How Al Rushd International collects, uses and protects your information.",
-    ar: "كيف تجمع الرشد الدولية معلوماتك وتستخدمها وتحميها.",
+    en: "How Al Rushd International Company collects, uses and protects your information.",
+    ar: "كيف تجمع شركة الرشد الدولية معلوماتك وتستخدمها وتحميها.",
   },
   "terms.title": { en: "Terms & Conditions", ar: "الشروط والأحكام" },
   "terms.subtitle": {

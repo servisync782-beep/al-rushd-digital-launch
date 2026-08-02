@@ -21,8 +21,8 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
       "توريد موثوق للمواد الصناعية ومعدات الوقاية الشخصية وأدوات السلامة لمواقع عمل متوافقة ومجهزة بالكامل.",
     ),
     description: b(
-      "Al Rushd International supplies a complete range of industrial and safety materials to keep your operations running and your workforce protected. From personal protective equipment and signage to consumables, tools and site safety hardware, we source certified products and deliver them on schedule. Our team helps you stay compliant with Saudi and international HSE standards while controlling procurement costs through dependable, single-source supply.",
-      "توفر الرشد الدولية مجموعة كاملة من المواد الصناعية ومواد السلامة للحفاظ على سير عملياتك وحماية القوى العاملة لديك. من معدات الوقاية الشخصية واللافتات إلى المواد الاستهلاكية والأدوات وأجهزة السلامة في الموقع، نوفر منتجات معتمدة ونسلّمها في الوقت المحدد. يساعدك فريقنا على الالتزام بمعايير الصحة والسلامة والبيئة السعودية والدولية مع التحكم في تكاليف الشراء من خلال توريد موثوق من مصدر واحد.",
+      "Al Rushd International Company supplies a complete range of industrial and safety materials to keep your operations running and your workforce protected. From personal protective equipment and signage to consumables, tools and site safety hardware, we source certified products and deliver them on schedule. Our team helps you stay compliant with Saudi and international HSE standards while controlling procurement costs through dependable, single-source supply.",
+      "توفر شركة الرشد الدولية مجموعة كاملة من المواد الصناعية ومواد السلامة للحفاظ على سير عملياتك وحماية القوى العاملة لديك. من معدات الوقاية الشخصية واللافتات إلى المواد الاستهلاكية والأدوات وأجهزة السلامة في الموقع، نوفر منتجات معتمدة ونسلّمها في الوقت المحدد. يساعدك فريقنا على الالتزام بمعايير الصحة والسلامة والبيئة السعودية والدولية مع التحكم في تكاليف الشراء من خلال توريد موثوق من مصدر واحد.",
     ),
     includes: [
       b("Certified PPE: helmets, gloves, boots, eyewear", "معدات وقاية شخصية معتمدة: خوذ وقفازات وأحذية ونظارات"),
@@ -40,8 +40,8 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
       "عمالة ماهرة وشبه ماهرة مؤهلة يتم توفيرها بسرعة للحفاظ على مشاريعك في موعدها.",
     ),
     description: b(
-      "Scale your workforce on demand with Al Rushd International's manpower supply service. We provide vetted skilled and semi-skilled personnel — operators, riggers, technicians, masons, scaffolders and general labour — ready to mobilise at short notice. Every worker is screened for qualifications, safety awareness and experience, so you get a productive, compliant team without the overhead of long-term recruitment.",
-      "وسّع قوتك العاملة عند الطلب مع خدمة توريد العمالة من الرشد الدولية. نوفر عمالة ماهرة وشبه ماهرة مؤهلة — مشغلين ورافعي أحمال وفنيين وبنّائين وعمال سقالات وعمالة عامة — جاهزين للتعبئة في وقت قصير. يتم فحص كل عامل من حيث المؤهلات والوعي بالسلامة والخبرة، لتحصل على فريق منتج ومتوافق دون أعباء التوظيف طويل الأمد.",
+      "Scale your workforce on demand with Al Rushd International Company's manpower supply service. We provide vetted skilled and semi-skilled personnel — operators, riggers, technicians, masons, scaffolders and general labour — ready to mobilise at short notice. Every worker is screened for qualifications, safety awareness and experience, so you get a productive, compliant team without the overhead of long-term recruitment.",
+      "وسّع قوتك العاملة عند الطلب مع خدمة توريد العمالة من شركة الرشد الدولية. نوفر عمالة ماهرة وشبه ماهرة مؤهلة — مشغلين ورافعي أحمال وفنيين وبنّائين وعمال سقالات وعمالة عامة — جاهزين للتعبئة في وقت قصير. يتم فحص كل عامل من حيث المؤهلات والوعي بالسلامة والخبرة، لتحصل على فريق منتج ومتوافق دون أعباء التوظيف طويل الأمد.",
     ),
     includes: [
       b("Certified equipment operators and riggers", "مشغلو معدات ورافعو أحمال معتمدون"),
@@ -59,8 +59,8 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
       "رصف الأسفلت والتبليط وعلامات الطرق الدقيقة لطرق وساحات آمنة وطويلة الأمد.",
     ),
     description: b(
-      "From access roads and parking yards to internal site routes, Al Rushd International delivers high-quality asphalt works and road marking. Our crews handle surface preparation, base laying, asphalt paving and compaction, followed by precise thermoplastic or paint road marking to keep traffic safe and organised. We use proven materials and modern equipment to produce durable surfaces built for heavy industrial use.",
-      "من طرق الوصول وساحات الانتظار إلى المسارات الداخلية للموقع، تقدم الرشد الدولية أعمال أسفلت وعلامات طرق عالية الجودة. تتولى فرقنا تجهيز السطح ووضع الطبقة الأساسية ورصف الأسفلت والدمك، يتبعها وضع علامات طرق دقيقة بالثيرموبلاستيك أو الطلاء للحفاظ على حركة مرور آمنة ومنظمة. نستخدم مواد مثبتة ومعدات حديثة لإنتاج أسطح متينة مصممة للاستخدام الصناعي الثقيل.",
+      "From access roads and parking yards to internal site routes, Al Rushd International Company delivers high-quality asphalt works and road marking. Our crews handle surface preparation, base laying, asphalt paving and compaction, followed by precise thermoplastic or paint road marking to keep traffic safe and organised. We use proven materials and modern equipment to produce durable surfaces built for heavy industrial use.",
+      "من طرق الوصول وساحات الانتظار إلى المسارات الداخلية للموقع، تقدم شركة الرشد الدولية أعمال أسفلت وعلامات طرق عالية الجودة. تتولى فرقنا تجهيز السطح ووضع الطبقة الأساسية ورصف الأسفلت والدمك، يتبعها وضع علامات طرق دقيقة بالثيرموبلاستيك أو الطلاء للحفاظ على حركة مرور آمنة ومنظمة. نستخدم مواد مثبتة ومعدات حديثة لإنتاج أسطح متينة مصممة للاستخدام الصناعي الثقيل.",
     ),
     includes: [
       b("Surface preparation and base laying", "تجهيز السطح ووضع الطبقة الأساسية"),
@@ -78,8 +78,8 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
       "توريد وتركيب وفك السقالات المعتمدة لوصول آمن على أي ارتفاع.",
     ),
     description: b(
-      "Al Rushd International provides complete scaffolding solutions for construction, maintenance and industrial projects. We supply, erect, inspect and dismantle certified scaffolding systems designed for safe working access at any height. Erection is carried out by trained scaffolders following strict safety procedures, with tagging and inspection to keep your site compliant and your teams protected throughout the project.",
-      "توفر الرشد الدولية حلول سقالات متكاملة لمشاريع البناء والصيانة والمشاريع الصناعية. نقوم بتوريد وتركيب وفحص وفك أنظمة السقالات المعتمدة المصممة لوصول آمن للعمل على أي ارتفاع. يتم التركيب بواسطة عمال سقالات مدربين وفق إجراءات سلامة صارمة، مع وضع البطاقات والفحص للحفاظ على توافق موقعك وحماية فرقك طوال المشروع.",
+      "Al Rushd International Company provides complete scaffolding solutions for construction, maintenance and industrial projects. We supply, erect, inspect and dismantle certified scaffolding systems designed for safe working access at any height. Erection is carried out by trained scaffolders following strict safety procedures, with tagging and inspection to keep your site compliant and your teams protected throughout the project.",
+      "توفر شركة الرشد الدولية حلول سقالات متكاملة لمشاريع البناء والصيانة والمشاريع الصناعية. نقوم بتوريد وتركيب وفحص وفك أنظمة السقالات المعتمدة المصممة لوصول آمن للعمل على أي ارتفاع. يتم التركيب بواسطة عمال سقالات مدربين وفق إجراءات سلامة صارمة، مع وضع البطاقات والفحص للحفاظ على توافق موقعك وحماية فرقك طوال المشروع.",
     ),
     includes: [
       b("Certified scaffolding supply and rental", "توريد وتأجير سقالات معتمدة"),
@@ -97,8 +97,8 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
       "حلول التسييج والتسوير لتأمين وتحديد حدود مشروعك.",
     ),
     description: b(
-      "Secure and define your project with Al Rushd International's fencing works. We supply and install temporary and permanent fencing, hoarding and barriers — including chain-link, panel and solid hoarding systems — to protect sites, control access and meet safety and regulatory requirements. Fast installation and reliable materials keep your perimeter secure from mobilisation through to project handover.",
-      "أمّن وحدّد مشروعك مع أعمال التسييج من الرشد الدولية. نقوم بتوريد وتركيب التسييج المؤقت والدائم والتسوير والحواجز — بما في ذلك أنظمة السلك الشبكي والألواح والتسوير الصلب — لحماية المواقع والتحكم في الدخول وتلبية متطلبات السلامة والأنظمة. تركيب سريع ومواد موثوقة تحافظ على أمان محيطك من التعبئة حتى تسليم المشروع.",
+      "Secure and define your project with Al Rushd International Company's fencing works. We supply and install temporary and permanent fencing, hoarding and barriers — including chain-link, panel and solid hoarding systems — to protect sites, control access and meet safety and regulatory requirements. Fast installation and reliable materials keep your perimeter secure from mobilisation through to project handover.",
+      "أمّن وحدّد مشروعك مع أعمال التسييج من شركة الرشد الدولية. نقوم بتوريد وتركيب التسييج المؤقت والدائم والتسوير والحواجز — بما في ذلك أنظمة السلك الشبكي والألواح والتسوير الصلب — لحماية المواقع والتحكم في الدخول وتلبية متطلبات السلامة والأنظمة. تركيب سريع ومواد موثوقة تحافظ على أمان محيطك من التعبئة حتى تسليم المشروع.",
     ),
     includes: [
       b("Chain-link, panel and solid hoarding", "سلك شبكي وألواح وتسوير صلب"),
@@ -116,8 +116,8 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
       "تأجير المركبات الخفيفة والثقيلة لنقل فرقك وموادك أينما لزم الأمر.",
     ),
     description: b(
-      "Keep your project mobile with Al Rushd International's vehicle rental fleet. We offer light and heavy vehicles — pickups, vans, buses, flatbeds and trucks — available with or without drivers, on flexible short and long-term terms. Every vehicle is well-maintained and ready for the demands of industrial sites, helping you move teams, tools and materials reliably and cost-effectively.",
-      "حافظ على حركة مشروعك مع أسطول تأجير المركبات من الرشد الدولية. نوفر مركبات خفيفة وثقيلة — شاحنات صغيرة وحافلات وعربات مسطحة وشاحنات — متاحة مع أو بدون سائقين، بشروط مرنة قصيرة وطويلة الأمد. كل مركبة مصانة جيداً وجاهزة لمتطلبات المواقع الصناعية، مما يساعدك على نقل الفرق والأدوات والمواد بموثوقية وفعالية من حيث التكلفة.",
+      "Keep your project mobile with Al Rushd International Company's vehicle rental fleet. We offer light and heavy vehicles — pickups, vans, buses, flatbeds and trucks — available with or without drivers, on flexible short and long-term terms. Every vehicle is well-maintained and ready for the demands of industrial sites, helping you move teams, tools and materials reliably and cost-effectively.",
+      "حافظ على حركة مشروعك مع أسطول تأجير المركبات من شركة الرشد الدولية. نوفر مركبات خفيفة وثقيلة — شاحنات صغيرة وحافلات وعربات مسطحة وشاحنات — متاحة مع أو بدون سائقين، بشروط مرنة قصيرة وطويلة الأمد. كل مركبة مصانة جيداً وجاهزة لمتطلبات المواقع الصناعية، مما يساعدك على نقل الفرق والأدوات والمواد بموثوقية وفعالية من حيث التكلفة.",
     ),
     includes: [
       b("Pickups, vans, buses and trucks", "شاحنات صغيرة وعربات وحافلات وشاحنات"),
@@ -135,8 +135,8 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
       "كبائن ومكاتب ووحدات سكن متنقلة يتم توصيلها وتركيبها في الموقع.",
     ),
     description: b(
-      "Set up site facilities fast with Al Rushd International's portable cabin services. We supply, deliver and install a range of portable units — site offices, accommodation, ablution and toilet blocks, stores and prayer rooms — ready for immediate use. Units are durable, insulated and configurable to your headcount and layout, giving your project comfortable, compliant facilities from day one.",
-      "جهّز مرافق الموقع بسرعة مع خدمات الكبائن المتنقلة من الرشد الدولية. نقوم بتوريد وتوصيل وتركيب مجموعة من الوحدات المتنقلة — مكاتب الموقع ووحدات السكن ودورات المياه والمخازن وغرف الصلاة — جاهزة للاستخدام الفوري. الوحدات متينة ومعزولة وقابلة للتهيئة حسب عدد الأفراد والتخطيط، مما يوفر لمشروعك مرافق مريحة ومتوافقة من اليوم الأول.",
+      "Set up site facilities fast with Al Rushd International Company's portable cabin services. We supply, deliver and install a range of portable units — site offices, accommodation, ablution and toilet blocks, stores and prayer rooms — ready for immediate use. Units are durable, insulated and configurable to your headcount and layout, giving your project comfortable, compliant facilities from day one.",
+      "جهّز مرافق الموقع بسرعة مع خدمات الكبائن المتنقلة من شركة الرشد الدولية. نقوم بتوريد وتوصيل وتركيب مجموعة من الوحدات المتنقلة — مكاتب الموقع ووحدات السكن ودورات المياه والمخازن وغرف الصلاة — جاهزة للاستخدام الفوري. الوحدات متينة ومعزولة وقابلة للتهيئة حسب عدد الأفراد والتخطيط، مما يوفر لمشروعك مرافق مريحة ومتوافقة من اليوم الأول.",
     ),
     includes: [
       b("Site offices and meeting rooms", "مكاتب موقع وغرف اجتماعات"),

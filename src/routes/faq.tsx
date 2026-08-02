@@ -7,13 +7,13 @@ import { FAQ } from "@/data/faq";
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "FAQ — Al Rushd International" },
+      { title: "FAQ — Al Rushd International Company" },
       {
         name: "description",
         content:
-          "Answers to common questions about heavy equipment rental, operators, delivery, terms and availability from Al Rushd International.",
+          "Answers to common questions about heavy equipment rental, operators, delivery, terms and availability from Al Rushd International Company.",
       },
-      { property: "og:title", content: "Frequently Asked Questions — Al Rushd International" },
+      { property: "og:title", content: "Frequently Asked Questions — Al Rushd International Company" },
       { property: "og:description", content: "Common questions about renting heavy equipment in Saudi Arabia." },
       { property: "og:url", content: "/faq" },
     ],

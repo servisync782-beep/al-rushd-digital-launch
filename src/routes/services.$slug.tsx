@@ -40,9 +40,9 @@ export const Route = createFileRoute("/services/$slug")({
     const path = `/services/${params.slug}`;
     return {
       meta: [
-        { title: `${name} — Al Rushd International` },
-        { name: "description", content: item?.summary.en ?? "Industrial services from Al Rushd International." },
-        { property: "og:title", content: `${name} — Al Rushd International` },
+        { title: `${name} — Al Rushd International Company` },
+        { name: "description", content: item?.summary.en ?? "Industrial services from Al Rushd International Company." },
+        { property: "og:title", content: `${name} — Al Rushd International Company` },
         { property: "og:description", content: item?.summary.en ?? "" },
         { property: "og:url", content: path },
       ],
@@ -56,7 +56,7 @@ export const Route = createFileRoute("/services/$slug")({
                 "@type": "Service",
                 name: item.title.en,
                 description: item.description.en,
-                provider: { "@type": "Organization", name: "Al Rushd International" },
+                provider: { "@type": "Organization", name: "Al Rushd International Company" },
                 areaServed: "SA",
               }),
             },
