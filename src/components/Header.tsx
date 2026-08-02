@@ -22,19 +22,16 @@ function Logo() {
   const { t } = useI18n();
 
   return (
-    <Link to="/" className="flex shrink-0 items-center gap-2.5" aria-label={t("brand.name")}>
+    <Link to="/" className="flex shrink-0 items-center" aria-label={t("brand.name")}>
       <img
-        src={emblemImg.url}
+        src={logoImg}
         alt={`${t("brand.name")} logo`}
-        width={147}
-        height={86}
-        className="h-10 w-auto shrink-0 object-contain md:h-11"
+        width={630}
+        height={550}
+        className="h-12 w-auto shrink-0 object-contain md:h-14"
         loading="eager"
         decoding="sync"
       />
-      <span className="max-w-40 font-display text-sm font-bold leading-tight text-foreground sm:max-w-none sm:text-base md:text-lg">
-        {t("brand.name")}
-      </span>
     </Link>
   );
 }
