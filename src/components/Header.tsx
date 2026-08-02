@@ -26,9 +26,9 @@ function Logo() {
       <img
         src={emblemImg.url}
         alt={`${t("brand.name")} logo`}
-        width={176}
-        height={176}
-        className="h-11 w-11 shrink-0 object-contain md:h-12 md:w-12"
+        width={147}
+        height={86}
+        className="h-10 w-auto shrink-0 object-contain md:h-11"
         loading="eager"
         decoding="sync"
       />
