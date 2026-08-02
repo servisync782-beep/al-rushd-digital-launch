@@ -22,7 +22,7 @@ function Logo() {
   const { t } = useI18n();
 
   return (
-    <Link to="/" className="flex shrink-0 items-center" aria-label={t("brand.name")}>
+    <Link to="/" className="flex shrink-0 items-center gap-3" aria-label={t("brand.name")}>
       <img
         src={logoImg}
         alt={`${t("brand.name")} logo`}
@@ -32,7 +32,11 @@ function Logo() {
         loading="eager"
         decoding="sync"
       />
+      <span className="hidden font-display text-base font-bold leading-tight tracking-tight text-foreground sm:inline-block md:text-lg">
+        {t("brand.name")}
+      </span>
     </Link>
+
   );
 }
 
