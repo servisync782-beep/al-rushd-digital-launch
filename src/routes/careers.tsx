@@ -49,7 +49,9 @@ function Careers() {
                   </div>
                 </div>
                 <a
-                  href={`mailto:${COMPANY.email}?subject=${encodeURIComponent("Application: " + r.en.title)}`}
+                  href="https://forms.gle/iL2ELn8VdibCQi1j6"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="shrink-0 rounded-md bg-accent px-4 py-2 text-sm font-bold text-accent-foreground"
                 >
                   {t("careers.apply")}
