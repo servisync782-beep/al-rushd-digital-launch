@@ -18,10 +18,10 @@ export const Route = createFileRoute("/careers")({
 });
 
 const ROLES = [
-  { en: { title: "Heavy Equipment Operator", loc: "Riyadh" }, ar: { title: "مشغل معدات ثقيلة", loc: "الرياض" } },
-  { en: { title: "Mobile Crane Operator", loc: "Dammam" }, ar: { title: "مشغل رافعة متنقلة", loc: "الدمام" } },
-  { en: { title: "Diesel Mechanic / Technician", loc: "Jeddah" }, ar: { title: "ميكانيكي ديزل / فني", loc: "جدة" } },
-  { en: { title: "Fleet Coordinator", loc: "Riyadh" }, ar: { title: "منسق أسطول", loc: "الرياض" } },
+  { en: { title: "Heavy Equipment Operator", loc: "Jubail" }, ar: { title: "مشغل معدات ثقيلة", loc: "الجبيل" } },
+  { en: { title: "Mobile Crane Operator", loc: "Jubail" }, ar: { title: "مشغل رافعة متنقلة", loc: "الجبيل" } },
+  { en: { title: "Diesel Mechanic / Technician", loc: "Jubail" }, ar: { title: "ميكانيكي ديزل / فني", loc: "الجبيل" } },
+  { en: { title: "Fleet Coordinator", loc: "Jubail" }, ar: { title: "منسق أسطول", loc: "الجبيل" } },
 ];
 
 function Careers() {
