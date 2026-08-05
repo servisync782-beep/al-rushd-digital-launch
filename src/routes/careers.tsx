@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MapPin, Briefcase } from "lucide-react";
-import { useI18n, COMPANY } from "@/lib/i18n";
+import { useI18n } from "@/lib/i18n";
 import { PageHeader } from "@/components/site";
 
 export const Route = createFileRoute("/careers")({
