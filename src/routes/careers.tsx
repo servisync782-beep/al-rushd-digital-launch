@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MapPin, Briefcase } from "lucide-react";
-import { useI18n, COMPANY } from "@/lib/i18n";
+import { useI18n } from "@/lib/i18n";
 import { PageHeader } from "@/components/site";
 
 export const Route = createFileRoute("/careers")({
@@ -18,10 +18,10 @@ export const Route = createFileRoute("/careers")({
 });
 
 const ROLES = [
-  { en: { title: "Heavy Equipment Operator", loc: "Riyadh" }, ar: { title: "مشغل معدات ثقيلة", loc: "الرياض" } },
-  { en: { title: "Mobile Crane Operator", loc: "Dammam" }, ar: { title: "مشغل رافعة متنقلة", loc: "الدمام" } },
-  { en: { title: "Diesel Mechanic / Technician", loc: "Jeddah" }, ar: { title: "ميكانيكي ديزل / فني", loc: "جدة" } },
-  { en: { title: "Fleet Coordinator", loc: "Riyadh" }, ar: { title: "منسق أسطول", loc: "الرياض" } },
+  { en: { title: "Heavy Equipment Operator", loc: "Jubail" }, ar: { title: "مشغل معدات ثقيلة", loc: "الجبيل" } },
+  { en: { title: "Mobile Crane Operator", loc: "Jubail" }, ar: { title: "مشغل رافعة متنقلة", loc: "الجبيل" } },
+  { en: { title: "Diesel Mechanic / Technician", loc: "Jubail" }, ar: { title: "ميكانيكي ديزل / فني", loc: "الجبيل" } },
+  { en: { title: "Fleet Coordinator", loc: "Jubail" }, ar: { title: "منسق أسطول", loc: "الجبيل" } },
 ];
 
 function Careers() {
@@ -49,7 +49,9 @@ function Careers() {
                   </div>
                 </div>
                 <a
-                  href={`mailto:${COMPANY.email}?subject=${encodeURIComponent("Application: " + r.en.title)}`}
+                  href="https://forms.gle/iL2ELn8VdibCQi1j6"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="shrink-0 rounded-md bg-accent px-4 py-2 text-sm font-bold text-accent-foreground"
                 >
                   {t("careers.apply")}
