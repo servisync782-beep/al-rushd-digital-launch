@@ -44,8 +44,6 @@ export function Footer() {
               { to: "/about", key: "nav.about" },
               { to: "/services", key: "nav.services" },
               { to: "/industries", key: "nav.industries" },
-              { to: "/projects", key: "nav.projects" },
-              { to: "/blog", key: "nav.blog" },
               { to: "/careers", key: "nav.careers" },
             ].map((l) => (
               <li key={l.to}>

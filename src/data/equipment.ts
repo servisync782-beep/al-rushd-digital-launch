@@ -12,7 +12,7 @@ export type Bilingual = { en: string; ar: string };
 
 export type CategoryId = "earthmoving" | "lifting" | "power" | "haulage";
 
-export type Availability = "available" | "limited" | "coming_soon";
+export type Availability = "available" | "limited" | "available";
 
 export interface Spec {
   label: Bilingual;
@@ -55,7 +55,7 @@ export const EQUIPMENT: Equipment[] = [
   {
     id: "crawler-excavator-30t",
     category: "earthmoving",
-    name: { en: "Crawler Excavator 30T", ar: "حفار زاحف 30 طن" },
+    name: { en: "Excavator", ar: "حفار" },
     short: { en: "Heavy-duty digging and trenching power.", ar: "قوة حفر وخنادق شديدة التحمل." },
     description: {
       en: "A 30-tonne crawler excavator built for large-scale earthmoving, deep excavation and demolition. Reliable hydraulics and a spacious, climate-controlled cab keep operators productive through long shifts.",
@@ -63,7 +63,7 @@ export const EQUIPMENT: Equipment[] = [
     },
     image: excavator,
     featured: true,
-    availability: "coming_soon",
+    availability: "available",
     features: [
       feat("Climate-controlled operator cab", "كابينة مشغل مكيفة"),
       feat("Quick-coupler attachment system", "نظام تركيب سريع للملحقات"),
@@ -88,7 +88,7 @@ export const EQUIPMENT: Equipment[] = [
     },
     image: loader,
     featured: true,
-    availability: "coming_soon",
+    availability: "available",
     features: [
       feat("High breakout force bucket", "قادوس بقوة اقتلاع عالية"),
       feat("Tight turning radius", "نصف قطر دوران ضيق"),
@@ -105,7 +105,7 @@ export const EQUIPMENT: Equipment[] = [
   {
     id: "all-terrain-crane-50t",
     category: "lifting",
-    name: { en: "All-Terrain Crane 50T", ar: "رافعة لجميع التضاريس 50 طن" },
+    name: { en: "Mobile Crane", ar: "رافعة متنقلة" },
     short: { en: "Powerful lifting for tough access sites.", ar: "رفع قوي للمواقع صعبة الوصول." },
     description: {
       en: "A 50-tonne all-terrain mobile crane combining on-road speed with off-road capability. Telescopic boom and precise load control deliver safe lifts on the most demanding sites.",
@@ -113,7 +113,7 @@ export const EQUIPMENT: Equipment[] = [
     },
     image: crane,
     featured: true,
-    availability: "coming_soon",
+    availability: "available",
     features: [
       feat("Telescopic boom with load chart", "ذراع تلسكوبي مع مخطط حمولة"),
       feat("All-wheel steering for tight sites", "توجيه لجميع العجلات للمواقع الضيقة"),
@@ -130,14 +130,14 @@ export const EQUIPMENT: Equipment[] = [
   {
     id: "telehandler-17m",
     category: "lifting",
-    name: { en: "Telehandler 17m", ar: "رافعة تلسكوبية 17 م" },
+    name: { en: "Telehandler", ar: "رافعة تلسكوبية" },
     short: { en: "Reach and place loads at height.", ar: "الوصول ووضع الأحمال على ارتفاع." },
     description: {
       en: "A telescopic handler offering up to 17 metres of lift height. Perfect for placing materials, loading at height and confined-access work with interchangeable attachments.",
       ar: "رافعة تلسكوبية توفر ارتفاع رفع يصل إلى 17 متراً. مثالية لوضع المواد والتحميل على ارتفاع والعمل في الأماكن الضيقة مع ملحقات قابلة للتبديل.",
     },
     image: telehandler,
-    availability: "coming_soon",
+    availability: "available",
     features: [
       feat("Interchangeable forks and bucket", "شوكات وقادوس قابلة للتبديل"),
       feat("Four-wheel drive and steering", "دفع وتوجيه رباعي"),
@@ -154,11 +154,11 @@ export const EQUIPMENT: Equipment[] = [
   {
     id: "heli-cpcd100-w5g",
     category: "lifting",
-    name: { en: "HELI CPCD100-W5G (Model 2026)", ar: "هيلي CPCD100-W5G (موديل 2026)" },
+    name: { en: "Forklift", ar: "رافعة شوكية" },
     brand: { en: "HELI (China)", ar: "هيلي (الصين)" },
     short: {
-      en: "Heavy-duty 10-tonne diesel forklift for demanding industrial handling.",
-      ar: "رافعة شوكية ديزل ثقيلة بسعة 10 أطنان لأعمال المناولة الصناعية الشاقة.",
+      en: "Heavy-duty diesel forklift for demanding industrial handling.",
+      ar: "رافعة شوكية ديزل ثقيلة لأعمال المناولة الصناعية الشاقة.",
     },
     description: {
       en: "The HELI CPCD100-W5G (Model 2026) is a heavy-duty 10-tonne diesel forklift engineered for the most demanding warehouse, port and industrial handling operations. Powered by a Japanese-built ISUZU engine with automatic transmission, it combines strength, reliability and operator comfort.",
@@ -199,7 +199,7 @@ export const EQUIPMENT: Equipment[] = [
   {
     id: "containerized-generator-500kva",
     category: "power",
-    name: { en: "Generator 500 kVA", ar: "مولد 500 ك.ف.أ" },
+    name: { en: "Generator", ar: "مولد كهرباء" },
     short: { en: "Containerized power for any site.", ar: "طاقة مغلفة لأي موقع." },
     description: {
       en: "A containerized 500 kVA diesel generator delivering stable, continuous power for large sites and events. Sound-attenuated enclosure and large fuel tank for extended runtime.",
@@ -207,7 +207,7 @@ export const EQUIPMENT: Equipment[] = [
     },
     image: generator,
     featured: true,
-    availability: "coming_soon",
+    availability: "available",
     features: [
       feat("Sound-attenuated weatherproof enclosure", "غلاف عازل للصوت ومقاوم للعوامل الجوية"),
       feat("Extended-run fuel tank", "خزان وقود لتشغيل ممتد"),
@@ -224,14 +224,14 @@ export const EQUIPMENT: Equipment[] = [
   {
     id: "articulated-dump-truck",
     category: "haulage",
-    name: { en: "Articulated Dump Truck", ar: "شاحنة قلابة مفصلية" },
+    name: { en: "Dump Truck", ar: "شاحنة قلابة" },
     short: { en: "Move heavy material over rough ground.", ar: "نقل المواد الثقيلة فوق الأرض الوعرة." },
     description: {
       en: "A heavy articulated dump truck built for hauling earth, aggregate and spoil across uneven terrain. High payload and all-wheel drive keep material moving in any conditions.",
       ar: "شاحنة قلابة مفصلية ثقيلة مصممة لنقل التراب والركام والمخلفات عبر التضاريس غير المستوية. حمولة عالية ودفع لجميع العجلات يبقي المواد متحركة في أي ظروف.",
     },
     image: dumptruck,
-    availability: "coming_soon",
+    availability: "available",
     features: [
       feat("All-wheel drive (6x6)", "دفع لجميع العجلات (6×6)"),
       feat("Articulated chassis for tight turns", "هيكل مفصلي للمنعطفات الضيقة"),
