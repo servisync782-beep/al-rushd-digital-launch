@@ -53,7 +53,7 @@ function Services() {
                 </span>
             <h3 className="mt-6 font-display text-xl font-bold">{t(`service.${n}.title`)}</h3>
             <span className="mt-2 inline-flex items-center rounded-md bg-accent px-2.5 py-1 text-xs font-bold text-accent-foreground shadow">
-              {t("common.comingSoon")}
+              {t("common.available")}
             </span>
             <p className="mt-3 leading-relaxed text-muted-foreground">{t(`service.${n}.body`)}</p>
             {slug && (

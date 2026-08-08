@@ -29,9 +29,9 @@ export function Hero() {
       <div className="container-x relative flex min-h-[72vh] flex-col justify-center py-24 md:min-h-[80vh] md:py-32">
         <span className="eyebrow">{pick({ en: "Beyond Expectations", ar: "ما يفوق التوقعات" })}</span>
 
-        <h1 className="mt-6 font-display text-5xl font-bold leading-[1.02] tracking-tight text-on-dark sm:text-6xl lg:text-7xl">
+        <h1 className="mt-6 font-brand text-5xl font-normal leading-[1.05] tracking-[0.06em] text-on-dark sm:text-6xl lg:text-7xl">
           {pick({ en: "AL RUSHD", ar: "الرشد" })}
-          <span className="mt-2 block text-2xl font-medium tracking-[0.18em] text-on-dark-muted sm:text-3xl lg:text-4xl">
+          <span className="mt-2 block font-brand text-2xl font-normal tracking-[0.14em] text-on-dark-muted sm:text-3xl lg:text-4xl">
             {pick({ en: "INTERNATIONAL COMPANY", ar: "الدولية" })}
           </span>
         </h1>

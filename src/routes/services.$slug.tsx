@@ -144,7 +144,7 @@ function ServiceDetail() {
                 {pick(item.title)}
               </h1>
               <span className="mt-3 inline-flex items-center rounded-md bg-accent px-3 py-1 text-sm font-bold text-accent-foreground shadow">
-                {t("common.comingSoon")}
+                {t("common.available")}
               </span>
             </div>
           </div>
