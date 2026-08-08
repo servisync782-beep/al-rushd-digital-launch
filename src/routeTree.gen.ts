@@ -12,20 +12,16 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
-import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as IndustriesRouteImport } from './routes/industries'
-import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CareersRouteImport } from './routes/careers'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as FleetIndexRouteImport } from './routes/fleet.index'
-import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
 import { Route as FleetIdRouteImport } from './routes/fleet.$id'
-import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
@@ -42,11 +38,6 @@ const ServicesRoute = ServicesRouteImport.update({
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProjectsRoute = ProjectsRouteImport.update({
-  id: '/projects',
-  path: '/projects',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
@@ -55,11 +46,6 @@ const PrivacyRoute = PrivacyRouteImport.update({
 const IndustriesRoute = IndustriesRouteImport.update({
   id: '/industries',
   path: '/industries',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const GalleryRoute = GalleryRouteImport.update({
-  id: '/gallery',
-  path: '/gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FaqRoute = FaqRouteImport.update({
@@ -92,11 +78,6 @@ const FleetIndexRoute = FleetIndexRouteImport.update({
   path: '/fleet/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogIndexRoute = BlogIndexRouteImport.update({
-  id: '/blog/',
-  path: '/blog/',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ServicesSlugRoute = ServicesSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -107,11 +88,6 @@ const FleetIdRoute = FleetIdRouteImport.update({
   path: '/fleet/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogSlugRoute = BlogSlugRouteImport.update({
-  id: '/blog/$slug',
-  path: '/blog/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -119,17 +95,13 @@ export interface FileRoutesByFullPath {
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
-  '/gallery': typeof GalleryRoute
   '/industries': typeof IndustriesRoute
   '/privacy': typeof PrivacyRoute
-  '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
-  '/blog/$slug': typeof BlogSlugRoute
   '/fleet/$id': typeof FleetIdRoute
   '/services/$slug': typeof ServicesSlugRoute
-  '/blog/': typeof BlogIndexRoute
   '/fleet/': typeof FleetIndexRoute
 }
 export interface FileRoutesByTo {
@@ -138,17 +110,13 @@ export interface FileRoutesByTo {
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
-  '/gallery': typeof GalleryRoute
   '/industries': typeof IndustriesRoute
   '/privacy': typeof PrivacyRoute
-  '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
-  '/blog/$slug': typeof BlogSlugRoute
   '/fleet/$id': typeof FleetIdRoute
   '/services/$slug': typeof ServicesSlugRoute
-  '/blog': typeof BlogIndexRoute
   '/fleet': typeof FleetIndexRoute
 }
 export interface FileRoutesById {
@@ -158,17 +126,13 @@ export interface FileRoutesById {
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
-  '/gallery': typeof GalleryRoute
   '/industries': typeof IndustriesRoute
   '/privacy': typeof PrivacyRoute
-  '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
-  '/blog/$slug': typeof BlogSlugRoute
   '/fleet/$id': typeof FleetIdRoute
   '/services/$slug': typeof ServicesSlugRoute
-  '/blog/': typeof BlogIndexRoute
   '/fleet/': typeof FleetIndexRoute
 }
 export interface FileRouteTypes {
@@ -179,17 +143,13 @@ export interface FileRouteTypes {
     | '/careers'
     | '/contact'
     | '/faq'
-    | '/gallery'
     | '/industries'
     | '/privacy'
-    | '/projects'
     | '/services'
     | '/sitemap.xml'
     | '/terms'
-    | '/blog/$slug'
     | '/fleet/$id'
     | '/services/$slug'
-    | '/blog/'
     | '/fleet/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -198,17 +158,13 @@ export interface FileRouteTypes {
     | '/careers'
     | '/contact'
     | '/faq'
-    | '/gallery'
     | '/industries'
     | '/privacy'
-    | '/projects'
     | '/services'
     | '/sitemap.xml'
     | '/terms'
-    | '/blog/$slug'
     | '/fleet/$id'
     | '/services/$slug'
-    | '/blog'
     | '/fleet'
   id:
     | '__root__'
@@ -217,17 +173,13 @@ export interface FileRouteTypes {
     | '/careers'
     | '/contact'
     | '/faq'
-    | '/gallery'
     | '/industries'
     | '/privacy'
-    | '/projects'
     | '/services'
     | '/sitemap.xml'
     | '/terms'
-    | '/blog/$slug'
     | '/fleet/$id'
     | '/services/$slug'
-    | '/blog/'
     | '/fleet/'
   fileRoutesById: FileRoutesById
 }
@@ -237,16 +189,12 @@ export interface RootRouteChildren {
   CareersRoute: typeof CareersRoute
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
-  GalleryRoute: typeof GalleryRoute
   IndustriesRoute: typeof IndustriesRoute
   PrivacyRoute: typeof PrivacyRoute
-  ProjectsRoute: typeof ProjectsRoute
   ServicesRoute: typeof ServicesRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
-  BlogSlugRoute: typeof BlogSlugRoute
   FleetIdRoute: typeof FleetIdRoute
-  BlogIndexRoute: typeof BlogIndexRoute
   FleetIndexRoute: typeof FleetIndexRoute
 }
 
@@ -273,13 +221,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/projects': {
-      id: '/projects'
-      path: '/projects'
-      fullPath: '/projects'
-      preLoaderRoute: typeof ProjectsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/privacy': {
       id: '/privacy'
       path: '/privacy'
@@ -292,13 +233,6 @@ declare module '@tanstack/react-router' {
       path: '/industries'
       fullPath: '/industries'
       preLoaderRoute: typeof IndustriesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/gallery': {
-      id: '/gallery'
-      path: '/gallery'
-      fullPath: '/gallery'
-      preLoaderRoute: typeof GalleryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/faq': {
@@ -343,13 +277,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FleetIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog/': {
-      id: '/blog/'
-      path: '/blog'
-      fullPath: '/blog/'
-      preLoaderRoute: typeof BlogIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/services/$slug': {
       id: '/services/$slug'
       path: '/$slug'
@@ -362,13 +289,6 @@ declare module '@tanstack/react-router' {
       path: '/fleet/$id'
       fullPath: '/fleet/$id'
       preLoaderRoute: typeof FleetIdRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/$slug': {
-      id: '/blog/$slug'
-      path: '/blog/$slug'
-      fullPath: '/blog/$slug'
-      preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -392,28 +312,14 @@ const rootRouteChildren: RootRouteChildren = {
   CareersRoute: CareersRoute,
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,
-  GalleryRoute: GalleryRoute,
   IndustriesRoute: IndustriesRoute,
   PrivacyRoute: PrivacyRoute,
-  ProjectsRoute: ProjectsRoute,
   ServicesRoute: ServicesRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
-  BlogSlugRoute: BlogSlugRoute,
   FleetIdRoute: FleetIdRoute,
-  BlogIndexRoute: BlogIndexRoute,
   FleetIndexRoute: FleetIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
