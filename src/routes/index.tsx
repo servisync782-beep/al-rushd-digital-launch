@@ -14,12 +14,12 @@ import {
   Tent,
 } from "lucide-react";
 import yardImg from "@/assets/yard.jpg";
-import heroSlide1 from "@/assets/hero-slide-1.jpg";
+import heroImg from "@/assets/hero-refinery.jpg";
 import { useI18n } from "@/lib/i18n";
 import { CATEGORIES, EQUIPMENT } from "@/data/equipment";
 import { FAQ } from "@/data/faq";
 import { EquipmentCard, SectionHeading, CTASection, FaqAccordion, Reveal } from "@/components/site";
-import { HeroCarousel } from "@/components/HeroCarousel";
+import { Hero } from "@/components/Hero";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -39,7 +39,7 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "/" },
-      { rel: "preload", as: "image", href: heroSlide1, fetchPriority: "high" },
+      { rel: "preload", as: "image", href: heroImg, fetchPriority: "high" },
     ],
   }),
   component: Home,
@@ -63,8 +63,8 @@ function Home() {
 
   return (
     <>
-      {/* Hero carousel */}
-      <HeroCarousel />
+      {/* Hero */}
+      <Hero />
 
       {/* About teaser */}
       <section className="container-x grid items-center gap-12 py-20 lg:grid-cols-2 lg:py-28">
