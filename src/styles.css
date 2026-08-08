@@ -149,6 +149,11 @@
   animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+@utility font-brand {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-weight: 400;
+}
+
 @utility eyebrow {
   display: inline-flex;
   align-items: center;
